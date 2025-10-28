@@ -1,0 +1,16 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "CS50-Style Course"
+pagination.pagerSize = 20
+
+taxonomies = {}
+
+[markup]
+  [markup.highlight]
+    noClasses = true
+    style = "dracula"
+    lineNos = true
+    lineNumbersInTable = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

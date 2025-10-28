@@ -1,0 +1,43 @@
+{{ define "main" }}
+{{ $course := .Params.course }}
+{{ $week := .Params.week }}
+<nav class="text-sm text-slate-500 mb-6">
+  <a class="hover:underline" href="/">Home</a>
+  <span class="mx-2">/</span>
+  <a class="hover:underline" href="/courses/">Courses</a>
+  <span class="mx-2">/</span>
+  <a class="hover:underline" href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>
+  <span class="mx-2">/</span>
+  <span>Week {{ $week }}</span>
+</nav>
+<h1 class="text-2xl font-semibold mb-2">{{ .Title }}</h1>
+<div class="text-sm text-slate-500 mb-8">{{ with .Params.description }}{{ . }}{{ else }}Notes and problem sets for Week {{ $week }}{{ end }}</div>
+
+{{ $notes := first 1 (where .Pages "Type" "notes") }}
+{{ with $notes }}
+  {{ $n := index . 0 }}
+  <div class="mb-10 bg-white border rounded-lg p-5">
+    <div class="flex items-center justify-between mb-2">
+      <h2 class="text-xl font-semibold">Notes</h2>
+      <a class="text-blue-600 hover:underline text-sm" href="{{ $n.RelPermalink }}">View notes →</a>
+    </div>
+    <div class="prose max-w-none text-sm text-slate-600">
+      {{ with $n.Params.description }}{{ . }}{{ else }}Lecture notes for this week.{{ end }}
+    </div>
+  </div>
+{{ end }}
+
+{{ $psets := where .Pages "Type" "psets-list" }}
+{{ with first 1 $psets }}
+  {{ $psSec := index . 0 }}
+  <h2 class="text-xl font-semibold mb-4">Problem Sets</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {{ range $psSec.Pages }}
+      <a href="{{ .RelPermalink }}" class="block bg-white border rounded-lg p-5 hover:shadow-md transition">
+        <div class="font-semibold">{{ .Title }}</div>
+        <div class="text-sm text-slate-500 mt-1">{{ with .Params.description }}{{ . }}{{ else }}Problem set{{ end }}</div>
+      </a>
+    {{ end }}
+  </div>
+{{ end }}
+{{ end }}

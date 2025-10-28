@@ -1,0 +1,17 @@
+{{ define "main" }}
+<h1 class="text-2xl font-semibold mb-6">Courses</h1>
+{{ $coursesSection := site.GetPage "section" "courses" }}
+{{ if $coursesSection }}
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {{ range $coursesSection.Sections }}
+      <a href="{{ .RelPermalink }}" class="block bg-white border rounded-lg p-5 hover:shadow-md transition">
+        <div class="text-sm text-slate-500 mb-2">Course</div>
+        <div class="font-semibold text-lg">{{ .Title }}</div>
+        <div class="text-sm text-slate-500 mt-1">{{ with .Params.description }}{{ . }}{{ else }}Explore weeks and problem sets{{ end }}</div>
+      </a>
+    {{ end }}
+  </div>
+{{ else }}
+  <p>No courses found. Create content under <code>content/courses/</code>.</p>
+{{ end }}
+{{ end }}
