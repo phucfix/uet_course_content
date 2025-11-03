@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=40987&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CS50-Style Course</title>
+  <meta property="og:title" content="CS50-Style Course" />
+  
+  <link rel="icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <style>
     :root { --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
     html { font-family: var(--font-sans); }
@@ -28,25 +32,131 @@
   </header>
   <main class="max-w-5xl mx-auto px-4 py-8">
     
-<h1 class="text-2xl font-semibold mb-6">Courses</h1>
+<div class="lg:grid lg:grid-cols-12 lg:gap-8">
+  <aside class="lg:col-span-4">
+    <div class="lg:hidden mb-6">
+      <details class="bg-slate-100 rounded-md">
+        <summary class="px-4 py-2 cursor-pointer font-medium">Menu</summary>
+        <div class="px-4 py-3 text-sm">
+          <nav class="space-y-6">
+            <div>
+              <h3 class="text-xs uppercase tracking-wide text-slate-500">Quick Links</h3>
+              <ul class="mt-2 space-y-1">
+                <li><a class="text-blue-600 hover:underline" href="/courses/">Courses</a></li>
+                <li><a class="text-blue-600 hover:underline" href="/weeks/">Weeks</a></li>
+              </ul>
+            </div>
+            
+            
+            <div>
+              <h3 class="text-xs uppercase tracking-wide text-slate-500">Weeks</h3>
+              <ul class="mt-2 space-y-1">
+                
+                  <li><a class="hover:underline" href="/notes/0/">Week 0 - Scratch</a></li>
+                
+                  <li><a class="hover:underline" href="/psets/0/">Week 0 - Scratch Pset</a></li>
+                
+                  <li><a class="hover:underline" href="/notes/1/">Week 1 - C</a></li>
+                
+                  <li><a class="hover:underline" href="/psets/1/">Week 1 - C Pset</a></li>
+                
+              </ul>
+            </div>
+            
+          </nav>
+        </div>
+      </details>
+    </div>
 
+    <div class="hidden lg:block sticky top-20">
+      <nav class="space-y-6 text-sm">
+        <div>
+          <h3 class="text-xs uppercase tracking-wide text-slate-500">Quick Links</h3>
+          <ul class="mt-2 space-y-1">
+            <li><a class="text-blue-600 hover:underline" href="/courses/">Courses</a></li>
+            <li><a class="text-blue-600 hover:underline" href="/weeks/">Weeks</a></li>
+          </ul>
+        </div>
+        
+        
+        <div>
+          <h3 class="text-xs uppercase tracking-wide text-slate-500">Weeks</h3>
+          <ul class="mt-2 space-y-1">
+            
+              <li><a class="hover:underline" href="/notes/0/">Week 0 - Scratch</a></li>
+            
+              <li><a class="hover:underline" href="/psets/0/">Week 0 - Scratch Pset</a></li>
+            
+              <li><a class="hover:underline" href="/notes/1/">Week 1 - C</a></li>
+            
+              <li><a class="hover:underline" href="/psets/1/">Week 1 - C Pset</a></li>
+            
+          </ul>
+        </div>
+        
+      </nav>
+    </div>
+  </aside>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    
-      <a href="/courses/cs50ai/" class="block bg-white border rounded-lg p-5 hover:shadow-md transition">
-        <div class="text-sm text-slate-500 mb-2">Course</div>
-        <div class="font-semibold text-lg">CS50 AI</div>
-        <div class="text-sm text-slate-500 mt-1">Introduction to Artificial Intelligence</div>
+  <div class="lg:col-span-8">
+    <h1 class="text-3xl font-semibold mb-3">Welcome</h1>
+    <p class="text-slate-600 mb-6">This site hosts UET’s CS50-style course materials. Work through weekly content, problem sets, and notes. The curriculum emphasizes correctness, design, and style across C, Python, SQL, and web development.</p>
+
+    <details class="mb-8">
+      <summary class="cursor-pointer text-blue-600 hover:underline">Watch an introduction</summary>
+      <div class="mt-3 aspect-w-16 aspect-h-9">
+        <div class="relative w-full" style="padding-top: 56.25%;">
+          <iframe class="absolute top-0 left-0 h-full w-full rounded border"
+            src="https://www.youtube.com/embed/3oFAJtFE8YU?modestbranding=0&rel=0&showinfo=0"
+            title="Introduction"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </details>
+
+    <h2 class="text-2xl font-semibold mb-3">How to Take this Course</h2>
+    <ol class="list-decimal ml-5 space-y-1 text-slate-700 mb-8">
+      <li>Watch the lecture for the week.</li>
+      <li>Optionally watch section and shorts for deeper dives.</li>
+      <li>Complete and submit the problem set.</li>
+      <li>Repeat weekly, then complete the final project.</li>
+    </ol>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+      <a href="/weeks/" class="block bg-white border rounded-lg p-5 hover:shadow-md transition">
+        <div class="text-sm text-slate-500 mb-1">Browse</div>
+        <div class="font-semibold text-lg">Weeks</div>
+        <div class="text-sm text-slate-500 mt-1">Lectures, notes, and psets</div>
       </a>
-    
-      <a href="/courses/cs50/" class="block bg-white border rounded-lg p-5 hover:shadow-md transition">
-        <div class="text-sm text-slate-500 mb-2">Course</div>
-        <div class="font-semibold text-lg">CS50x</div>
-        <div class="text-sm text-slate-500 mt-1">Introduction to Computer Science</div>
+      <a href="/courses/" class="block bg-white border rounded-lg p-5 hover:shadow-md transition">
+        <div class="text-sm text-slate-500 mb-1">Explore</div>
+        <div class="font-semibold text-lg">Courses</div>
+        <div class="text-sm text-slate-500 mt-1">Course overviews and sections</div>
       </a>
+    </div>
+
+    <h2 class="text-2xl font-semibold mb-4">Courses</h2>
+    
+    
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+        
+          <a href="/courses/cs50ai/" class="block bg-white border rounded-lg p-5 hover:shadow-md transition">
+            <div class="text-sm text-slate-500 mb-2">Course</div>
+            <div class="font-semibold text-lg">CS50 AI</div>
+            <div class="text-sm text-slate-500 mt-1">Introduction to Artificial Intelligence</div>
+          </a>
+        
+          <a href="/courses/cs50/" class="block bg-white border rounded-lg p-5 hover:shadow-md transition">
+            <div class="text-sm text-slate-500 mb-2">Course</div>
+            <div class="font-semibold text-lg">CS50x</div>
+            <div class="text-sm text-slate-500 mt-1">Introduction to Computer Science</div>
+          </a>
+        
+      </div>
     
   </div>
-
+</div>
 
   </main>
   <footer class="bg-slate-900 mt-8">
@@ -54,5 +164,6 @@
       © 2025 CS50-Style Course
     </div>
   </footer>
+  <script>try{ if(window.mermaid){ window.mermaid.initialize({ startOnLoad: true, theme: 'default' }); }}catch(e){}</script>
 </body>
 </html>
