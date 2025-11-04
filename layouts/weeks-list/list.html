@@ -1,12 +1,45 @@
 {{ define "main" }}
-<h1 class="text-2xl font-semibold mb-6">{{ .Title }}</h1>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-  {{ range sort .Sections "Title" }}
-    <a href="{{ .RelPermalink }}" class="block bg-white border rounded-lg p-5 hover:shadow-md transition">
-      <div class="text-sm text-slate-500 mb-2">Week</div>
-      <div class="font-semibold text-lg">{{ .Title }}</div>
-      <div class="text-sm text-slate-500 mt-1">Notes and problem sets</div>
-    </a>
-  {{ end }}
+<div class="fade-in">
+  <!-- Course Introduction -->
+  <div class="mb-8 sm:mb-12 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200 shadow-sm p-6 sm:p-8 lg:p-10">
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">{{ .Title }}</h1>
+    <div class="prose prose-lg max-w-none text-slate-700">
+      {{ .Content }}
+    </div>
+  </div>
+
+  <!-- Weeks Section -->
+  <div>
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 sm:mb-8 flex items-center gap-2 sm:gap-3">
+      <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+        </svg>
+      </div>
+      Các tuần học
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {{ range sort .Sections "Title" }}
+      <a href="{{ .RelPermalink }}" class="group block bg-white rounded-xl border border-blue-200 p-6 card-hover shadow-sm hover:border-blue-400 hover:shadow-md">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <span class="text-xs font-semibold text-blue-600 uppercase tracking-wide">Tuần</span>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">{{ .Title }}</h3>
+        <p class="text-sm text-slate-600">{{ with .Params.description }}{{ . }}{{ else }}Ghi chú và bài tập{{ end }}</p>
+        <div class="mt-4 flex items-center text-blue-600 text-sm font-medium">
+          <span>Xem tuần học</span>
+          <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
 </div>
 {{ end }}

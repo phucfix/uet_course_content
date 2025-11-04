@@ -32,7 +32,7 @@
     <div class="mb-8 sm:mb-10 lg:mb-12 bg-gradient-to-br from-white to-blue-50 rounded-xl border border-blue-100 p-4 sm:p-6 lg:p-8 card-hover">
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 mb-3 sm:mb-4">
         <div class="flex items-center gap-2 sm:gap-3">
-          <div class="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center flex-shrink-0">
             <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
             </svg>
@@ -55,7 +55,7 @@
     {{ $psSec := index . 0 }}
     <div class="mb-4 sm:mb-6">
       <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
-        <div class="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+        <div class="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center flex-shrink-0">
           <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
           </svg>
@@ -65,10 +65,10 @@
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
       {{ range $psSec.Pages }}
-      <a href="{{ .RelPermalink }}" class="group block bg-white rounded-xl border border-slate-200 p-6 card-hover shadow-sm hover:border-purple-300">
+      <a href="{{ .RelPermalink }}" class="group block bg-white rounded-xl border border-slate-200 p-6 card-hover shadow-sm hover:border-blue-300">
         <div class="flex items-start justify-between mb-3">
-          <h3 class="text-lg font-semibold text-slate-900 group-hover:text-purple-600 transition-colors">{{ .Title }}</h3>
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-purple-600 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <h3 class="text-lg font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">{{ .Title }}</h3>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
         </div>

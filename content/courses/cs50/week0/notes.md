@@ -12,5 +12,5 @@ Welcome to Week 0! Here are some starter notes.
 ```python
 # Example Python code
 for i in range(3):
-    print("Hello, CS50!", i)
+    print("Hello, UET Learning!", i)
 ```

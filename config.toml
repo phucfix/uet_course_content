@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "CS50-Style Course"
+title = "UET Learning Course"
 pagination.pagerSize = 20
 
 taxonomies = {}
