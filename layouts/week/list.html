@@ -1,43 +1,81 @@
 {{ define "main" }}
 {{ $course := .Params.course }}
 {{ $week := .Params.week }}
-<nav class="text-sm text-slate-500 mb-6">
-  <a class="hover:underline" href="/">Home</a>
-  <span class="mx-2">/</span>
-  <a class="hover:underline" href="/courses/">Courses</a>
-  <span class="mx-2">/</span>
-  <a class="hover:underline" href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>
-  <span class="mx-2">/</span>
-  <span>Week {{ $week }}</span>
-</nav>
-<h1 class="text-2xl font-semibold mb-2">{{ .Title }}</h1>
-<div class="text-sm text-slate-500 mb-8">{{ with .Params.description }}{{ . }}{{ else }}Notes and problem sets for Week {{ $week }}{{ end }}</div>
+<div class="fade-in">
+  <nav class="flex flex-wrap items-center text-xs sm:text-sm text-slate-500 mb-6 sm:mb-8" aria-label="Breadcrumb">
+    <a class="hover:text-blue-600 transition-colors" href="/">Trang chủ</a>
+    <svg class="w-3 h-3 sm:w-4 sm:h-4 mx-1 sm:mx-2 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+    <a class="hover:text-blue-600 transition-colors" href="/courses/">Khóa học</a>
+    <svg class="w-3 h-3 sm:w-4 sm:h-4 mx-1 sm:mx-2 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+    <a class="hover:text-blue-600 transition-colors truncate max-w-[120px] sm:max-w-none" href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>
+    <svg class="w-3 h-3 sm:w-4 sm:h-4 mx-1 sm:mx-2 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+    <span class="text-slate-700 font-medium">Tuần {{ $week }}</span>
+  </nav>
 
-{{ $notes := first 1 (where .Pages "Type" "notes") }}
-{{ with $notes }}
-  {{ $n := index . 0 }}
-  <div class="mb-10 bg-white border rounded-lg p-5">
-    <div class="flex items-center justify-between mb-2">
-      <h2 class="text-xl font-semibold">Notes</h2>
-      <a class="text-blue-600 hover:underline text-sm" href="{{ $n.RelPermalink }}">View notes →</a>
+  <div class="mb-6 sm:mb-8 lg:mb-10">
+    <div class="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-50 text-blue-700 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+      <span>Tuần {{ $week }}</span>
     </div>
-    <div class="prose max-w-none text-sm text-slate-600">
-      {{ with $n.Params.description }}{{ . }}{{ else }}Lecture notes for this week.{{ end }}
-    </div>
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-2 sm:mb-3">{{ .Title }}</h1>
+    <p class="text-base sm:text-lg text-slate-600">{{ with .Params.description }}{{ . }}{{ else }}Ghi chú và bài tập cho Tuần {{ $week }}{{ end }}</p>
   </div>
-{{ end }}
 
-{{ $psets := where .Pages "Type" "psets-list" }}
-{{ with first 1 $psets }}
-  {{ $psSec := index . 0 }}
-  <h2 class="text-xl font-semibold mb-4">Problem Sets</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    {{ range $psSec.Pages }}
-      <a href="{{ .RelPermalink }}" class="block bg-white border rounded-lg p-5 hover:shadow-md transition">
-        <div class="font-semibold">{{ .Title }}</div>
-        <div class="text-sm text-slate-500 mt-1">{{ with .Params.description }}{{ . }}{{ else }}Problem set{{ end }}</div>
+  {{ $notes := first 1 (where .Pages "Type" "notes") }}
+  {{ with $notes }}
+    {{ $n := index . 0 }}
+    <div class="mb-8 sm:mb-10 lg:mb-12 bg-gradient-to-br from-white to-blue-50 rounded-xl border border-blue-100 p-4 sm:p-6 lg:p-8 card-hover">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 mb-3 sm:mb-4">
+        <div class="flex items-center gap-2 sm:gap-3">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Ghi chú</h2>
+        </div>
+        <a class="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-xs sm:text-sm transition-colors self-start sm:self-auto" href="{{ $n.RelPermalink }}">
+          <span>Xem ghi chú</span>
+          <svg class="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <p class="text-sm sm:text-base text-slate-600 leading-relaxed">{{ with $n.Params.description }}{{ . }}{{ else }}Ghi chú bài giảng cho tuần này.{{ end }}</p>
+    </div>
+  {{ end }}
+
+  {{ $psets := where .Pages "Type" "psets-list" }}
+  {{ with first 1 $psets }}
+    {{ $psSec := index . 0 }}
+    <div class="mb-4 sm:mb-6">
+      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
+        <div class="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+          </svg>
+        </div>
+        Bài tập
+      </h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+      {{ range $psSec.Pages }}
+      <a href="{{ .RelPermalink }}" class="group block bg-white rounded-xl border border-slate-200 p-6 card-hover shadow-sm hover:border-purple-300">
+        <div class="flex items-start justify-between mb-3">
+          <h3 class="text-lg font-semibold text-slate-900 group-hover:text-purple-600 transition-colors">{{ .Title }}</h3>
+          <svg class="w-5 h-5 text-slate-400 group-hover:text-purple-600 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+        <p class="text-sm text-slate-600">{{ with .Params.description }}{{ . }}{{ else }}Bài tập{{ end }}</p>
       </a>
-    {{ end }}
-  </div>
-{{ end }}
+      {{ end }}
+    </div>
+  {{ end }}
+</div>
 {{ end }}

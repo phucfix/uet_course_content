@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Week 1 - Python Basics Notes | CS50-Style Course</title>
+  <meta property="og:title" content="Week 1 - Python Basics Notes | CS50-Style Course" />
+  <meta property="og:description" content="Ghi chú về Python cơ bản: biến, kiểu dữ liệu, và cú pháp" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <style>
+    :root { 
+      --font-sans: 'PT Sans', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; 
+    }
+    html { 
+      font-family: var(--font-sans); 
+      scroll-behavior: smooth;
+      height: 100%;
+    }
+    body {
+      background: linear-gradient(to bottom, #f8fafc 0%, #ffffff 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    pre code { 
+      display: block; 
+      padding: 1.5rem; 
+      border-radius: 0.5rem; 
+      background: #1e293b;
+      color: #e2e8f0;
+      overflow-x: auto;
+    }
+    code {
+      background: #f1f5f9;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.25rem;
+      font-size: 0.875em;
+      color: #dc2626;
+    }
+    pre code code {
+      background: transparent;
+      padding: 0;
+      color: inherit;
+    }
+    .prose {
+      color: #334155;
+      line-height: 1.75;
+    }
+    .prose h1, .prose h2, .prose h3, .prose h4 {
+      color: #0f172a;
+      font-weight: 700;
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
+    .prose h1 { font-size: 2.25em; }
+    .prose h2 { font-size: 1.875em; }
+    .prose h3 { font-size: 1.5em; }
+    .prose a {
+      color: #2563eb;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .prose a:hover {
+      border-bottom-color: #2563eb;
+    }
+    .prose ul, .prose ol {
+      margin: 1.5em 0;
+      padding-left: 1.625em;
+    }
+    .prose li {
+      margin: 0.5em 0;
+    }
+    .prose blockquote {
+      border-left: 4px solid #3b82f6;
+      padding-left: 1em;
+      margin: 1.5em 0;
+      color: #64748b;
+      font-style: italic;
+    }
+    .prose table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5em 0;
+    }
+    .prose th, .prose td {
+      border: 1px solid #e2e8f0;
+      padding: 0.75em;
+    }
+    .prose th {
+      background: #f8fafc;
+      font-weight: 600;
+    }
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      animation: fadeIn 0.5s ease-out;
+    }
+  </style>
+</head>
+<body class="min-h-screen text-slate-900">
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="text-slate-900 text-xl font-bold tracking-tight hover:text-blue-600 transition-colors flex items-center gap-2">
+          <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">CS50-Style Course</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/">Trang chủ</a>
+          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/courses/">Khóa học</a>
+          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/about/">Giới thiệu</a>
+        </nav>
+        <button class="md:hidden text-slate-600 hover:text-slate-900" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <nav class="flex flex-col gap-3">
+          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/">Trang chủ</a>
+          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/courses/">Khóa học</a>
+          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/about/">Giới thiệu</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 flex-grow">
+    
+<div class="fade-in">
+  <nav class="flex flex-wrap items-center text-xs sm:text-sm text-slate-500 mb-6 sm:mb-8" aria-label="Breadcrumb">
+    <a class="hover:text-blue-600 transition-colors" href="/">Trang chủ</a>
+    <svg class="w-4 h-4 mx-2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+    <a class="hover:text-blue-600 transition-colors" href="/courses/">Khóa học</a>
+    
+    <svg class="w-4 h-4 mx-2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+    <a class="hover:text-blue-600 transition-colors" href="/courses/python/">Python Programming</a>
+    
+    <svg class="w-4 h-4 mx-2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+    <span class="text-slate-700 font-medium">Ghi chú Tuần 1</span>
+  </nav>
+
+  <article class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 sm:p-6 lg:p-8 xl:p-12">
+    <div class="mb-6 sm:mb-8 pb-4 sm:pb-6 border-b border-slate-200">
+      <div class="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-50 text-blue-700 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+        <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        <span>Tuần 1</span>
+      </div>
+      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-2 sm:mb-3">Week 1 - Python Basics Notes</h1>
+    </div>
+    <div class="prose prose-lg max-w-none">
+      <h1 id="python-basics">Python Basics</h1>
+<h2 id="giới-thiệu-về-python">Giới thiệu về Python</h2>
+<p>Python là một ngôn ngữ lập trình cấp cao, dễ đọc và mạnh mẽ. Python được thiết kế với triết lý &ldquo;đẹp hơn ugly, rõ ràng hơn implicit&rdquo;.</p>
+<h2 id="biến-và-kiểu-dữ-liệu">Biến và Kiểu dữ liệu</h2>
+<h3 id="biến-trong-python">Biến trong Python</h3>
+<p>Python là ngôn ngữ động, không cần khai báo kiểu:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Python&#34;</span>
+</span></span><span style="display:flex;"><span>age <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">30</span>
+</span></span><span style="display:flex;"><span>height <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1.75</span>
+</span></span><span style="display:flex;"><span>is_student <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="các-kiểu-dữ-liệu-cơ-bản">Các kiểu dữ liệu cơ bản</h3>
+<ol>
+<li><strong>Số nguyên (int)</strong>: <code>42</code>, <code>-10</code></li>
+<li><strong>Số thực (float)</strong>: <code>3.14</code>, <code>-0.5</code></li>
+<li><strong>Chuỗi (str)</strong>: <code>&quot;Hello&quot;</code>, <code>'World'</code></li>
+<li><strong>Boolean</strong>: <code>True</code>, <code>False</code></li>
+<li><strong>None</strong>: <code>None</code></li>
+</ol>
+<h2 id="cấu-trúc-điều-khiển">Cấu trúc điều khiển</h2>
+<h3 id="if-else">If-else</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">if</span> age <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">18</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Bạn đã trưởng thành&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Bạn chưa trưởng thành&#34;</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="vòng-lặp">Vòng lặp</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#6272a4"># For loop</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">5</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(i)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># While loop</span>
+</span></span><span style="display:flex;"><span>count <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">while</span> count <span style="color:#ff79c6">&lt;</span> <span style="color:#bd93f9">5</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(count)
+</span></span><span style="display:flex;"><span>    count <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="hàm-functions">Hàm (Functions)</h2>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">greet</span>(name):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Xin chào, </span><span style="color:#f1fa8c">{</span>name<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>message <span style="color:#ff79c6">=</span> greet(<span style="color:#f1fa8c">&#34;Python&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(message)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="list-và-dictionary">List và Dictionary</h2>
+<h3 id="list">List</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>fruits <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#34;apple&#34;</span>, <span style="color:#f1fa8c">&#34;banana&#34;</span>, <span style="color:#f1fa8c">&#34;orange&#34;</span>]
+</span></span><span style="display:flex;"><span>fruits<span style="color:#ff79c6">.</span>append(<span style="color:#f1fa8c">&#34;grape&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(fruits[<span style="color:#bd93f9">0</span>])  <span style="color:#6272a4"># apple</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="dictionary">Dictionary</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>student <span style="color:#ff79c6">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Nguyễn Văn A&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;age&#34;</span>: <span style="color:#bd93f9">20</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;grade&#34;</span>: <span style="color:#f1fa8c">&#34;A&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(student[<span style="color:#f1fa8c">&#34;name&#34;</span>])
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+  </article>
+</div>
+
+  </main>
+  <footer class="bg-gradient-to-r from-slate-900 to-slate-800 mt-auto text-white w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+        <div>
+          <h3 class="text-lg font-bold mb-4">CS50-Style Course</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Hệ thống học tập hiện đại với nội dung chất lượng cao</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4 text-base sm:text-lg">Liên kết</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="/courses/" class="hover:text-white transition-colors">Khóa học</a></li>
+            <li><a href="/about/" class="hover:text-white transition-colors">Giới thiệu</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4 text-base sm:text-lg">Thông tin</h4>
+          <p class="text-sm text-slate-400">© 2025 CS50-Style Course</p>
+          <p class="text-sm text-slate-400 mt-2">Được xây dựng với ❤️ cho sinh viên</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>try{ if(window.mermaid){ window.mermaid.initialize({ startOnLoad: true, theme: 'default' }); }}catch(e){}</script>
+</body>
+</html>
