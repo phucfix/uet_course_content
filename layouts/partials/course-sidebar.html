@@ -1,0 +1,87 @@
+<!-- Sidebar -->
+<aside class="w-64 flex-shrink-0 bg-slate-900 text-white min-h-screen fixed left-0 top-0 overflow-y-auto">
+  <div class="p-6">
+    <!-- Course Header -->
+    <div class="mb-8">
+      <a href="/" class="block mb-2">
+        <h1 class="text-2xl font-bold text-white mb-1">UET Learning</h1>
+        <p class="text-sm text-slate-300">{{ .Title }}</p>
+      </a>
+    </div>
+
+    <!-- All Courses -->
+    <div class="mb-8">
+      <nav class="space-y-1">
+        {{ $courses := site.GetPage "section" "courses" }}
+        {{ if $courses }}
+          {{ range $courses.Sections }}
+            <a 
+              href="{{ .RelPermalink }}" 
+              class="block py-2 text-sm text-slate-300 hover:text-white hover:underline {{ if eq .RelPermalink $.RelPermalink }}text-white underline{{ end }}"
+            >
+              {{ .Title }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </nav>
+    </div>
+
+    <!-- Course Weeks -->
+    <div>
+      {{/* Determine the course page */}}
+      {{ $currentPage := . }}
+      {{ $coursePage := . }}
+      {{ if ne .Type "course-welcome" }}
+        {{/* For week pages, find the course parent */}}
+        {{ $coursePage = .Parent }}
+        {{/* If parent is not the course, go up one more level */}}
+        {{ if and $coursePage (ne $coursePage.Type "course-welcome") }}
+          {{ $coursePage = $coursePage.Parent }}
+        {{ end }}
+        {{/* Add link to course welcome page */}}
+        {{ if $coursePage }}
+          <a 
+            href="{{ $coursePage.RelPermalink }}" 
+            class="block py-2 text-sm text-slate-300 hover:text-white hover:underline mb-4"
+          >
+            Welcome
+          </a>
+        {{ end }}
+      {{ end }}
+      {{ $courseWeeks := slice }}
+      {{ $weekMap := dict }}
+      
+      {{ if $coursePage }}
+        {{/* Get all sections under the course that are weeks - only direct child sections */}}
+        {{ range $coursePage.Sections }}
+          {{ if eq .Type "week-with-sidebar" }}
+            {{ $weekNum := .Params.week }}
+            {{ if or (eq $weekNum 0) $weekNum }}
+              {{ $weekKey := printf "%d" $weekNum }}
+              {{/* Only add if we haven't seen this week number before */}}
+              {{ if not (index $weekMap $weekKey) }}
+                {{ $courseWeeks = $courseWeeks | append . }}
+                {{ $weekMap = merge $weekMap (dict $weekKey true) }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      
+      {{ if $courseWeeks }}
+        <nav class="space-y-1">
+          {{ range sort $courseWeeks "Params.week" "asc" }}
+            <a 
+              href="{{ .RelPermalink }}" 
+              class="block py-2 text-sm text-slate-300 hover:text-white hover:underline {{ if eq .RelPermalink $currentPage.RelPermalink }}text-white underline{{ end }}"
+            >
+              {{ .Title }}
+            </a>
+          {{ end }}
+        </nav>
+      {{ else }}
+        <p class="text-xs text-slate-500 py-2">Chưa có tuần học</p>
+      {{ end }}
+    </div>
+  </div>
+</aside>

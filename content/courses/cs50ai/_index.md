@@ -1,6 +1,6 @@
 ---
-title: "UET Learning - Artificial Intelligence"
-type: "weeks-list"
+title: "Artificial Intelligence"
+type: "course-welcome"
 description: "Giới thiệu về Trí tuệ Nhân tạo"
 url: "/courses/cs50ai/"
 ---

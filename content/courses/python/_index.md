@@ -1,6 +1,6 @@
 ---
 title: "Python Programming"
-type: "weeks-list"
+type: "course-welcome"
 description: "Học lập trình Python từ cơ bản đến nâng cao"
 url: "/courses/python/"
 ---

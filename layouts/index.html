@@ -1,110 +1,49 @@
 {{ define "main" }}
-<div class="fade-in">
-  <!-- Hero Section -->
-  <div class="text-center mb-8 sm:mb-12 lg:mb-16">
-    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 px-4">
-      <span class="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">UET Learning</span>
-    </h1>
-    <p class="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed px-4">
-      Hệ thống học tập trực tuyến của Trường Đại học Công nghệ - Đại học Quốc gia Hà Nội. 
-      Khám phá các khóa học chất lượng cao và phát triển kỹ năng của bạn.
-    </p>
+<div class="max-w-4xl mx-auto px-8 py-12">
+  <h1 class="text-4xl font-bold text-slate-900 mb-6">UET Learning</h1>
+  <p class="text-slate-700 mb-8 leading-relaxed">
+    Hệ thống học tập trực tuyến của Trường Đại học Công nghệ - Đại học Quốc gia Hà Nội.
+  </p>
+
+  <!-- Search Bar -->
+  <div class="mb-8">
+    <div class="relative">
+      <input 
+        type="text" 
+        id="course-search" 
+        placeholder="Tìm kiếm khóa học..." 
+        class="w-full px-4 py-2 pl-10 text-base border border-slate-300 focus:outline-none focus:border-slate-500"
+      />
+      <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+    </div>
+    <div id="search-results" class="mt-4 hidden"></div>
   </div>
 
-  <!-- How to Take Course Section -->
-  <div class="mb-8 sm:mb-12 lg:mb-16 bg-white rounded-xl border border-blue-100 shadow-sm p-4 sm:p-6 lg:p-8">
-    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
-      <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
-        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-      </div>
-      Cách học tại UET Learning
-    </h2>
-    <div class="space-y-4">
-      <div class="flex items-start gap-4 p-4 bg-blue-50 rounded-lg">
-        <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
-        <div>
-          <h3 class="font-semibold text-slate-900 mb-1">Xem video bài giảng</h3>
-          <p class="text-slate-600 text-sm sm:text-base">Xem các video bài giảng được quay sẵn để hiểu các khái niệm và kiến thức cơ bản.</p>
-        </div>
-      </div>
-      <div class="flex items-start gap-4 p-4 bg-blue-50 rounded-lg">
-        <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
-        <div>
-          <h3 class="font-semibold text-slate-900 mb-1">Làm bài tập và nộp bài</h3>
-          <p class="text-slate-600 text-sm sm:text-base">Hoàn thành các bài tập thực hành và nộp bài qua hệ thống để được đánh giá.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- About UET Learning Section -->
-  <div class="mb-8 sm:mb-12 lg:mb-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200 shadow-sm p-4 sm:p-6 lg:p-8">
-    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
-      <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-      </div>
-      Về UET Learning
-    </h2>
-    <p class="text-slate-700 text-base sm:text-lg leading-relaxed mb-4">
-      UET Learning là nền tảng học tập trực tuyến của Trường Đại học Công nghệ - Đại học Quốc gia Hà Nội. 
-      Chúng tôi cung cấp các khóa học chất lượng cao về lập trình, công nghệ thông tin và các lĩnh vực liên quan.
+  <!-- About UET Section -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-slate-900 mb-4">Về Trường Đại học Công nghệ</h2>
+    <p class="text-slate-700 mb-4 leading-relaxed">
+      Trường Đại học Công nghệ (UET) là một trong những trường đại học hàng đầu về đào tạo công nghệ thông tin và kỹ thuật tại Việt Nam, trực thuộc Đại học Quốc gia Hà Nội.
     </p>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
-      <div class="bg-white rounded-lg p-4 border border-blue-200">
-        <div class="text-blue-600 font-bold text-2xl mb-2">100+</div>
-        <div class="text-slate-600 text-sm">Khóa học</div>
-      </div>
-      <div class="bg-white rounded-lg p-4 border border-blue-200">
-        <div class="text-blue-600 font-bold text-2xl mb-2">5000+</div>
-        <div class="text-slate-600 text-sm">Sinh viên</div>
-      </div>
-      <div class="bg-white rounded-lg p-4 border border-blue-200">
-        <div class="text-blue-600 font-bold text-2xl mb-2">24/7</div>
-        <div class="text-slate-600 text-sm">Học tập</div>
-      </div>
-    </div>
   </div>
 
   <!-- Courses Section -->
   <div>
-    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 sm:mb-8 flex items-center gap-2 sm:gap-3">
-      <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
-        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-        </svg>
-      </div>
-      Khóa học
-    </h2>
+    <h2 class="text-2xl font-bold text-slate-900 mb-6">Courses</h2>
     {{ $courses := site.GetPage "section" "courses" }}
     {{ if $courses }}
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div id="courses-grid" class="space-y-3">
         {{ range $courses.Sections }}
-        <a href="{{ .RelPermalink }}" class="group block bg-white rounded-xl border border-blue-200 p-6 card-hover shadow-sm hover:border-blue-400 hover:shadow-md relative overflow-hidden">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-50 to-blue-100 rounded-full -mr-16 -mt-16 opacity-50 group-hover:opacity-75 transition-opacity"></div>
-          <div class="relative">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                </svg>
-              </div>
-              <span class="text-xs font-semibold text-blue-600 uppercase tracking-wide">Khóa học</span>
-            </div>
-            <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">{{ .Title }}</h3>
-            <p class="text-sm text-slate-600 leading-relaxed">{{ with .Params.description }}{{ . }}{{ else }}Khám phá các tuần học và bài tập{{ end }}</p>
-            <div class="mt-4 flex items-center text-blue-600 text-sm font-medium">
-              <span>Xem khóa học</span>
-              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </div>
-          </div>
-        </a>
+        <div class="course-card" data-course-name="{{ lower .Title }}" data-course-desc="{{ lower (.Params.description | default "") }}">
+          <a href="{{ .RelPermalink }}" class="text-blue-600 hover:underline text-lg">
+            {{ .Title }}
+          </a>
+          {{ with .Params.description }}
+            <p class="text-slate-600 text-sm mt-1">{{ . }}</p>
+          {{ end }}
+        </div>
         {{ end }}
       </div>
     {{ else }}
@@ -114,4 +53,47 @@
     {{ end }}
   </div>
 </div>
+
+<script>
+  // Course search functionality
+  const searchInput = document.getElementById('course-search');
+  const searchResults = document.getElementById('search-results');
+  const coursesGrid = document.getElementById('courses-grid');
+  const courseCards = document.querySelectorAll('.course-card');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function(e) {
+      const query = e.target.value.toLowerCase().trim();
+      
+      if (query === '') {
+        // Show all courses
+        courseCards.forEach(card => {
+          card.style.display = 'block';
+        });
+        searchResults.classList.add('hidden');
+      } else {
+        // Filter courses
+        let hasResults = false;
+        courseCards.forEach(card => {
+          const courseName = card.getAttribute('data-course-name') || '';
+          const courseDesc = card.getAttribute('data-course-desc') || '';
+          
+          if (courseName.includes(query) || courseDesc.includes(query)) {
+            card.style.display = 'block';
+            hasResults = true;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        
+        if (!hasResults) {
+          searchResults.innerHTML = `<p class="text-slate-600">Không tìm thấy khóa học nào với từ khóa "${query}"</p>`;
+          searchResults.classList.remove('hidden');
+        } else {
+          searchResults.classList.add('hidden');
+        }
+      }
+    });
+  }
+</script>
 {{ end }}

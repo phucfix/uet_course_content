@@ -3,8 +3,8 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UET Learning - Introduction to Computer Science | UET Learning Course</title>
-  <meta property="og:title" content="UET Learning - Introduction to Computer Science | UET Learning Course" />
+  <title>Introduction to Computer Science | UET Learning Course</title>
+  <meta property="og:title" content="Introduction to Computer Science | UET Learning Course" />
   <meta property="og:description" content="Giới thiệu về Khoa học Máy tính" />
   <link rel="icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
       height: 100%;
     }
     body {
-      background: linear-gradient(to bottom, #f8fafc 0%, #ffffff 100%);
+      background: #ffffff;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -113,39 +113,134 @@
   </style>
 </head>
 <body class="min-h-screen text-slate-900">
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/50 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="/" class="text-slate-900 text-xl font-bold tracking-tight hover:text-blue-600 transition-colors flex items-center gap-2">
-          <span class="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">UET Learning Course</span>
-        </a>
-        <nav class="hidden md:flex items-center gap-6">
-          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/">Trang chủ</a>
-          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/courses/">Khóa học</a>
-          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/about/">Giới thiệu</a>
-        </nav>
-        <button class="md:hidden text-slate-600 hover:text-slate-900" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-      <div id="mobile-menu" class="hidden md:hidden pb-4">
-        <nav class="flex flex-col gap-3">
-          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/">Trang chủ</a>
-          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/courses/">Khóa học</a>
-          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/about/">Giới thiệu</a>
-        </nav>
-      </div>
-    </div>
-  </header>
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 flex-grow">
-    
-<div class="fade-in">
   
-  <div class="mb-8 sm:mb-12 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200 shadow-sm p-6 sm:p-8 lg:p-10">
-    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">UET Learning - Introduction to Computer Science</h1>
-    <div class="prose prose-lg max-w-none text-slate-700">
+  <main class="flex-grow">
+    
+<div class="flex">
+  
+<aside class="w-64 flex-shrink-0 bg-slate-900 text-white min-h-screen fixed left-0 top-0 overflow-y-auto">
+  <div class="p-6">
+    
+    <div class="mb-8">
+      <a href="/" class="block mb-2">
+        <h1 class="text-2xl font-bold text-white mb-1">UET Learning</h1>
+        <p class="text-sm text-slate-300">Introduction to Computer Science</p>
+      </a>
+    </div>
+
+    
+    <div class="mb-8">
+      <nav class="space-y-1">
+        
+        
+          
+            <a 
+              href="/courses/cs50ai/" 
+              class="block py-2 text-sm text-slate-300 hover:text-white hover:underline "
+            >
+              Artificial Intelligence
+            </a>
+          
+            <a 
+              href="/courses/database/" 
+              class="block py-2 text-sm text-slate-300 hover:text-white hover:underline "
+            >
+              Database Systems
+            </a>
+          
+            <a 
+              href="/courses/cs50/" 
+              class="block py-2 text-sm text-slate-300 hover:text-white hover:underline text-white underline"
+            >
+              Introduction to Computer Science
+            </a>
+          
+            <a 
+              href="/courses/python/" 
+              class="block py-2 text-sm text-slate-300 hover:text-white hover:underline "
+            >
+              Python Programming
+            </a>
+          
+            <a 
+              href="/courses/web-dev/" 
+              class="block py-2 text-sm text-slate-300 hover:text-white hover:underline "
+            >
+              Web Development
+            </a>
+          
+        
+      </nav>
+    </div>
+
+    
+    <div>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+        
+          
+            
+            
+              
+              
+              
+                
+                
+              
+            
+          
+        
+          
+            
+            
+              
+              
+              
+                
+                
+              
+            
+          
+        
+      
+      
+      
+        <nav class="space-y-1">
+          
+            <a 
+              href="/courses/cs50/week0/" 
+              class="block py-2 text-sm text-slate-300 hover:text-white hover:underline "
+            >
+              Week 0
+            </a>
+          
+            <a 
+              href="/courses/cs50/week1/" 
+              class="block py-2 text-sm text-slate-300 hover:text-white hover:underline "
+            >
+              Week 1
+            </a>
+          
+        </nav>
+      
+    </div>
+  </div>
+</aside>
+
+  
+  
+  <main class="flex-1 ml-64 p-12 max-w-4xl">
+    
+    <h1 class="text-4xl font-bold text-slate-900 mb-6">Welcome</h1>
+    
+    <div class="prose prose-lg max-w-none mb-8 text-slate-700 leading-relaxed">
       <p>Chào mừng bạn đến với khóa học <strong>Giới thiệu về Khoa học Máy tính</strong> của UET Learning.</p>
 <p>Khóa học này sẽ giúp bạn làm quen với các khái niệm cơ bản của lập trình và khoa học máy tính. Bạn sẽ học cách suy nghĩ như một lập trình viên và giải quyết các vấn đề thực tế bằng code.</p>
 <p>Khóa học bao gồm:</p>
@@ -159,85 +254,76 @@
 <p>Hãy bắt đầu với tuần đầu tiên và từng bước xây dựng nền tảng kiến thức vững chắc!</p>
 
     </div>
-  </div>
 
-  
-  <div>
-    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 sm:mb-8 flex items-center gap-2 sm:gap-3">
-      <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
-        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-        </svg>
+    
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold text-slate-900 mb-4">How to Take this Course</h2>
+      <p class="text-slate-700 mb-6 leading-relaxed">
+        Khóa học này được tổ chức theo các tuần học. Mỗi tuần bao gồm video bài giảng, ghi chú và bài tập.
+      </p>
+      
+      
+      <div class="mb-8">
+        <div class="flex flex-col items-center space-y-3">
+          
+          <div class="bg-purple-100 border-2 border-purple-300 px-8 py-4 rounded text-center" style="width: 200px;">
+            <div class="font-semibold text-slate-900">Watch Lecture</div>
+          </div>
+          
+          
+          <div class="flex flex-col items-center">
+            <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+            <span class="text-xs text-slate-500 mt-1">recommended</span>
+          </div>
+          
+          
+          <div class="bg-purple-100 border-2 border-purple-300 px-8 py-4 rounded text-center" style="width: 200px;">
+            <div class="font-semibold text-slate-900">Watch Section</div>
+          </div>
+          
+          
+          <div class="flex flex-col items-center">
+            <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+            <span class="text-xs text-slate-500 mt-1">recommended</span>
+          </div>
+          
+          
+          <div class="bg-purple-100 border-2 border-purple-300 px-8 py-4 rounded text-center" style="width: 200px;">
+            <div class="font-semibold text-slate-900">Watch Shorts</div>
+          </div>
+          
+          
+          <div class="flex flex-col items-center">
+            <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </div>
+          
+          
+          <div class="bg-purple-100 border-2 border-purple-300 px-8 py-4 rounded text-center" style="width: 200px;">
+            <div class="font-semibold text-slate-900">Submit Problem Set</div>
+          </div>
+        </div>
       </div>
-      Các tuần học
-    </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       
-      <a href="/courses/cs50/weeks/0/" class="group block bg-white rounded-xl border border-blue-200 p-6 card-hover shadow-sm hover:border-blue-400 hover:shadow-md">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-          </div>
-          <span class="text-xs font-semibold text-blue-600 uppercase tracking-wide">Tuần</span>
-        </div>
-        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Week 0</h3>
-        <p class="text-sm text-slate-600">Ghi chú và bài tập</p>
-        <div class="mt-4 flex items-center text-blue-600 text-sm font-medium">
-          <span>Xem tuần học</span>
-          <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </div>
-      </a>
+      <p class="text-slate-700 mb-4 leading-relaxed">
+        Nộp bài tập và dự án cuối khóa để nhận phản hồi. Sử dụng hệ thống nộp bài để gửi các bài tập của bạn.
+      </p>
       
-      <a href="/courses/cs50/weeks/1/" class="group block bg-white rounded-xl border border-blue-200 p-6 card-hover shadow-sm hover:border-blue-400 hover:shadow-md">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
-            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-          </div>
-          <span class="text-xs font-semibold text-blue-600 uppercase tracking-wide">Tuần</span>
-        </div>
-        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Week 1</h3>
-        <p class="text-sm text-slate-600">Ghi chú và bài tập</p>
-        <div class="mt-4 flex items-center text-blue-600 text-sm font-medium">
-          <span>Xem tuần học</span>
-          <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </div>
-      </a>
-      
+      <ul class="text-slate-700 mb-4 space-y-2 list-disc list-inside">
+        <li>Nộp bài tập qua hệ thống để được đánh giá</li>
+        <li>Nộp dự án cuối khóa để hoàn thành khóa học</li>
+        <li>Sử dụng sidebar bên trái để điều hướng giữa các tuần học</li>
+      </ul>
     </div>
-  </div>
+  </main>
 </div>
 
   </main>
-  <footer class="bg-gradient-to-r from-slate-900 to-slate-800 mt-auto text-white w-full">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-        <div>
-          <h3 class="text-lg font-bold mb-4">UET Learning Course</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Hệ thống học tập hiện đại với nội dung chất lượng cao</p>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-4 text-base sm:text-lg">Liên kết</h4>
-          <ul class="space-y-2 text-sm text-slate-400">
-            <li><a href="/courses/" class="hover:text-white transition-colors">Khóa học</a></li>
-            <li><a href="/about/" class="hover:text-white transition-colors">Giới thiệu</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-4 text-base sm:text-lg">Thông tin</h4>
-          <p class="text-sm text-slate-400">© 2025 UET Learning Course</p>
-          <p class="text-sm text-slate-400 mt-2">Được xây dựng với ❤️ cho sinh viên</p>
-        </div>
-      </div>
-    </div>
-  </footer>
   <script>try{ if(window.mermaid){ window.mermaid.initialize({ startOnLoad: true, theme: 'default' }); }}catch(e){}</script>
 </body>
 </html>

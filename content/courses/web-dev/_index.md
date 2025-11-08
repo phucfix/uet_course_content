@@ -1,6 +1,6 @@
 ---
 title: "Web Development"
-type: "weeks-list"
+type: "course-welcome"
 description: "Học phát triển web với HTML, CSS, JavaScript và các framework hiện đại"
 url: "/courses/web-dev/"
 ---

@@ -1,6 +1,6 @@
 ---
-title: "UET Learning - Introduction to Computer Science"
-type: "weeks-list"
+title: "Introduction to Computer Science"
+type: "course-welcome"
 description: "Giới thiệu về Khoa học Máy tính"
 url: "/courses/cs50/"
 ---

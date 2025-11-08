@@ -1,6 +1,6 @@
 ---
 title: "Database Systems"
-type: "weeks-list"
+type: "course-welcome"
 description: "Học về hệ thống cơ sở dữ liệu, SQL và database design"
 url: "/courses/database/"
 ---

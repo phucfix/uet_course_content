@@ -22,7 +22,7 @@
       height: 100%;
     }
     body {
-      background: linear-gradient(to bottom, #f8fafc 0%, #ffffff 100%);
+      background: #ffffff;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -113,33 +113,8 @@
   </style>
 </head>
 <body class="min-h-screen text-slate-900">
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/50 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="/" class="text-slate-900 text-xl font-bold tracking-tight hover:text-blue-600 transition-colors flex items-center gap-2">
-          <span class="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">UET Learning Course</span>
-        </a>
-        <nav class="hidden md:flex items-center gap-6">
-          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/">Trang chủ</a>
-          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/courses/">Khóa học</a>
-          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/about/">Giới thiệu</a>
-        </nav>
-        <button class="md:hidden text-slate-600 hover:text-slate-900" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-      <div id="mobile-menu" class="hidden md:hidden pb-4">
-        <nav class="flex flex-col gap-3">
-          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/">Trang chủ</a>
-          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/courses/">Khóa học</a>
-          <a class="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm" href="/about/">Giới thiệu</a>
-        </nav>
-      </div>
-    </div>
-  </header>
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 flex-grow">
+  
+  <main class="flex-grow">
     
 <h1 class="text-2xl font-semibold mb-6">Week 2 Problem Sets</h1>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,28 +127,6 @@
 </div>
 
   </main>
-  <footer class="bg-gradient-to-r from-slate-900 to-slate-800 mt-auto text-white w-full">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-        <div>
-          <h3 class="text-lg font-bold mb-4">UET Learning Course</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Hệ thống học tập hiện đại với nội dung chất lượng cao</p>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-4 text-base sm:text-lg">Liên kết</h4>
-          <ul class="space-y-2 text-sm text-slate-400">
-            <li><a href="/courses/" class="hover:text-white transition-colors">Khóa học</a></li>
-            <li><a href="/about/" class="hover:text-white transition-colors">Giới thiệu</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-4 text-base sm:text-lg">Thông tin</h4>
-          <p class="text-sm text-slate-400">© 2025 UET Learning Course</p>
-          <p class="text-sm text-slate-400 mt-2">Được xây dựng với ❤️ cho sinh viên</p>
-        </div>
-      </div>
-    </div>
-  </footer>
   <script>try{ if(window.mermaid){ window.mermaid.initialize({ startOnLoad: true, theme: 'default' }); }}catch(e){}</script>
 </body>
 </html>

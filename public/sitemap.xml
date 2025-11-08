@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>//localhost:1313/courses/cs50ai/</loc>
+  </url><url>
     <loc>//localhost:1313/courses/python/week1/psets/calculator/</loc>
   </url><url>
     <loc>//localhost:1313/courses/cs50/weeks/1/psets/cash/</loc>
@@ -18,6 +20,8 @@
   </url><url>
     <loc>//localhost:1313/courses/python/week1/psets/guess_number/</loc>
   </url><url>
+    <loc>//localhost:1313/courses/cs50/</loc>
+  </url><url>
     <loc>//localhost:1313/courses/database/week1/psets/library_system/</loc>
   </url><url>
     <loc>//localhost:1313/courses/cs50/weeks/0/psets/mario/</loc>
@@ -28,33 +32,29 @@
   </url><url>
     <loc>//localhost:1313/courses/cs50/weeks/0/psets/scratch/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50ai/</loc>
-  </url><url>
-    <loc>//localhost:1313/courses/cs50/</loc>
-  </url><url>
     <loc>//localhost:1313/</loc>
   </url><url>
     <loc>//localhost:1313/courses/web-dev/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/weeks/0/</loc>
+    <loc>//localhost:1313/courses/cs50/week0/</loc>
   </url><url>
     <loc>//localhost:1313/courses/cs50/weeks/0/notes/</loc>
   </url><url>
     <loc>//localhost:1313/courses/cs50/weeks/0/psets/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/weeks/1/</loc>
+    <loc>//localhost:1313/courses/cs50/week1/</loc>
   </url><url>
     <loc>//localhost:1313/courses/cs50/weeks/1/notes/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/web-dev/weeks/1/</loc>
+    <loc>//localhost:1313/courses/web-dev/week1/</loc>
   </url><url>
     <loc>//localhost:1313/courses/web-dev/weeks/1/notes/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/database/weeks/1/</loc>
+    <loc>//localhost:1313/courses/database/week1/</loc>
   </url><url>
     <loc>//localhost:1313/courses/database/weeks/1/notes/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/python/weeks/1/</loc>
+    <loc>//localhost:1313/courses/python/week1/</loc>
   </url><url>
     <loc>//localhost:1313/courses/python/weeks/1/notes/</loc>
   </url><url>
@@ -66,7 +66,7 @@
   </url><url>
     <loc>//localhost:1313/courses/web-dev/weeks/1/psets/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/python/weeks/2/</loc>
+    <loc>//localhost:1313/courses/python/week2/</loc>
   </url><url>
     <loc>//localhost:1313/courses/python/weeks/2/notes/</loc>
   </url><url>
