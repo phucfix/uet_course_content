@@ -38,6 +38,14 @@
   </url><url>
     <loc>//localhost:1313/courses/cs50/week0/</loc>
   </url><url>
+    <loc>//localhost:1313/courses/cs50ai/week0/</loc>
+  </url><url>
+    <loc>//localhost:1313/courses/database/week0/</loc>
+  </url><url>
+    <loc>//localhost:1313/courses/python/week0/</loc>
+  </url><url>
+    <loc>//localhost:1313/courses/web-dev/week0/</loc>
+  </url><url>
     <loc>//localhost:1313/courses/cs50/weeks/0/notes/</loc>
   </url><url>
     <loc>//localhost:1313/courses/cs50/weeks/0/psets/</loc>
