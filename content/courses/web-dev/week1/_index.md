@@ -5,5 +5,6 @@ course: "Web Development"
 type: "week-with-sidebar"
 url: "/courses/web-dev/week1/"
 description: "Học HTML và CSS cơ bản để tạo trang web"
+youtube: "https://youtu.be/example"
 ---
 

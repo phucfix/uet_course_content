@@ -5,5 +5,7 @@ course: "Web Development"
 type: "week-with-sidebar"
 url: "/courses/web-dev/week0/"
 description: "Giới thiệu về phát triển web và các công cụ cần thiết"
+youtube: "https://youtu.be/example"
 ---
+
 

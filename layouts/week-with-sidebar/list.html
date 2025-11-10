@@ -1,9 +1,10 @@
 {{ define "main" }}
+{{ partial "mobile-navbar.html" . }}
 <div class="flex">
   {{ partial "course-sidebar.html" . }}
   
   <!-- Main Content -->
-  <main class="flex-1 ml-64 p-12 max-w-4xl">
+  <main class="flex-1 ml-0 lg:ml-80 p-6 lg:p-12 max-w-3xl">
     {{ $course := .Params.course }}
     {{ $week := .Params.week }}
     
@@ -11,6 +12,19 @@
     {{ with .Params.description }}
       <p class="text-slate-700 mb-8 leading-relaxed">{{ . }}</p>
     {{ end }}
+
+    <!-- Lecture Video -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold text-slate-900 mb-4">Lecture Video</h2>
+      {{ if .Params.youtube }}
+        <a href="{{ .Params.youtube }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">
+          Watch on YouTube
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M10 15l5-3-5-3v6z"></path><path d="M21 12c0-1.657-.336-3.314-.336-3.314a3.998 3.998 0 00-2.829-2.829C15.52 5.333 12 5.333 12 5.333s-3.52 0-5.005.524A3.998 3.998 0 004.166 8.686S3.83 10.343 3.83 12s.336 3.314.336 3.314a3.998 3.998 0 002.829 2.829C8.48 18.667 12 18.667 12 18.667s3.52 0 5.005-.524a3.998 3.998 0 002.829-2.829S21 13.657 21 12z"></path></svg>
+        </a>
+      {{ else }}
+        <p class="text-slate-600">Video sẽ sớm được cập nhật. Tạm thời bạn có thể dùng placeholder: <a class="text-blue-600 underline" href="https://youtu.be/example" target="_blank" rel="noopener noreferrer">https://youtu.be/example</a></p>
+      {{ end }}
+    </div>
 
     <!-- Notes Section -->
     {{ $notes := first 1 (where .Pages "Type" "notes") }}

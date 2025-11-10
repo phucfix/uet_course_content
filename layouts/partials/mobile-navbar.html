@@ -1,0 +1,99 @@
+<!-- Mobile Navbar (in-flow, sticky) -->
+<div class="lg:hidden sticky top-0 inset-x-0 bg-slate-900 text-white z-30">
+  <div class="h-12 flex items-center justify-between px-4">
+    <span class="text-sm font-semibold truncate">{{ .Title }}</span>
+    <button id="toggleMobileMenu" class="px-3 py-1.5 rounded bg-slate-800 text-white text-sm">Menu</button>
+  </div>
+  <div id="mobileMenu" class="hidden border-t border-slate-800">
+    <div class="p-4 space-y-6">
+      <!-- Course Info -->
+      <div>
+        {{ with .Params.description }}
+          <p class="text-slate-300 text-sm leading-relaxed">{{ . }}</p>
+        {{ end }}
+      </div>
+
+      <!-- Courses -->
+      <div>
+        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Courses</h2>
+        <nav class="space-y-1">
+          {{ $courses := site.GetPage "section" "courses" }}
+          {{ if $courses }}
+            {{ range $courses.Sections }}
+              <a href="{{ .RelPermalink }}" class="block py-1.5 text-sm text-slate-300 hover:text-white {{ if eq .RelPermalink $.RelPermalink }}text-white font-semibold{{ end }}">{{ .Title }}</a>
+            {{ end }}
+          {{ end }}
+        </nav>
+      </div>
+
+      <!-- Tools -->
+      <div>
+        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Tools</h2>
+        <nav class="space-y-1">
+          <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="block py-1.5 text-sm text-slate-300 hover:text-white">Visual Studio Code</a>
+        </nav>
+      </div>
+
+      <!-- Weeks -->
+      <div>
+        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Weeks</h2>
+        {{ $currentPage := . }}
+        {{ $coursePage := . }}
+        {{ if ne .Type "course-welcome" }}
+          {{ $coursePage = .Parent }}
+          {{ if and $coursePage (ne $coursePage.Type "course-welcome") }}
+            {{ $coursePage = $coursePage.Parent }}
+          {{ end }}
+          {{ if $coursePage }}
+            <a href="{{ $coursePage.RelPermalink }}" class="block py-1.5 text-sm text-slate-300 hover:text-white mb-1">Welcome</a>
+          {{ end }}
+        {{ end }}
+        {{ $courseWeeks := slice }}
+        {{ $weekMap := dict }}
+        {{ if $coursePage }}
+          {{ range $coursePage.Sections }}
+            {{ if eq .Type "week-with-sidebar" }}
+              {{ $weekNum := .Params.week }}
+              {{ if or (eq $weekNum 0) $weekNum }}
+                {{ $weekKey := printf "%d" $weekNum }}
+                {{ if not (index $weekMap $weekKey) }}
+                  {{ $courseWeeks = $courseWeeks | append . }}
+                  {{ $weekMap = merge $weekMap (dict $weekKey true) }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        {{ if $courseWeeks }}
+          <nav class="space-y-1">
+            {{ range sort $courseWeeks "Params.week" "asc" }}
+              <a href="{{ .RelPermalink }}" class="block py-1.5 text-sm text-slate-300 hover:text-white {{ if eq .RelPermalink $currentPage.RelPermalink }}text-white font-semibold{{ end }}">{{ .Title }}</a>
+            {{ end }}
+          </nav>
+        {{ else }}
+          <p class="text-xs text-slate-500 py-1.5">Chưa có tuần học</p>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const toggleBtn = document.getElementById('toggleMobileMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (toggleBtn && mobileMenu) {
+      toggleBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+      document.addEventListener('click', function(e) {
+        const t = e.target;
+        if (!mobileMenu.classList.contains('hidden')) {
+          if (!t.closest('#mobileMenu') && !t.closest('#toggleMobileMenu')) {
+            mobileMenu.classList.add('hidden');
+          }
+        }
+      });
+    }
+  })();
+</script>

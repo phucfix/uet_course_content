@@ -5,5 +5,6 @@ course: "Python Programming"
 type: "week-with-sidebar"
 url: "/courses/python/week2/"
 description: "Học về functions nâng cao, modules và packages"
+youtube: "https://youtu.be/example"
 ---
 

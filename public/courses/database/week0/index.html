@@ -96,6 +96,12 @@
       background: #f8fafc;
       font-weight: 600;
     }
+    .prose hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+      margin: 2rem 0;
+    }
     .card-hover {
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -116,58 +122,151 @@
   
   <main class="flex-grow">
     
+
+<div class="lg:hidden sticky top-0 inset-x-0 bg-slate-900 text-white z-30">
+  <div class="h-12 flex items-center justify-between px-4">
+    <span class="text-sm font-semibold truncate">Week 0</span>
+    <button id="toggleMobileMenu" class="px-3 py-1.5 rounded bg-slate-800 text-white text-sm">Menu</button>
+  </div>
+  <div id="mobileMenu" class="hidden border-t border-slate-800">
+    <div class="p-4 space-y-6">
+      
+      <div>
+        
+          <p class="text-slate-300 text-sm leading-relaxed">Giới thiệu về cơ sở dữ liệu và các khái niệm cơ bản</p>
+        
+      </div>
+
+      
+      <div>
+        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Courses</h2>
+        <nav class="space-y-1">
+          
+          
+            
+              <a href="/courses/cs50ai/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Artificial Intelligence</a>
+            
+              <a href="/courses/database/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Database Systems</a>
+            
+              <a href="/courses/cs50/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Introduction to Computer Science</a>
+            
+              <a href="/courses/python/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Python Programming</a>
+            
+              <a href="/courses/web-dev/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Web Development</a>
+            
+          
+        </nav>
+      </div>
+
+      
+      <div>
+        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Tools</h2>
+        <nav class="space-y-1">
+          <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="block py-1.5 text-sm text-slate-300 hover:text-white">Visual Studio Code</a>
+        </nav>
+      </div>
+
+      
+      <div>
+        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Weeks</h2>
+        
+        
+        
+          
+          
+          
+            <a href="/courses/database/" class="block py-1.5 text-sm text-slate-300 hover:text-white mb-1">Welcome</a>
+          
+        
+        
+        
+        
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+        
+        
+          <nav class="space-y-1">
+            
+              <a href="/courses/database/week0/" class="block py-1.5 text-sm text-slate-300 hover:text-white text-white font-semibold">Week 0</a>
+            
+              <a href="/courses/database/week1/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 1 - Introduction to Databases</a>
+            
+          </nav>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const toggleBtn = document.getElementById('toggleMobileMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (toggleBtn && mobileMenu) {
+      toggleBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+      document.addEventListener('click', function(e) {
+        const t = e.target;
+        if (!mobileMenu.classList.contains('hidden')) {
+          if (!t.closest('#mobileMenu') && !t.closest('#toggleMobileMenu')) {
+            mobileMenu.classList.add('hidden');
+          }
+        }
+      });
+    }
+  })();
+</script>
+
 <div class="flex">
   
-<aside class="w-64 flex-shrink-0 bg-slate-900 text-white min-h-screen fixed left-0 top-0 overflow-y-auto">
-  <div class="p-6">
+<aside class="hidden lg:block w-80 flex-shrink-0 bg-slate-900 text-white min-h-screen left-0 top-0 overflow-y-auto">
+  <div class="p-6 space-y-8">
     
-    <div class="mb-8">
-      <a href="/" class="block mb-2">
-        <h1 class="text-2xl font-bold text-white mb-1">UET Learning</h1>
-        <p class="text-sm text-slate-300">Week 0</p>
-      </a>
+    <div>
+      <h1 class="text-2xl font-bold leading-snug">Week 0</h1>
+      
+        <p class="text-slate-300 text-sm mt-2 leading-relaxed">Giới thiệu về cơ sở dữ liệu và các khái niệm cơ bản</p>
+      
     </div>
 
     
-    <div class="mb-8">
+    <div>
+      <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Courses</h2>
       <nav class="space-y-1">
         
         
           
-            <a 
-              href="/courses/cs50ai/" 
-              class="block py-2 text-sm text-slate-300 hover:text-white hover:underline "
-            >
-              Artificial Intelligence
-            </a>
+            <a href="/courses/cs50ai/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Artificial Intelligence</a>
           
-            <a 
-              href="/courses/database/" 
-              class="block py-2 text-sm text-slate-300 hover:text-white hover:underline "
-            >
-              Database Systems
-            </a>
+            <a href="/courses/database/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Database Systems</a>
           
-            <a 
-              href="/courses/cs50/" 
-              class="block py-2 text-sm text-slate-300 hover:text-white hover:underline "
-            >
-              Introduction to Computer Science
-            </a>
+            <a href="/courses/cs50/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Introduction to Computer Science</a>
           
-            <a 
-              href="/courses/python/" 
-              class="block py-2 text-sm text-slate-300 hover:text-white hover:underline "
-            >
-              Python Programming
-            </a>
+            <a href="/courses/python/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Python Programming</a>
           
-            <a 
-              href="/courses/web-dev/" 
-              class="block py-2 text-sm text-slate-300 hover:text-white hover:underline "
-            >
-              Web Development
-            </a>
+            <a href="/courses/web-dev/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Web Development</a>
           
         
       </nav>
@@ -175,34 +274,31 @@
 
     
     <div>
-      
-      
-      
-      
-        
-        
-        
-        
-        
-        
-          <a 
-            href="/courses/database/" 
-            class="block py-2 text-sm text-slate-300 hover:text-white hover:underline mb-4"
-          >
-            Welcome
-          </a>
-        
-      
-      
+      <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Tools</h2>
+      <nav class="space-y-1">
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="block py-1.5 text-sm text-slate-300 hover:text-white">Visual Studio Code</a>
+      </nav>
+    </div>
+
+    
+    <div>
+      <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Weeks</h2>
       
       
       
         
+        
+        
+          <a href="/courses/database/" class="block py-1.5 text-sm text-slate-300 hover:text-white mb-1">Welcome</a>
+        
+      
+      
+      
+      
         
           
             
             
-              
               
               
                 
@@ -216,31 +312,19 @@
             
               
               
-              
                 
                 
               
             
           
         
-      
       
       
         <nav class="space-y-1">
           
-            <a 
-              href="/courses/database/week0/" 
-              class="block py-2 text-sm text-slate-300 hover:text-white hover:underline text-white underline"
-            >
-              Week 0
-            </a>
+            <a href="/courses/database/week0/" class="block py-1.5 text-sm text-slate-300 hover:text-white text-white font-semibold">Week 0</a>
           
-            <a 
-              href="/courses/database/week1/" 
-              class="block py-2 text-sm text-slate-300 hover:text-white hover:underline "
-            >
-              Week 1 - Introduction to Databases
-            </a>
+            <a href="/courses/database/week1/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 1 - Introduction to Databases</a>
           
         </nav>
       
@@ -250,7 +334,7 @@
 
   
   
-  <main class="flex-1 ml-64 p-12 max-w-4xl">
+  <main class="flex-1 ml-0 lg:ml-80 p-6 lg:p-12 max-w-3xl">
     
     
     
@@ -258,6 +342,17 @@
     
       <p class="text-slate-700 mb-8 leading-relaxed">Giới thiệu về cơ sở dữ liệu và các khái niệm cơ bản</p>
     
+
+    
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold text-slate-900 mb-4">Lecture Video</h2>
+      
+        <a href="https://youtu.be/example" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">
+          Watch on YouTube
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M10 15l5-3-5-3v6z"></path><path d="M21 12c0-1.657-.336-3.314-.336-3.314a3.998 3.998 0 00-2.829-2.829C15.52 5.333 12 5.333 12 5.333s-3.52 0-5.005.524A3.998 3.998 0 004.166 8.686S3.83 10.343 3.83 12s.336 3.314.336 3.314a3.998 3.998 0 002.829 2.829C8.48 18.667 12 18.667 12 18.667s3.52 0 5.005-.524a3.998 3.998 0 002.829-2.829S21 13.657 21 12z"></path></svg>
+        </a>
+      
+    </div>
 
     
     

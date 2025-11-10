@@ -5,5 +5,6 @@ course: "Database Systems"
 type: "week-with-sidebar"
 url: "/courses/database/week1/"
 description: "Giới thiệu về databases, SQL và cơ bản về database design"
+youtube: "https://youtu.be/example"
 ---
 

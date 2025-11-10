@@ -5,5 +5,7 @@ course: "Python Programming"
 type: "week-with-sidebar"
 url: "/courses/python/week0/"
 description: "Giới thiệu về Python và môi trường phát triển"
+youtube: "https://youtu.be/example"
 ---
+
 

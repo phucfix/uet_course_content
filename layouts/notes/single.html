@@ -1,36 +1,18 @@
 {{ define "main" }}
-<div class="fade-in">
-  <nav class="flex flex-wrap items-center text-xs sm:text-sm text-slate-500 mb-6 sm:mb-8" aria-label="Breadcrumb">
-    <a class="hover:text-blue-600 transition-colors" href="/">Trang chủ</a>
-    <svg class="w-4 h-4 mx-2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-    </svg>
-    <a class="hover:text-blue-600 transition-colors" href="/courses/">Khóa học</a>
-    {{ with .CurrentSection.Parent }}
-    <svg class="w-4 h-4 mx-2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-    </svg>
-    <a class="hover:text-blue-600 transition-colors" href="{{ .RelPermalink }}">{{ .Title }}</a>
+{{ partial "mobile-navbar.html" . }}
+<div class="flex">
+  {{ partial "course-sidebar.html" . }}
+  
+  <!-- Main Content -->
+  <main class="flex-1 ml-0 lg:ml-80 p-6 lg:ml-80 lg:p-12 max-w-3xl">
+    <h1 class="text-4xl font-bold text-slate-900 mb-6">{{ .Title }}</h1>
+    {{ with .Params.week }}
+      <p class="text-slate-600 mb-6">Week {{ . }}</p>
     {{ end }}
-    <svg class="w-4 h-4 mx-2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-    </svg>
-    <span class="text-slate-700 font-medium">Ghi chú Tuần {{ .Params.week }}</span>
-  </nav>
 
-  <article class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 sm:p-6 lg:p-8 xl:p-12">
-    <div class="mb-6 sm:mb-8 pb-4 sm:pb-6 border-b border-slate-200">
-      <div class="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-50 text-blue-700 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
-        <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-        </svg>
-        <span>Tuần {{ .Params.week }}</span>
-      </div>
-      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-2 sm:mb-3">{{ .Title }}</h1>
-    </div>
     <div class="prose prose-lg max-w-none">
       {{ .Content }}
     </div>
-  </article>
+  </main>
 </div>
 {{ end }}

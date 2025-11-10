@@ -1,9 +1,10 @@
 {{ define "main" }}
+{{ partial "mobile-navbar.html" . }}
 <div class="flex">
   {{ partial "course-sidebar.html" . }}
   
   <!-- Main Content -->
-  <main class="flex-1 ml-64 p-12 max-w-4xl">
+  <main class="flex-1 ml-0 lg:ml-80 p-6 lg:p-12 max-w-3xl">
     <!-- Welcome Section -->
     <h1 class="text-4xl font-bold text-slate-900 mb-6">Welcome</h1>
     
