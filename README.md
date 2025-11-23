@@ -56,3 +56,5 @@ hugo -D -b "https://phucfix.github.io/uet_course_content/"
 
 ## Requirements
 - Hugo (latest) for local dev: https://gohugo.io/getting-started/installing/
+## CS50-like theme (lightweight)
+

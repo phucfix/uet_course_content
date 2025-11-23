@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Week 1 Problem Sets on UET Learning Course</title>
-    <link>//localhost:1313/courses/python/weeks/1/psets/</link>
+    <link>/courses/python/weeks/1/psets/</link>
     <description>Recent content in Week 1 Problem Sets on UET Learning Course</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:1313/courses/python/weeks/1/psets/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/courses/python/weeks/1/psets/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Calculator</title>
-      <link>//localhost:1313/courses/python/week1/psets/calculator/</link>
+      <link>/courses/python/week1/psets/calculator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/courses/python/week1/psets/calculator/</guid>
+      <guid>/courses/python/week1/psets/calculator/</guid>
       <description>&lt;h1 id=&#34;calculator&#34;&gt;Calculator&lt;/h1&gt;&#xA;&lt;p&gt;Viết một chương trình máy tính đơn giản có thể thực hiện các phép toán cơ bản.&lt;/p&gt;&#xA;&lt;h2 id=&#34;yêu-cầu&#34;&gt;Yêu cầu&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Nhận hai số từ người dùng&lt;/li&gt;&#xA;&lt;li&gt;Nhận phép toán (+, -, *, /)&lt;/li&gt;&#xA;&lt;li&gt;Tính toán và hiển thị kết quả&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;ví-dụ&#34;&gt;Ví dụ&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&#xA;&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;4&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Nhập số thứ nhất: &lt;span style=&#34;color:#bd93f9&#34;&gt;10&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Nhập số thứ hai: &lt;span style=&#34;color:#bd93f9&#34;&gt;5&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Nhập phép toán (&lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;): &lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Kết quả: &lt;span style=&#34;color:#bd93f9&#34;&gt;15&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h2 id=&#34;gợi-ý&#34;&gt;Gợi ý&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sử dụng &lt;code&gt;input()&lt;/code&gt; để nhận dữ liệu từ người dùng&lt;/li&gt;&#xA;&lt;li&gt;Sử dụng &lt;code&gt;if-elif-else&lt;/code&gt; để xử lý các phép toán khác nhau&lt;/li&gt;&#xA;&lt;li&gt;Xử lý trường hợp chia cho 0&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Guess the Number</title>
-      <link>//localhost:1313/courses/python/week1/psets/guess_number/</link>
+      <link>/courses/python/week1/psets/guess_number/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/courses/python/week1/psets/guess_number/</guid>
+      <guid>/courses/python/week1/psets/guess_number/</guid>
       <description>&lt;h1 id=&#34;guess-the-number&#34;&gt;Guess the Number&lt;/h1&gt;&#xA;&lt;p&gt;Viết một trò chơi đoán số, nơi máy tính chọn một số ngẫu nhiên và người chơi phải đoán.&lt;/p&gt;&#xA;&lt;h2 id=&#34;yêu-cầu&#34;&gt;Yêu cầu&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Máy tính chọn một số ngẫu nhiên từ 1 đến 100&lt;/li&gt;&#xA;&lt;li&gt;Người chơi nhập số đoán&lt;/li&gt;&#xA;&lt;li&gt;Máy tính cho biết số đoán lớn hơn hay nhỏ hơn số đúng&lt;/li&gt;&#xA;&lt;li&gt;Lặp lại cho đến khi đoán đúng&lt;/li&gt;&#xA;&lt;li&gt;Đếm số lần đoán&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;ví-dụ&#34;&gt;Ví dụ&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Tôi đang nghĩ về một số từ 1 đến 100...&#xA;Đoán số của tôi: 50&#xA;Quá lớn! Hãy thử lại: 25&#xA;Quá nhỏ! Hãy thử lại: 35&#xA;Đúng rồi! Bạn đã đoán đúng sau 3 lần!&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;gợi-ý&#34;&gt;Gợi ý&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sử dụng &lt;code&gt;random.randint()&lt;/code&gt; để tạo số ngẫu nhiên&lt;/li&gt;&#xA;&lt;li&gt;Sử dụng vòng lặp &lt;code&gt;while&lt;/code&gt; để tiếp tục cho đến khi đoán đúng&lt;/li&gt;&#xA;&lt;li&gt;Sử dụng biến đếm để theo dõi số lần đoán&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

@@ -1,11 +1,10 @@
-<!-- Mobile Navbar (in-flow, sticky) -->
-<div class="lg:hidden sticky top-0 inset-x-0 bg-slate-900 text-white z-30">
+<!-- Mobile Navbar (in-flow) -->
+<div class="lg:hidden inset-x-0 bg-slate-900 text-white z-30">
   <div class="h-12 flex items-center justify-between px-4">
-    <span class="text-sm font-semibold truncate">{{ .Title }}</span>
     <button id="toggleMobileMenu" class="px-3 py-1.5 rounded bg-slate-800 text-white text-sm">Menu</button>
   </div>
   <div id="mobileMenu" class="hidden border-t border-slate-800">
-    <div class="p-4 space-y-6">
+    <div class="p-4 space-y-6 max-h-[55vh] overflow-auto">
       <!-- Course Info -->
       <div>
         {{ with .Params.description }}
@@ -14,7 +13,7 @@
       </div>
 
       <!-- Courses -->
-      <div>
+  <div>
         <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Courses</h2>
         <nav class="space-y-1">
           {{ $courses := site.GetPage "section" "courses" }}
@@ -24,7 +23,7 @@
             {{ end }}
           {{ end }}
         </nav>
-      </div>
+  </div>
 
       <!-- Tools -->
       <div>
@@ -49,12 +48,15 @@
           {{ end }}
         {{ end }}
         {{ $courseWeeks := slice }}
+        {{ $finalWeek := false }}
         {{ $weekMap := dict }}
         {{ if $coursePage }}
           {{ range $coursePage.Sections }}
             {{ if eq .Type "week-with-sidebar" }}
               {{ $weekNum := .Params.week }}
-              {{ if or (eq $weekNum 0) $weekNum }}
+              {{ if eq $weekNum 999 }}
+                {{ $finalWeek = . }}
+              {{ else if or (eq $weekNum 0) $weekNum }}
                 {{ $weekKey := printf "%d" $weekNum }}
                 {{ if not (index $weekMap $weekKey) }}
                   {{ $courseWeeks = $courseWeeks | append . }}
@@ -64,10 +66,13 @@
             {{ end }}
           {{ end }}
         {{ end }}
-        {{ if $courseWeeks }}
+        {{ if or $courseWeeks $finalWeek }}
           <nav class="space-y-1">
             {{ range sort $courseWeeks "Params.week" "asc" }}
               <a href="{{ .RelPermalink }}" class="block py-1.5 text-sm text-slate-300 hover:text-white {{ if eq .RelPermalink $currentPage.RelPermalink }}text-white font-semibold{{ end }}">{{ .Title }}</a>
+            {{ end }}
+            {{ if $finalWeek }}
+              <a href="{{ $finalWeek.RelPermalink }}" class="block py-1.5 text-sm text-slate-300 hover:text-white {{ if eq $finalWeek.RelPermalink $currentPage.RelPermalink }}text-white font-semibold{{ end }}">{{ $finalWeek.Title }}</a>
             {{ end }}
           </nav>
         {{ else }}
@@ -97,3 +102,4 @@
     }
   })();
 </script>
+

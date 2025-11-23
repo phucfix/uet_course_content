@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <style>
     :root { 
       --font-sans: 'PT Sans', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; 
@@ -27,20 +29,49 @@
       display: flex;
       flex-direction: column;
     }
+    /* CS50-style code blocks: light gray background */
+    pre {
+      background: #f1f5f9;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+      margin: 1.5em 0;
+    }
     pre code { 
       display: block; 
-      padding: 1.5rem; 
-      border-radius: 0.5rem; 
-      background: #1e293b;
-      color: #e2e8f0;
-      overflow-x: auto;
+      padding: 0;
+      background: transparent;
+      color: #0f172a;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9em;
+      line-height: 1.6;
     }
+    /* Inline code: light gray background */
     code {
       background: #f1f5f9;
       padding: 0.2rem 0.4rem;
       border-radius: 0.25rem;
       font-size: 0.875em;
-      color: #dc2626;
+      font-family: 'Courier New', Courier, monospace;
+      color: #0f172a;
+    }
+    /* Syntax highlighting: keywords and strings in red */
+    .hljs-keyword,
+    .hljs-string,
+    .hljs-title,
+    .hljs-built_in,
+    .hljs-function {
+      color: #dc2626 !important;
+    }
+    /* Comments in gray */
+    .hljs-comment {
+      color: #6b7280 !important;
+      font-style: italic;
+    }
+    /* Override highlight.js default background */
+    .hljs {
+      background: #f1f5f9 !important;
+      color: #0f172a !important;
     }
     pre code code {
       background: transparent;
@@ -118,23 +149,31 @@
     }
   </style>
 </head>
-<body class="min-h-screen text-slate-900">
-  {{ if or .IsHome (eq .Type "courses-root") }}
-  <header class="sticky top-0 z-50 bg-white border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="/" class="text-slate-900 text-xl font-bold">{{ .Site.Title }}</a>
-        <nav class="hidden md:flex items-center gap-6">
-          <a class="text-slate-600 hover:text-slate-900 text-sm" href="/">Trang chủ</a>
-          <a class="text-slate-600 hover:text-slate-900 text-sm" href="/courses/">Khóa học</a>
-        </nav>
-      </div>
+<body class="min-h-screen text-slate-900 bg-white">
+  {{ if not .IsHome }}
+  <header class="site-header">
+    <div class="site-header-inner">
+      <nav class="site-nav">
+        <a href="/">Trang chủ</a>
+        <a href="/courses/">Khóa học</a>
+      </nav>
     </div>
   </header>
   {{ end }}
-  <main class="flex-grow">
+  {{ partial "mobile-navbar.html" . }}
+  <main class="site-main">
     {{ block "main" . }}{{ end }}
   </main>
   <script>try{ if(window.mermaid){ window.mermaid.initialize({ startOnLoad: true, theme: 'default' }); }}catch(e){}</script>
+  <script>
+    // Initialize syntax highlighting
+    if (typeof hljs !== 'undefined') {
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('pre code').forEach(function(block) {
+          hljs.highlightElement(block);
+        });
+      });
+    }
+  </script>
 </body>
 </html>

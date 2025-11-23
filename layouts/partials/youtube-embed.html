@@ -1,0 +1,82 @@
+{{/* 
+  Partial để nhúng YouTube video
+  Usage: {{ partial "youtube-embed.html" (dict "url" "https://www.youtube.com/watch?v=VIDEO_ID") }}
+*/}}
+{{ $url := .url | default "" }}
+{{ $videoId := "" }}
+{{ $startTime := "" }}
+
+{{ if $url }}
+  {{ if hasPrefix $url "https://www.youtube.com/watch" }}
+    {{/* Parse https://www.youtube.com/watch?v=VIDEO_ID&t=START_TIME */}}
+    {{ $parts := split $url "?" }}
+    {{ if gt (len $parts) 1 }}
+      {{ $query := index $parts 1 }}
+      {{ $params := split $query "&" }}
+      {{ range $params }}
+        {{ $param := split . "=" }}
+        {{ if eq (index $param 0) "v" }}
+          {{ $videoId = index $param 1 }}
+        {{ end }}
+        {{ if eq (index $param 0) "t" }}
+          {{ $startTime = index $param 1 }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ else if hasPrefix $url "https://youtu.be/" }}
+    {{/* Parse https://youtu.be/VIDEO_ID?t=START_TIME */}}
+    {{ $parts := split $url "/" }}
+    {{ $lastPart := index $parts (sub (len $parts) 1) }}
+    {{ $idParts := split $lastPart "?" }}
+    {{ $videoId = index $idParts 0 }}
+    {{ if gt (len $idParts) 1 }}
+      {{ $query := index $idParts 1 }}
+      {{ $params := split $query "&" }}
+      {{ range $params }}
+        {{ $param := split . "=" }}
+        {{ if eq (index $param 0) "t" }}
+          {{ $startTime = index $param 1 }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ else }}
+    {{/* Assume it's just a video ID */}}
+    {{ $videoId = $url }}
+  {{ end }}
+{{ end }}
+
+{{ if $videoId }}
+  <!-- Embedded YouTube Video -->
+  <div class="relative w-full mb-4" style="padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000;">
+    <iframe 
+      class="absolute top-0 left-0 w-full h-full rounded-lg"
+      src="https://www.youtube.com/embed/{{ $videoId }}{{ if $startTime }}?start={{ $startTime }}{{ end }}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      loading="lazy"
+      title="YouTube video player">
+    </iframe>
+  </div>
+  <!-- Link to YouTube as fallback -->
+  <div class="mt-2">
+    <a href="{{ $url }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900">
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M10 15l5-3-5-3v6z"></path>
+        <path d="M21 12c0-1.657-.336-3.314-.336-3.314a3.998 3.998 0 00-2.829-2.829C15.52 5.333 12 5.333 12 5.333s-3.52 0-5.005.524A3.998 3.998 0 004.166 8.686S3.83 10.343 3.83 12s.336 3.314.336 3.314a3.998 3.998 0 002.829 2.829C8.48 18.667 12 18.667 12 18.667s3.52 0 5.005-.524a3.998 3.998 0 002.829-2.829S21 13.657 21 12z"></path>
+      </svg>
+      Xem trên YouTube
+    </a>
+  </div>
+{{ else }}
+  <!-- Fallback if URL parsing fails -->
+  <a href="{{ $url }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">
+    Watch on YouTube
+    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M10 15l5-3-5-3v6z"></path>
+      <path d="M21 12c0-1.657-.336-3.314-.336-3.314a3.998 3.998 0 00-2.829-2.829C15.52 5.333 12 5.333 12 5.333s-3.52 0-5.005.524A3.998 3.998 0 004.166 8.686S3.83 10.343 3.83 12s.336 3.314.336 3.314a3.998 3.998 0 002.829 2.829C8.48 18.667 12 18.667 12 18.667s3.52 0 5.005-.524a3.998 3.998 0 002.829-2.829S21 13.657 21 12z"></path>
+    </svg>
+  </a>
+{{ end }}
+
+

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Week 1 Problem Sets on UET Learning Course</title>
-    <link>//localhost:1313/courses/web-dev/weeks/1/psets/</link>
+    <link>/courses/web-dev/weeks/1/psets/</link>
     <description>Recent content in Week 1 Problem Sets on UET Learning Course</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:1313/courses/web-dev/weeks/1/psets/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/courses/web-dev/weeks/1/psets/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Personal Portfolio</title>
-      <link>//localhost:1313/courses/web-dev/week1/psets/portfolio/</link>
+      <link>/courses/web-dev/week1/psets/portfolio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/courses/web-dev/week1/psets/portfolio/</guid>
+      <guid>/courses/web-dev/week1/psets/portfolio/</guid>
       <description>&lt;h1 id=&#34;personal-portfolio&#34;&gt;Personal Portfolio&lt;/h1&gt;&#xA;&lt;p&gt;Xây dựng một trang portfolio cá nhân sử dụng HTML và CSS.&lt;/p&gt;&#xA;&lt;h2 id=&#34;yêu-cầu&#34;&gt;Yêu cầu&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Header&lt;/strong&gt;: Navigation bar với menu&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Hero Section&lt;/strong&gt;: Giới thiệu về bản thân với hình ảnh&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;About Section&lt;/strong&gt;: Thông tin về kỹ năng và kinh nghiệm&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Projects Section&lt;/strong&gt;: Hiển thị các dự án (có thể dùng placeholder)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Contact Section&lt;/strong&gt;: Form liên hệ&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Footer&lt;/strong&gt;: Thông tin liên hệ và social media links&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;yêu-cầu-css&#34;&gt;Yêu cầu CSS&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Responsive design (mobile, tablet, desktop)&lt;/li&gt;&#xA;&lt;li&gt;Sử dụng Flexbox hoặc Grid&lt;/li&gt;&#xA;&lt;li&gt;Màu sắc và typography đẹp mắt&lt;/li&gt;&#xA;&lt;li&gt;Hover effects&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;gợi-ý&#34;&gt;Gợi ý&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sử dụng semantic HTML5 tags&lt;/li&gt;&#xA;&lt;li&gt;Tổ chức CSS theo BEM methodology&lt;/li&gt;&#xA;&lt;li&gt;Sử dụng CSS variables cho colors&lt;/li&gt;&#xA;&lt;li&gt;Thêm animations cho các elements&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

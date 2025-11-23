@@ -45,12 +45,15 @@
         {{ end }}
       {{ end }}
       {{ $courseWeeks := slice }}
+      {{ $finalWeek := false }}
       {{ $weekMap := dict }}
       {{ if $coursePage }}
         {{ range $coursePage.Sections }}
           {{ if eq .Type "week-with-sidebar" }}
             {{ $weekNum := .Params.week }}
-            {{ if or (eq $weekNum 0) $weekNum }}
+            {{ if eq $weekNum 999 }}
+              {{ $finalWeek = . }}
+            {{ else if or (eq $weekNum 0) $weekNum }}
               {{ $weekKey := printf "%d" $weekNum }}
               {{ if not (index $weekMap $weekKey) }}
                 {{ $courseWeeks = $courseWeeks | append . }}
@@ -60,10 +63,13 @@
           {{ end }}
         {{ end }}
       {{ end }}
-      {{ if $courseWeeks }}
+      {{ if or $courseWeeks $finalWeek }}
         <nav class="space-y-1">
           {{ range sort $courseWeeks "Params.week" "asc" }}
             <a href="{{ .RelPermalink }}" class="block py-1.5 text-sm text-slate-300 hover:text-white {{ if eq .RelPermalink $currentPage.RelPermalink }}text-white font-semibold{{ end }}">{{ .Title }}</a>
+          {{ end }}
+          {{ if $finalWeek }}
+            <a href="{{ $finalWeek.RelPermalink }}" class="block py-1.5 text-sm text-slate-300 hover:text-white {{ if eq $finalWeek.RelPermalink $currentPage.RelPermalink }}text-white font-semibold{{ end }}">{{ $finalWeek.Title }}</a>
           {{ end }}
         </nav>
       {{ else }}

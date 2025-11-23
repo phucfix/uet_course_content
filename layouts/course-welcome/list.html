@@ -1,9 +1,11 @@
 {{ define "main" }}
 <div class="flex">
-  {{ partial "course-sidebar.html" . }}
+  {{ if not (or .IsHome (eq .Type "courses-root")) }}
+    {{ partial "course-sidebar.html" . }}
+  {{ end }}
   
   <!-- Main Content -->
-  <main class="flex-1 ml-64 p-12 max-w-4xl">
+  <main class="flex-1 ml-0 lg:ml-64 p-6 lg:p-12 max-w-4xl">
     <!-- Welcome Section -->
     <h1 class="text-4xl font-bold text-slate-900 mb-6">Welcome</h1>
     
@@ -79,6 +81,7 @@
   </main>
 </div>
 {{ end }}
+
 
 
 

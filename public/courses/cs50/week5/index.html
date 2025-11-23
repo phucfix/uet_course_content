@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Week 5 | UET Learning Course</title>
+  <meta property="og:title" content="Week 5 | UET Learning Course" />
+  
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <style>
+    :root { 
+      --font-sans: 'PT Sans', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; 
+    }
+    html { 
+      font-family: var(--font-sans); 
+      scroll-behavior: smooth;
+      height: 100%;
+    }
+    body {
+      background: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+     
+    pre {
+      background: #f1f5f9;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+      margin: 1.5em 0;
+    }
+    pre code { 
+      display: block; 
+      padding: 0;
+      background: transparent;
+      color: #0f172a;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9em;
+      line-height: 1.6;
+    }
+     
+    code {
+      background: #f1f5f9;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.25rem;
+      font-size: 0.875em;
+      font-family: 'Courier New', Courier, monospace;
+      color: #0f172a;
+    }
+     
+    .hljs-keyword,
+    .hljs-string,
+    .hljs-title,
+    .hljs-built_in,
+    .hljs-function {
+      color: #dc2626 !important;
+    }
+     
+    .hljs-comment {
+      color: #6b7280 !important;
+      font-style: italic;
+    }
+     
+    .hljs {
+      background: #f1f5f9 !important;
+      color: #0f172a !important;
+    }
+    pre code code {
+      background: transparent;
+      padding: 0;
+      color: inherit;
+    }
+    .prose {
+      color: #334155;
+      line-height: 1.75;
+    }
+    .prose h1, .prose h2, .prose h3, .prose h4 {
+      color: #0f172a;
+      font-weight: 700;
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
+    .prose h1 { font-size: 2.25em; }
+    .prose h2 { font-size: 1.875em; }
+    .prose h3 { font-size: 1.5em; }
+    .prose a {
+      color: #2563eb;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .prose a:hover {
+      border-bottom-color: #2563eb;
+    }
+    .prose ul, .prose ol {
+      margin: 1.5em 0;
+      padding-left: 1.625em;
+    }
+    .prose li {
+      margin: 0.5em 0;
+    }
+    .prose blockquote {
+      border-left: 4px solid #3b82f6;
+      padding-left: 1em;
+      margin: 1.5em 0;
+      color: #64748b;
+      font-style: italic;
+    }
+    .prose table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5em 0;
+    }
+    .prose th, .prose td {
+      border: 1px solid #e2e8f0;
+      padding: 0.75em;
+    }
+    .prose th {
+      background: #f8fafc;
+      font-weight: 600;
+    }
+    .prose hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+      margin: 2rem 0;
+    }
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      animation: fadeIn 0.5s ease-out;
+    }
+  </style>
+</head>
+<body class="min-h-screen text-slate-900 bg-white">
+  
+  <header class="site-header">
+    <div class="site-header-inner">
+      <nav class="site-nav">
+        <a href="/">Trang chủ</a>
+        <a href="/courses/">Khóa học</a>
+      </nav>
+    </div>
+  </header>
+  
+  
+<div class="lg:hidden inset-x-0 bg-slate-900 text-white z-30">
+  <div class="h-12 flex items-center justify-between px-4">
+    <button id="toggleMobileMenu" class="px-3 py-1.5 rounded bg-slate-800 text-white text-sm">Menu</button>
+  </div>
+  <div id="mobileMenu" class="hidden border-t border-slate-800">
+    <div class="p-4 space-y-6 max-h-[55vh] overflow-auto">
+      
+      <div>
+        
+      </div>
+
+      
+  <div>
+        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Courses</h2>
+        <nav class="space-y-1">
+          
+          
+            
+              <a href="/courses/cs50ai/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Artificial Intelligence</a>
+            
+              <a href="/courses/database/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Database Systems</a>
+            
+              <a href="/courses/cs50/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Introduction to Computer Science</a>
+            
+              <a href="/courses/python/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Python Programming</a>
+            
+              <a href="/courses/web-dev/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Web Development</a>
+            
+          
+        </nav>
+  </div>
+
+      
+      <div>
+        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Tools</h2>
+        <nav class="space-y-1">
+          <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="block py-1.5 text-sm text-slate-300 hover:text-white">Visual Studio Code</a>
+        </nav>
+      </div>
+
+      
+      <div>
+        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Weeks</h2>
+        
+        
+        
+          
+          
+          
+            <a href="/courses/cs50/" class="block py-1.5 text-sm text-slate-300 hover:text-white mb-1">Welcome</a>
+          
+        
+        
+        
+        
+        
+          
+            
+              
+              
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+        
+        
+          <nav class="space-y-1">
+            
+              <a href="/courses/cs50/week0/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 0</a>
+            
+              <a href="/courses/cs50/week1/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 1</a>
+            
+              <a href="/courses/cs50/week2/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 2</a>
+            
+              <a href="/courses/cs50/week3/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 3</a>
+            
+              <a href="/courses/cs50/week4/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 4</a>
+            
+              <a href="/courses/cs50/week5/" class="block py-1.5 text-sm text-slate-300 hover:text-white text-white font-semibold">Week 5</a>
+            
+            
+              <a href="/courses/cs50/final/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Final Project</a>
+            
+          </nav>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const toggleBtn = document.getElementById('toggleMobileMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (toggleBtn && mobileMenu) {
+      toggleBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+      document.addEventListener('click', function(e) {
+        const t = e.target;
+        if (!mobileMenu.classList.contains('hidden')) {
+          if (!t.closest('#mobileMenu') && !t.closest('#toggleMobileMenu')) {
+            mobileMenu.classList.add('hidden');
+          }
+        }
+      });
+    }
+  })();
+</script>
+
+
+  <main class="site-main">
+    
+
+<div class="lg:hidden inset-x-0 bg-slate-900 text-white z-30">
+  <div class="h-12 flex items-center justify-between px-4">
+    <button id="toggleMobileMenu" class="px-3 py-1.5 rounded bg-slate-800 text-white text-sm">Menu</button>
+  </div>
+  <div id="mobileMenu" class="hidden border-t border-slate-800">
+    <div class="p-4 space-y-6 max-h-[55vh] overflow-auto">
+      
+      <div>
+        
+      </div>
+
+      
+  <div>
+        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Courses</h2>
+        <nav class="space-y-1">
+          
+          
+            
+              <a href="/courses/cs50ai/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Artificial Intelligence</a>
+            
+              <a href="/courses/database/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Database Systems</a>
+            
+              <a href="/courses/cs50/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Introduction to Computer Science</a>
+            
+              <a href="/courses/python/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Python Programming</a>
+            
+              <a href="/courses/web-dev/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Web Development</a>
+            
+          
+        </nav>
+  </div>
+
+      
+      <div>
+        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Tools</h2>
+        <nav class="space-y-1">
+          <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="block py-1.5 text-sm text-slate-300 hover:text-white">Visual Studio Code</a>
+        </nav>
+      </div>
+
+      
+      <div>
+        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Weeks</h2>
+        
+        
+        
+          
+          
+          
+            <a href="/courses/cs50/" class="block py-1.5 text-sm text-slate-300 hover:text-white mb-1">Welcome</a>
+          
+        
+        
+        
+        
+        
+          
+            
+              
+              
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+        
+        
+          <nav class="space-y-1">
+            
+              <a href="/courses/cs50/week0/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 0</a>
+            
+              <a href="/courses/cs50/week1/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 1</a>
+            
+              <a href="/courses/cs50/week2/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 2</a>
+            
+              <a href="/courses/cs50/week3/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 3</a>
+            
+              <a href="/courses/cs50/week4/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 4</a>
+            
+              <a href="/courses/cs50/week5/" class="block py-1.5 text-sm text-slate-300 hover:text-white text-white font-semibold">Week 5</a>
+            
+            
+              <a href="/courses/cs50/final/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Final Project</a>
+            
+          </nav>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const toggleBtn = document.getElementById('toggleMobileMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (toggleBtn && mobileMenu) {
+      toggleBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+      document.addEventListener('click', function(e) {
+        const t = e.target;
+        if (!mobileMenu.classList.contains('hidden')) {
+          if (!t.closest('#mobileMenu') && !t.closest('#toggleMobileMenu')) {
+            mobileMenu.classList.add('hidden');
+          }
+        }
+      });
+    }
+  })();
+</script>
+
+
+<div class="flex">
+  
+    
+<aside class="hidden lg:block w-80 flex-shrink-0 bg-slate-900 text-white min-h-screen left-0 top-0 overflow-y-auto">
+  <div class="p-6 space-y-8">
+    
+    <div>
+      <h1 class="text-2xl font-bold leading-snug">Week 5</h1>
+      
+    </div>
+
+    
+    <div>
+      <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Courses</h2>
+      <nav class="space-y-1">
+        
+        
+          
+            <a href="/courses/cs50ai/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Artificial Intelligence</a>
+          
+            <a href="/courses/database/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Database Systems</a>
+          
+            <a href="/courses/cs50/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Introduction to Computer Science</a>
+          
+            <a href="/courses/python/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Python Programming</a>
+          
+            <a href="/courses/web-dev/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Web Development</a>
+          
+        
+      </nav>
+    </div>
+
+    
+    <div>
+      <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Tools</h2>
+      <nav class="space-y-1">
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="block py-1.5 text-sm text-slate-300 hover:text-white">Visual Studio Code</a>
+      </nav>
+    </div>
+
+    
+    <div>
+      <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Weeks</h2>
+      
+      
+      
+        
+        
+        
+          <a href="/courses/cs50/" class="block py-1.5 text-sm text-slate-300 hover:text-white mb-1">Welcome</a>
+        
+      
+      
+      
+      
+      
+        
+          
+            
+            
+              
+            
+          
+        
+          
+            
+            
+              
+              
+                
+                
+              
+            
+          
+        
+          
+            
+            
+              
+              
+                
+                
+              
+            
+          
+        
+          
+            
+            
+              
+              
+                
+                
+              
+            
+          
+        
+          
+            
+            
+              
+              
+                
+                
+              
+            
+          
+        
+          
+            
+            
+              
+              
+                
+                
+              
+            
+          
+        
+          
+            
+            
+              
+              
+                
+                
+              
+            
+          
+        
+      
+      
+        <nav class="space-y-1">
+          
+            <a href="/courses/cs50/week0/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 0</a>
+          
+            <a href="/courses/cs50/week1/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 1</a>
+          
+            <a href="/courses/cs50/week2/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 2</a>
+          
+            <a href="/courses/cs50/week3/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 3</a>
+          
+            <a href="/courses/cs50/week4/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 4</a>
+          
+            <a href="/courses/cs50/week5/" class="block py-1.5 text-sm text-slate-300 hover:text-white text-white font-semibold">Week 5</a>
+          
+          
+            <a href="/courses/cs50/final/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Final Project</a>
+          
+        </nav>
+      
+    </div>
+  </div>
+</aside>
+
+  
+  
+  
+  <main class="flex-1 ml-0 lg:ml-80 p-6 lg:p-12 max-w-3xl">
+    
+    
+    
+    <h1 class="text-4xl font-bold text-slate-900 mb-6">Week 5</h1>
+    
+
+    
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold text-slate-900 mb-4">Lecture Video</h2>
+      
+        
+
+
+
+
+
+  
+    
+    
+    
+    
+    
+    
+  
+
+
+
+  
+  <div class="relative w-full mb-4" style="padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000;">
+    <iframe 
+      class="absolute top-0 left-0 w-full h-full rounded-lg"
+      src="https://www.youtube.com/embed/example"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      loading="lazy"
+      title="YouTube video player">
+    </iframe>
+  </div>
+  
+  <div class="mt-2">
+    <a href="https://youtu.be/example" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900">
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M10 15l5-3-5-3v6z"></path>
+        <path d="M21 12c0-1.657-.336-3.314-.336-3.314a3.998 3.998 0 00-2.829-2.829C15.52 5.333 12 5.333 12 5.333s-3.52 0-5.005.524A3.998 3.998 0 004.166 8.686S3.83 10.343 3.83 12s.336 3.314.336 3.314a3.998 3.998 0 002.829 2.829C8.48 18.667 12 18.667 12 18.667s3.52 0 5.005-.524a3.998 3.998 0 002.829-2.829S21 13.657 21 12z"></path>
+      </svg>
+      Xem trên YouTube
+    </a>
+  </div>
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    
+    
+    
+  </main>
+</div>
+
+  </main>
+  <script>try{ if(window.mermaid){ window.mermaid.initialize({ startOnLoad: true, theme: 'default' }); }}catch(e){}</script>
+  <script>
+    
+    if (typeof hljs !== 'undefined') {
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('pre code').forEach(function(block) {
+          hljs.highlightElement(block);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

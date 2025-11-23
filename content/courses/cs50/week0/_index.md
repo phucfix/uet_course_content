@@ -4,5 +4,5 @@ week: 0
 course: "CS50x"
 type: "week-with-sidebar"
 url: "/courses/cs50/week0/"
-youtube: "https://youtu.be/example"
+youtube: "https://www.youtube.com/watch?v=2WtPyqwTLKM&t=6s"
 ---

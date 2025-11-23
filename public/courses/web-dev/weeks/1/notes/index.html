@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Week 1 - HTML &amp; CSS Fundamentals Notes | UET Learning Course</title>
@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <style>
     :root { 
       --font-sans: 'PT Sans', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; 
@@ -27,20 +29,49 @@
       display: flex;
       flex-direction: column;
     }
+     
+    pre {
+      background: #f1f5f9;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+      margin: 1.5em 0;
+    }
     pre code { 
       display: block; 
-      padding: 1.5rem; 
-      border-radius: 0.5rem; 
-      background: #1e293b;
-      color: #e2e8f0;
-      overflow-x: auto;
+      padding: 0;
+      background: transparent;
+      color: #0f172a;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9em;
+      line-height: 1.6;
     }
+     
     code {
       background: #f1f5f9;
       padding: 0.2rem 0.4rem;
       border-radius: 0.25rem;
       font-size: 0.875em;
-      color: #dc2626;
+      font-family: 'Courier New', Courier, monospace;
+      color: #0f172a;
+    }
+     
+    .hljs-keyword,
+    .hljs-string,
+    .hljs-title,
+    .hljs-built_in,
+    .hljs-function {
+      color: #dc2626 !important;
+    }
+     
+    .hljs-comment {
+      color: #6b7280 !important;
+      font-style: italic;
+    }
+     
+    .hljs {
+      background: #f1f5f9 !important;
+      color: #0f172a !important;
     }
     pre code code {
       background: transparent;
@@ -118,18 +149,24 @@
     }
   </style>
 </head>
-<body class="min-h-screen text-slate-900">
+<body class="min-h-screen text-slate-900 bg-white">
   
-  <main class="flex-grow">
-    
-
-<div class="lg:hidden sticky top-0 inset-x-0 bg-slate-900 text-white z-30">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <nav class="site-nav">
+        <a href="/">Trang chủ</a>
+        <a href="/courses/">Khóa học</a>
+      </nav>
+    </div>
+  </header>
+  
+  
+<div class="lg:hidden inset-x-0 bg-slate-900 text-white z-30">
   <div class="h-12 flex items-center justify-between px-4">
-    <span class="text-sm font-semibold truncate">Week 1 - HTML &amp; CSS Fundamentals Notes</span>
     <button id="toggleMobileMenu" class="px-3 py-1.5 rounded bg-slate-800 text-white text-sm">Menu</button>
   </div>
   <div id="mobileMenu" class="hidden border-t border-slate-800">
-    <div class="p-4 space-y-6">
+    <div class="p-4 space-y-6 max-h-[55vh] overflow-auto">
       
       <div>
         
@@ -138,7 +175,7 @@
       </div>
 
       
-      <div>
+  <div>
         <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Courses</h2>
         <nav class="space-y-1">
           
@@ -156,7 +193,7 @@
             
           
         </nav>
-      </div>
+  </div>
 
       
       <div>
@@ -183,6 +220,58 @@
         
         
         
+        
+          
+            
+              
+              
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
           
             
               
@@ -214,6 +303,17 @@
             
               <a href="/courses/web-dev/week1/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 1 - HTML &amp; CSS Fundamentals</a>
             
+              <a href="/courses/web-dev/week2/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 2</a>
+            
+              <a href="/courses/web-dev/week3/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 3</a>
+            
+              <a href="/courses/web-dev/week4/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 4</a>
+            
+              <a href="/courses/web-dev/week5/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 5</a>
+            
+            
+              <a href="/courses/web-dev/final/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Final Project</a>
+            
           </nav>
         
       </div>
@@ -241,8 +341,194 @@
   })();
 </script>
 
+
+  <main class="site-main">
+    
+
+<div class="lg:hidden inset-x-0 bg-slate-900 text-white z-30">
+  <div class="h-12 flex items-center justify-between px-4">
+    <button id="toggleMobileMenu" class="px-3 py-1.5 rounded bg-slate-800 text-white text-sm">Menu</button>
+  </div>
+  <div id="mobileMenu" class="hidden border-t border-slate-800">
+    <div class="p-4 space-y-6 max-h-[55vh] overflow-auto">
+      
+      <div>
+        
+          <p class="text-slate-300 text-sm leading-relaxed">Ghi chú về HTML và CSS cơ bản</p>
+        
+      </div>
+
+      
+  <div>
+        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Courses</h2>
+        <nav class="space-y-1">
+          
+          
+            
+              <a href="/courses/cs50ai/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Artificial Intelligence</a>
+            
+              <a href="/courses/database/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Database Systems</a>
+            
+              <a href="/courses/cs50/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Introduction to Computer Science</a>
+            
+              <a href="/courses/python/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Python Programming</a>
+            
+              <a href="/courses/web-dev/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Web Development</a>
+            
+          
+        </nav>
+  </div>
+
+      
+      <div>
+        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Tools</h2>
+        <nav class="space-y-1">
+          <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="block py-1.5 text-sm text-slate-300 hover:text-white">Visual Studio Code</a>
+        </nav>
+      </div>
+
+      
+      <div>
+        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Weeks</h2>
+        
+        
+        
+          
+          
+            
+          
+          
+            <a href="/courses/web-dev/" class="block py-1.5 text-sm text-slate-300 hover:text-white mb-1">Welcome</a>
+          
+        
+        
+        
+        
+        
+          
+            
+              
+              
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+            
+              
+              
+                
+                
+                  
+                  
+                
+              
+            
+          
+        
+        
+          <nav class="space-y-1">
+            
+              <a href="/courses/web-dev/week0/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 0</a>
+            
+              <a href="/courses/web-dev/week1/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 1 - HTML &amp; CSS Fundamentals</a>
+            
+              <a href="/courses/web-dev/week2/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 2</a>
+            
+              <a href="/courses/web-dev/week3/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 3</a>
+            
+              <a href="/courses/web-dev/week4/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 4</a>
+            
+              <a href="/courses/web-dev/week5/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 5</a>
+            
+            
+              <a href="/courses/web-dev/final/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Final Project</a>
+            
+          </nav>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const toggleBtn = document.getElementById('toggleMobileMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (toggleBtn && mobileMenu) {
+      toggleBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+      document.addEventListener('click', function(e) {
+        const t = e.target;
+        if (!mobileMenu.classList.contains('hidden')) {
+          if (!t.closest('#mobileMenu') && !t.closest('#toggleMobileMenu')) {
+            mobileMenu.classList.add('hidden');
+          }
+        }
+      });
+    }
+  })();
+</script>
+
+
 <div class="flex">
   
+    
 <aside class="hidden lg:block w-80 flex-shrink-0 bg-slate-900 text-white min-h-screen left-0 top-0 overflow-y-auto">
   <div class="p-6 space-y-8">
     
@@ -299,6 +585,58 @@
       
       
       
+      
+        
+          
+            
+            
+              
+            
+          
+        
+          
+            
+            
+              
+              
+                
+                
+              
+            
+          
+        
+          
+            
+            
+              
+              
+                
+                
+              
+            
+          
+        
+          
+            
+            
+              
+              
+                
+                
+              
+            
+          
+        
+          
+            
+            
+              
+              
+                
+                
+              
+            
+          
         
           
             
@@ -330,12 +668,24 @@
           
             <a href="/courses/web-dev/week1/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 1 - HTML &amp; CSS Fundamentals</a>
           
+            <a href="/courses/web-dev/week2/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 2</a>
+          
+            <a href="/courses/web-dev/week3/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 3</a>
+          
+            <a href="/courses/web-dev/week4/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 4</a>
+          
+            <a href="/courses/web-dev/week5/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Week 5</a>
+          
+          
+            <a href="/courses/web-dev/final/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Final Project</a>
+          
         </nav>
       
     </div>
   </div>
 </aside>
 
+  
   
   
   <main class="flex-1 ml-0 lg:ml-80 p-6 lg:ml-80 lg:p-12 max-w-3xl">
@@ -567,5 +917,15 @@
 
   </main>
   <script>try{ if(window.mermaid){ window.mermaid.initialize({ startOnLoad: true, theme: 'default' }); }}catch(e){}</script>
+  <script>
+    
+    if (typeof hljs !== 'undefined') {
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('pre code').forEach(function(block) {
+          hljs.highlightElement(block);
+        });
+      });
+    }
+  </script>
 </body>
 </html>
