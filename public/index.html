@@ -1,384 +1,183 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.152.2">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UET Learning Course</title>
-  <meta property="og:title" content="UET Learning Course" />
-  
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <style>
-    :root { 
-      --font-sans: 'PT Sans', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; 
-    }
-    html { 
-      font-family: var(--font-sans); 
-      scroll-behavior: smooth;
-      height: 100%;
-    }
-    body {
-      background: #ffffff;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-     
-    pre {
-      background: #f1f5f9;
-      padding: 1.5rem;
-      border-radius: 0.5rem;
-      overflow-x: auto;
-      margin: 1.5em 0;
-    }
-    pre code { 
-      display: block; 
-      padding: 0;
-      background: transparent;
-      color: #0f172a;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 0.9em;
-      line-height: 1.6;
-    }
-     
-    code {
-      background: #f1f5f9;
-      padding: 0.2rem 0.4rem;
-      border-radius: 0.25rem;
-      font-size: 0.875em;
-      font-family: 'Courier New', Courier, monospace;
-      color: #0f172a;
-    }
-     
-    .hljs-keyword,
-    .hljs-string,
-    .hljs-title,
-    .hljs-built_in,
-    .hljs-function {
-      color: #dc2626 !important;
-    }
-     
-    .hljs-comment {
-      color: #6b7280 !important;
-      font-style: italic;
-    }
-     
-    .hljs {
-      background: #f1f5f9 !important;
-      color: #0f172a !important;
-    }
-    pre code code {
-      background: transparent;
-      padding: 0;
-      color: inherit;
-    }
-    .prose {
-      color: #334155;
-      line-height: 1.75;
-    }
-    .prose h1, .prose h2, .prose h3, .prose h4 {
-      color: #0f172a;
-      font-weight: 700;
-      margin-top: 2em;
-      margin-bottom: 1em;
-    }
-    .prose h1 { font-size: 2.25em; }
-    .prose h2 { font-size: 1.875em; }
-    .prose h3 { font-size: 1.5em; }
-    .prose a {
-      color: #2563eb;
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: all 0.2s;
-    }
-    .prose a:hover {
-      border-bottom-color: #2563eb;
-    }
-    .prose ul, .prose ol {
-      margin: 1.5em 0;
-      padding-left: 1.625em;
-    }
-    .prose li {
-      margin: 0.5em 0;
-    }
-    .prose blockquote {
-      border-left: 4px solid #3b82f6;
-      padding-left: 1em;
-      margin: 1.5em 0;
-      color: #64748b;
-      font-style: italic;
-    }
-    .prose table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1.5em 0;
-    }
-    .prose th, .prose td {
-      border: 1px solid #e2e8f0;
-      padding: 0.75em;
-    }
-    .prose th {
-      background: #f8fafc;
-      font-weight: 600;
-    }
-    .prose hr {
-      border: 0;
-      height: 1px;
-      background: linear-gradient(to right, transparent, #e2e8f0, transparent);
-      margin: 2rem 0;
-    }
-    .card-hover {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .card-hover:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .fade-in {
-      animation: fadeIn 0.5s ease-out;
-    }
-  </style>
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>UET Learning Course</title>
+	<link rel="icon" href="/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+	<style>
+		 
+		:root{--font-sans:'Inter','PT Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
+		html{font-family:var(--font-sans);scroll-behavior:smooth}
+		body{background:linear-gradient(180deg,#ffffff 0%,#fbfdff 100%);color:#0f172a;min-height:100vh}
+		.hero{background-size:cover;background-position:center}
+		.hero h1{font-family:'Merriweather',serif}
+		.max-w-6xl{max-width:72rem}
+	</style>
 </head>
 <body class="min-h-screen text-slate-900 bg-white">
-  
-  
-<div class="lg:hidden inset-x-0 bg-slate-900 text-white z-30">
-  <div class="h-12 flex items-center justify-between px-4">
-    <button id="toggleMobileMenu" class="px-3 py-1.5 rounded bg-slate-800 text-white text-sm">Menu</button>
-  </div>
-  <div id="mobileMenu" class="hidden border-t border-slate-800">
-    <div class="p-4 space-y-6 max-h-[55vh] overflow-auto">
-      
-      <div>
-        
-      </div>
+	
+	<div class="lg:hidden inset-x-0 bg-slate-900 text-white z-30">
+		<div class="h-12 flex items-center justify-between px-4"><button id="toggleMobileMenu" class="px-3 py-1.5 rounded bg-slate-800 text-white text-sm">Menu</button></div>
+	</div>
 
-      
-  <div>
-        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Courses</h2>
-        <nav class="space-y-1">
-          
-          
-            
-              <a href="/courses/cs50ai/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Artificial Intelligence</a>
-            
-              <a href="/courses/database/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Database Systems</a>
-            
-              <a href="/courses/cs50/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Introduction to Computer Science</a>
-            
-              <a href="/courses/python/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Python Programming</a>
-            
-              <a href="/courses/web-dev/" class="block py-1.5 text-sm text-slate-300 hover:text-white ">Web Development</a>
-            
-          
-        </nav>
-  </div>
+	<main class="site-main site-main--home">
+		
+		<section class="hero bg-[#273549] text-white py-14 lg:py-20">
+			<div class="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-between">
+				<div class="flex items-center gap-6">
+					<img src="/img/Logo-DH-Cong-Nghe-UET.webp" alt="logo" class="h-10" />
+					<div>
+						<h1 class="text-4xl lg:text-5xl font-serif font-semibold tracking-tight">Free Courses</h1>
+						<p class="text-slate-200 max-w-2xl">Browse curated free course content and lecture notes from UET Learning. Click a course to view weeks, notes and problem sets.</p>
+					</div>
+				</div>
+				<div class="hidden lg:block">
+					<div class="flex items-center gap-3">
+						<a href="/courses/" class="px-4 py-2 border border-white/20 text-white rounded">VIEW ALL COURSES</a>
+						<div class="w-40">
+							<input id="course-search" placeholder="Search" class="w-full px-3 py-2 rounded text-black" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-      
-      <div>
-        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Tools</h2>
-        <nav class="space-y-1">
-          <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="block py-1.5 text-sm text-slate-300 hover:text-white">Visual Studio Code</a>
-        </nav>
-      </div>
+		
+		<section class="filters bg-white border-b border-slate-200">
+			<div class="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex flex-wrap items-center gap-4">
+				<div class="text-sm text-slate-600">107 results for</div>
+				<div class="flex items-center gap-2">
+					<span class="bg-slate-100 px-3 py-1 rounded text-sm">FREE</span>
+					<a class="text-sm text-red-600 ml-2">Clear all filters</a>
+				</div>
+				<div class="ml-auto flex gap-3">
+					<button class="text-sm px-3 py-2 border rounded">Subject Area</button>
+					<button class="text-sm px-3 py-2 border rounded">Price</button>
+					<button class="text-sm px-3 py-2 border rounded">Start Date</button>
+					<button class="text-sm px-3 py-2 border rounded">Duration</button>
+				</div>
+			</div>
+		</section>
 
-      
-      <div>
-        <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-2">Weeks</h2>
-        
-        
-        
-          
-          
-          
-        
-        
-        
-        
-        
-        
-          <p class="text-xs text-slate-500 py-1.5">Chưa có tuần học</p>
-        
-      </div>
-    </div>
-  </div>
-</div>
+		
+		<section class="courses py-10">
+			<div class="max-w-6xl mx-auto px-6 lg:px-8">
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+					
+					
+						
+							<a href="/courses/cs50ai/" class="course-card block bg-white rounded shadow-sm overflow-hidden hover:shadow-md" data-course-name="artificial intelligence" data-course-desc="giới thiệu về trí tuệ nhân tạo và machine learning">
+								
+								<div class="h-40 bg-slate-300/60" style="background-image: url('/img/courses/ai.png'); background-size: cover; background-position: center;"></div>
+								<div class="p-4">
+									<div class="text-xs text-slate-400 uppercase mb-2 flex items-center gap-2">
+										<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
+										<span>Computer Science</span>
+									</div>
+									<h3 class="text-lg font-semibold text-slate-900 mb-1">Artificial Intelligence</h3>
+									<p class="text-sm text-slate-600">Giới thiệu về Trí tuệ Nhân tạo và Machine Learning</p>
+								</div>
+							</a>
+						
+							<a href="/courses/database/" class="course-card block bg-white rounded shadow-sm overflow-hidden hover:shadow-md" data-course-name="database systems" data-course-desc="học về hệ thống cơ sở dữ liệu, sql và database design">
+								
+								<div class="h-40 bg-slate-300/60" style="background-image: url('/img/course-placeholder.jpg'); background-size: cover; background-position: center;"></div>
+								<div class="p-4">
+									<div class="text-xs text-slate-400 uppercase mb-2 flex items-center gap-2">
+										<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
+										<span>Computer Science</span>
+									</div>
+									<h3 class="text-lg font-semibold text-slate-900 mb-1">Database Systems</h3>
+									<p class="text-sm text-slate-600">Học về hệ thống cơ sở dữ liệu, SQL và database design</p>
+								</div>
+							</a>
+						
+							<a href="/courses/cs50/" class="course-card block bg-white rounded shadow-sm overflow-hidden hover:shadow-md" data-course-name="introduction to computer science" data-course-desc="giới thiệu về khoa học máy tính">
+								
+								<div class="h-40 bg-slate-300/60" style="background-image: url('/img/course-placeholder.jpg'); background-size: cover; background-position: center;"></div>
+								<div class="p-4">
+									<div class="text-xs text-slate-400 uppercase mb-2 flex items-center gap-2">
+										<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
+										<span>Computer Science</span>
+									</div>
+									<h3 class="text-lg font-semibold text-slate-900 mb-1">Introduction to Computer Science</h3>
+									<p class="text-sm text-slate-600">Giới thiệu về Khoa học Máy tính</p>
+								</div>
+							</a>
+						
+							<a href="/courses/python/" class="course-card block bg-white rounded shadow-sm overflow-hidden hover:shadow-md" data-course-name="python programming" data-course-desc="học lập trình python từ cơ bản đến nâng cao">
+								
+								<div class="h-40 bg-slate-300/60" style="background-image: url('/img/course-placeholder.jpg'); background-size: cover; background-position: center;"></div>
+								<div class="p-4">
+									<div class="text-xs text-slate-400 uppercase mb-2 flex items-center gap-2">
+										<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
+										<span>Computer Science</span>
+									</div>
+									<h3 class="text-lg font-semibold text-slate-900 mb-1">Python Programming</h3>
+									<p class="text-sm text-slate-600">Học lập trình Python từ cơ bản đến nâng cao</p>
+								</div>
+							</a>
+						
+							<a href="/courses/web-dev/" class="course-card block bg-white rounded shadow-sm overflow-hidden hover:shadow-md" data-course-name="web development" data-course-desc="học phát triển web với html, css, javascript và các framework hiện đại">
+								
+								<div class="h-40 bg-slate-300/60" style="background-image: url('/img/course-placeholder.jpg'); background-size: cover; background-position: center;"></div>
+								<div class="p-4">
+									<div class="text-xs text-slate-400 uppercase mb-2 flex items-center gap-2">
+										<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
+										<span>Computer Science</span>
+									</div>
+									<h3 class="text-lg font-semibold text-slate-900 mb-1">Web Development</h3>
+									<p class="text-sm text-slate-600">Học phát triển web với HTML, CSS, JavaScript và các framework hiện đại</p>
+								</div>
+							</a>
+						
+					
+				</div>
+			</div>
+		</section>
+	</main>
 
-<script>
-  (function() {
-    const toggleBtn = document.getElementById('toggleMobileMenu');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (toggleBtn && mobileMenu) {
-      toggleBtn.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-      });
-      document.addEventListener('click', function(e) {
-        const t = e.target;
-        if (!mobileMenu.classList.contains('hidden')) {
-          if (!t.closest('#mobileMenu') && !t.closest('#toggleMobileMenu')) {
-            mobileMenu.classList.add('hidden');
-          }
-        }
-      });
-    }
-  })();
-</script>
+	<script>
+		
+		(function(){
+			const searchInput = document.getElementById('course-search');
+			if (!searchInput) return;
+			const cards = Array.from(document.querySelectorAll('.course-card'));
+			const resultsEl = document.createElement('div');
+			resultsEl.id = 'search-results';
+			resultsEl.className = 'mt-4 hidden';
+			searchInput.parentNode.parentNode.appendChild(resultsEl);
 
-
-  <main class="site-main">
-    
-<div class="max-w-4xl mx-auto px-8 py-12">
-  <h1 class="text-4xl font-bold text-slate-900 mb-6">UET Learning</h1>
-  <p class="text-slate-700 mb-8 leading-relaxed">
-    Hệ thống học tập trực tuyến của Trường Đại học Công nghệ - Đại học Quốc gia Hà Nội.
-  </p>
-
-  
-  <div class="mb-8">
-    <div class="relative">
-      <input 
-        type="text" 
-        id="course-search" 
-        placeholder="Tìm kiếm khóa học..." 
-        class="w-full px-4 py-2 pl-10 text-base border border-slate-300 focus:outline-none focus:border-slate-500"
-      />
-      <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-      </svg>
-    </div>
-    <div id="search-results" class="mt-4 hidden"></div>
-  </div>
-
-  
-  <div class="mb-12">
-    <h2 class="text-2xl font-bold text-slate-900 mb-4">Về Trường Đại học Công nghệ</h2>
-    <p class="text-slate-700 mb-4 leading-relaxed">
-      Trường Đại học Công nghệ (UET) là một trong những trường đại học hàng đầu về đào tạo công nghệ thông tin và kỹ thuật tại Việt Nam, trực thuộc Đại học Quốc gia Hà Nội.
-    </p>
-  </div>
-
-  
-  <div>
-    <h2 class="text-2xl font-bold text-slate-900 mb-6">Courses</h2>
-    
-    
-      <div id="courses-grid" class="space-y-3">
-        
-        <div class="course-card" data-course-name="artificial intelligence" data-course-desc="giới thiệu về trí tuệ nhân tạo và machine learning">
-          <a href="/courses/cs50ai/" class="text-blue-600 hover:underline text-lg">
-            Artificial Intelligence
-          </a>
-          
-            <p class="text-slate-600 text-sm mt-1">Giới thiệu về Trí tuệ Nhân tạo và Machine Learning</p>
-          
-        </div>
-        
-        <div class="course-card" data-course-name="database systems" data-course-desc="học về hệ thống cơ sở dữ liệu, sql và database design">
-          <a href="/courses/database/" class="text-blue-600 hover:underline text-lg">
-            Database Systems
-          </a>
-          
-            <p class="text-slate-600 text-sm mt-1">Học về hệ thống cơ sở dữ liệu, SQL và database design</p>
-          
-        </div>
-        
-        <div class="course-card" data-course-name="introduction to computer science" data-course-desc="giới thiệu về khoa học máy tính">
-          <a href="/courses/cs50/" class="text-blue-600 hover:underline text-lg">
-            Introduction to Computer Science
-          </a>
-          
-            <p class="text-slate-600 text-sm mt-1">Giới thiệu về Khoa học Máy tính</p>
-          
-        </div>
-        
-        <div class="course-card" data-course-name="python programming" data-course-desc="học lập trình python từ cơ bản đến nâng cao">
-          <a href="/courses/python/" class="text-blue-600 hover:underline text-lg">
-            Python Programming
-          </a>
-          
-            <p class="text-slate-600 text-sm mt-1">Học lập trình Python từ cơ bản đến nâng cao</p>
-          
-        </div>
-        
-        <div class="course-card" data-course-name="web development" data-course-desc="học phát triển web với html, css, javascript và các framework hiện đại">
-          <a href="/courses/web-dev/" class="text-blue-600 hover:underline text-lg">
-            Web Development
-          </a>
-          
-            <p class="text-slate-600 text-sm mt-1">Học phát triển web với HTML, CSS, JavaScript và các framework hiện đại</p>
-          
-        </div>
-        
-      </div>
-    
-  </div>
-</div>
-
-<script>
-  
-  const searchInput = document.getElementById('course-search');
-  const searchResults = document.getElementById('search-results');
-  const coursesGrid = document.getElementById('courses-grid');
-  const courseCards = document.querySelectorAll('.course-card');
-
-  if (searchInput) {
-    searchInput.addEventListener('input', function(e) {
-      const query = e.target.value.toLowerCase().trim();
-      
-      if (query === '') {
-        
-        courseCards.forEach(card => {
-          card.style.display = 'block';
-        });
-        searchResults.classList.add('hidden');
-      } else {
-        
-        let hasResults = false;
-        courseCards.forEach(card => {
-          const courseName = card.getAttribute('data-course-name') || '';
-          const courseDesc = card.getAttribute('data-course-desc') || '';
-          
-          if (courseName.includes(query) || courseDesc.includes(query)) {
-            card.style.display = 'block';
-            hasResults = true;
-          } else {
-            card.style.display = 'none';
-          }
-        });
-        
-        if (!hasResults) {
-          searchResults.innerHTML = `<p class="text-slate-600">Không tìm thấy khóa học nào với từ khóa "${query}"</p>`;
-          searchResults.classList.remove('hidden');
-        } else {
-          searchResults.classList.add('hidden');
-        }
-      }
-    });
-  }
-</script>
-
-  </main>
-  <script>try{ if(window.mermaid){ window.mermaid.initialize({ startOnLoad: true, theme: 'default' }); }}catch(e){}</script>
-  <script>
-    
-    if (typeof hljs !== 'undefined') {
-      document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('pre code').forEach(function(block) {
-          hljs.highlightElement(block);
-        });
-      });
-    }
-  </script>
+			searchInput.addEventListener('input', function(e){
+				const q = e.target.value.toLowerCase().trim();
+				if (!q) {
+					cards.forEach(c => c.style.display = 'block');
+					resultsEl.classList.add('hidden');
+					return;
+				}
+				let found = false;
+				cards.forEach(c => {
+					const n = c.getAttribute('data-course-name') || '';
+					const d = c.getAttribute('data-course-desc') || '';
+					if (n.includes(q) || d.includes(q)) { c.style.display = 'block'; found = true; } else { c.style.display = 'none'; }
+				});
+				if (!found) {
+					resultsEl.innerHTML = `<p class="text-slate-600">Không tìm thấy khóa học nào với từ khóa "${q}"</p>`;
+					resultsEl.classList.remove('hidden');
+				} else {
+					resultsEl.classList.add('hidden');
+				}
+			});
+		})();
+	</script>
 </body>
 </html>

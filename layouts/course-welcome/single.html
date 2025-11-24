@@ -1,12 +1,11 @@
 {{ define "main" }}
 {{ partial "mobile-navbar.html" . }}
-<div class="flex">
-  {{ if not (or .IsHome (eq .Type "courses-root")) }}
+<div class="course-page-layout">
+  <div class="course-container">
     {{ partial "course-sidebar.html" . }}
-  {{ end }}
-  
-  <!-- Main Content -->
-  <main class="flex-1 ml-0 lg:ml-80 p-6 lg:p-12 max-w-3xl">
+
+    <!-- Main Content -->
+    <main class="course-content">
     <!-- Welcome Section -->
     <h1 class="text-4xl font-bold text-slate-900 mb-6">Welcome</h1>
     
@@ -79,6 +78,7 @@
         <li>Sử dụng sidebar bên trái để điều hướng giữa các tuần học</li>
       </ul>
     </div>
-  </main>
+    </main>
+  </div>
 </div>
 {{ end }}

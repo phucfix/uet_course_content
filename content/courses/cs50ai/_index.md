@@ -3,6 +3,7 @@ title: "Artificial Intelligence"
 type: "course-welcome"
 description: "Giới thiệu về Trí tuệ Nhân tạo và Machine Learning"
 url: "/courses/cs50ai/"
+image: "/img/courses/ai.png"
 ---
 Chào mừng bạn đến với khóa học **Artificial Intelligence** của UET Learning.
 

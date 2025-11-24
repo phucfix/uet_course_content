@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Week 1 - HTML &amp; CSS Fundamentals Notes | UET Learning Course</title>
   <meta property="og:title" content="Week 1 - HTML &amp; CSS Fundamentals Notes | UET Learning Course" />
   <meta property="og:description" content="Ghi chú về HTML và CSS cơ bản" />
   <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
+  <link rel="icon" type="image/webp" href="/img/Logo-DH-Cong-Nghe-UET.webp" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="shortcut icon" href="/img/Logo-DH-Cong-Nghe-UET.webp" />
+  <link rel="icon" type="image/webp" sizes="32x32" href="/img/Logo-DH-Cong-Nghe-UET.webp" />
+  <link rel="icon" type="image/webp" sizes="16x16" href="/img/Logo-DH-Cong-Nghe-UET.webp" />
+  <link rel="apple-touch-icon" href="/img/Logo-DH-Cong-Nghe-UET.webp" />
+  <meta name="theme-color" content="#24324a" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -15,138 +26,146 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <style>
-    :root { 
-      --font-sans: 'PT Sans', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; 
+    :root {
+      --font-sans: 'Inter', 'PT Sans', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      --bg: #0f172a;  
+      --muted: #6b7280;
+      --accent: #2563eb;  
+      --card: #ffffff;
+      --surface: #f8fafc;
     }
-    html { 
-      font-family: var(--font-sans); 
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap');
+
+    html {
+      font-family: var(--font-sans);
       scroll-behavior: smooth;
       height: 100%;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
+
     body {
-      background: #ffffff;
+      background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+      color: #0f172a;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-    }
-     
-    pre {
-      background: #f1f5f9;
-      padding: 1.5rem;
-      border-radius: 0.5rem;
-      overflow-x: auto;
-      margin: 1.5em 0;
-    }
-    pre code { 
-      display: block; 
-      padding: 0;
-      background: transparent;
-      color: #0f172a;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 0.9em;
       line-height: 1.6;
     }
+
      
-    code {
-      background: #f1f5f9;
-      padding: 0.2rem 0.4rem;
-      border-radius: 0.25rem;
-      font-size: 0.875em;
-      font-family: 'Courier New', Courier, monospace;
-      color: #0f172a;
-    }
+      .site-header {
+        background: #24324a;  
+        color: #f8fafc;
+        border-bottom: 1px solid rgba(0,0,0,0.12);
+      }
+      .site-header-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.75rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .site-header .brand-center { flex: 1; display:flex; justify-content:center; align-items:center; }
+      .site-header .left, .site-header .right { display:flex; align-items:center; gap:0.75rem; }
+      .site-header .menu-btn { background:transparent; border:0; color: #fff; font-size:1.25rem; padding:0.25rem; }
+      .site-header .search-box input { padding:0.5rem 0.75rem; border-radius:4px; border:1px solid rgba(255,255,255,0.12); }
+      .site-nav a { color: #fff; text-decoration:none; font-weight:600 }
+
      
-    .hljs-keyword,
-    .hljs-string,
-    .hljs-title,
-    .hljs-built_in,
-    .hljs-function {
-      color: #dc2626 !important;
-    }
+    .hero { background-size: cover; background-position: center; }
+    .hero h1 { font-family: 'Merriweather', serif; }
+
      
-    .hljs-comment {
-      color: #6b7280 !important;
-      font-style: italic;
-    }
-     
-    .hljs {
-      background: #f1f5f9 !important;
-      color: #0f172a !important;
-    }
-    pre code code {
-      background: transparent;
-      padding: 0;
-      color: inherit;
-    }
-    .prose {
-      color: #334155;
-      line-height: 1.75;
-    }
-    .prose h1, .prose h2, .prose h3, .prose h4 {
-      color: #0f172a;
-      font-weight: 700;
-      margin-top: 2em;
-      margin-bottom: 1em;
-    }
-    .prose h1 { font-size: 2.25em; }
-    .prose h2 { font-size: 1.875em; }
-    .prose h3 { font-size: 1.5em; }
-    .prose a {
-      color: #2563eb;
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: all 0.2s;
-    }
-    .prose a:hover {
-      border-bottom-color: #2563eb;
-    }
-    .prose ul, .prose ol {
-      margin: 1.5em 0;
-      padding-left: 1.625em;
-    }
-    .prose li {
-      margin: 0.5em 0;
-    }
-    .prose blockquote {
-      border-left: 4px solid #3b82f6;
-      padding-left: 1em;
-      margin: 1.5em 0;
-      color: #64748b;
-      font-style: italic;
-    }
-    .prose table {
+    .site-main {
       width: 100%;
-      border-collapse: collapse;
-      margin: 1.5em 0;
+      max-width: none;  
+      margin: 0;  
+      padding: 0;  
+      flex: 1 0 auto;
+      display: flex;  
+      align-items:stretch;
     }
-    .prose th, .prose td {
-      border: 1px solid #e2e8f0;
-      padding: 0.75em;
+
+     
+    pre {
+      background: #0b1220;
+      color: #e6eef8;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow: auto;
+      margin: 1.25em 0;
+      box-shadow: 0 6px 12px rgba(2,6,23,0.04);
     }
-    .prose th {
-      background: #f8fafc;
-      font-weight: 600;
+    pre code {
+      display: block;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+      font-size: 0.92em;
+      line-height: 1.6;
     }
-    .prose hr {
-      border: 0;
-      height: 1px;
-      background: linear-gradient(to right, transparent, #e2e8f0, transparent);
-      margin: 2rem 0;
-    }
-    .card-hover {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .card-hover:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .fade-in {
-      animation: fadeIn 0.5s ease-out;
-    }
+    code { background: #f1f5f9; padding: 0.18rem 0.38rem; border-radius: 0.25rem; }
+
+     
+    .hljs { background: transparent !important; color: #e6eef8 !important; }
+    .hljs-keyword, .hljs-title, .hljs-built_in, .hljs-function { color: #60a5fa !important; }
+    .hljs-string, .hljs-number { color: #7dd3fc !important; }
+    .hljs-comment { color: #94a3b8 !important; font-style: italic; }
+
+     
+    .prose { color: #0f172a; max-width: 80ch; }
+    .prose h1, .prose h2, .prose h3, .prose h4 { color: var(--bg); font-weight: 700; margin-top: 1.6em; margin-bottom: 0.6em; }
+    .prose h1 { font-size: 2.25em; }
+    .prose a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+     
+  .card-hover { transition: transform .22s ease, box-shadow .22s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 14px 28px rgba(15,23,42,0.08); }
+
+   
+  aside { background: linear-gradient(180deg, #071023 0%, #06101b 100%); }
+  aside h1, aside h2 { color: #e6eef8; }
+  aside a { color: #cfe8ff; }
+
+     
+    .fade-in { animation: fadeIn 0.45s ease-out; }
+    @keyframes fadeIn { from{ opacity:0; transform: translateY(8px);} to{ opacity:1; transform: translateY(0);} }
+   
+  .courses .h-40 { height: 10rem; }
+
+   
+  .course-card { border-radius: 6px; overflow: hidden; background: #fff; box-shadow: 0 6px 18px rgba(15,23,42,0.06); border: 1px solid rgba(15,23,42,0.04); }
+  .course-card .card-body { padding: 1.25rem; }
+  .course-card .card-meta { color: #6b7280; font-size: 0.85rem; margin-bottom: 0.5rem; display:block }
+  .courses-grid-3 { display:grid; grid-template-columns: 1fr; gap:1.25rem }
+  @media(min-width:640px){ .courses-grid-3 { grid-template-columns: repeat(2, 1fr); } }
+  @media(min-width:1024px){ .courses-grid-3 { grid-template-columns: repeat(3, 1fr); } }
+
+   
+  .site-main--home { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
+  .site-main--home .hero, .site-main--home .filters, .site-main--home .courses { max-width: none !important; padding-left: 0 !important; padding-right: 0 !important; }
+
+   
+  .site-header .brand-center { position: absolute; left: 50%; transform: translateX(-50%); display:flex; align-items:center; gap:8px }
+  .site-header .menu-btn { background:transparent; border:1px solid rgba(255,255,255,0.12); color:#fff; padding:6px 10px; border-radius:6px }
+  .site-header .search-box input { border-radius:8px; border:1px solid rgba(0,0,0,0.08); padding:8px 10px; width:220px }
+  @media(max-width:640px){ .site-header .brand-center{ position:static; transform:none; margin:0 auto } .site-header-inner{justify-content:space-between} .site-header .search-box input{width:140px} }
+
+   
+  .site-main--home { background: linear-gradient(180deg, #24324a 0%, #2f435a 32%, #ffffff 66%); }
+   
+  .course-page-layout { display:block; }
+  .course-container { display:flex; align-items:stretch; gap:0; padding:0; width:100%; box-sizing:border-box; }
+   
+  .course-sidebar { width:240px; flex:0 0 240px; height:100vh; overflow:auto; }
+  .course-sidebar-inner { position:static; top:auto; height:auto; overflow:visible; padding-left:8px; padding-right:8px; }
+   
+  .course-content { flex:1 1 auto; width:auto; padding:18px 12px 18px 24px; height:100vh; overflow:auto; box-sizing:border-box; }
+  @media(max-width:1024px){ .course-container{flex-direction:column;padding:0 8px;gap:12px} .course-sidebar{width:100%;flex:auto} .course-sidebar-inner{position:relative;height:auto} .course-content{width:100%;padding:12px} }
+   
+  .prose-container { max-width:920px; margin:0 auto; }
   </style>
 </head>
 <body class="min-h-screen text-slate-900 bg-white">
@@ -342,7 +361,7 @@
 </script>
 
 
-  <main class="site-main">
+  <main class="site-main ">
     
 
 <div class="lg:hidden inset-x-0 bg-slate-900 text-white z-30">
@@ -526,11 +545,11 @@
 </script>
 
 
-<div class="flex">
-  
+<div class="course-page-layout">
+  <div class="course-container">
     
-<aside class="hidden lg:block w-80 flex-shrink-0 bg-slate-900 text-white min-h-screen left-0 top-0 overflow-y-auto">
-  <div class="p-6 space-y-8">
+<aside class="course-sidebar hidden lg:block bg-slate-900 text-white">
+  <div class="course-sidebar-inner space-y-8">
     
     <div>
       <h1 class="text-2xl font-bold leading-snug">Week 1 - HTML &amp; CSS Fundamentals Notes</h1>
@@ -685,10 +704,9 @@
   </div>
 </aside>
 
-  
-  
-  
-  <main class="flex-1 ml-0 lg:ml-80 p-6 lg:ml-80 lg:p-12 max-w-3xl">
+
+    
+    <main class="course-content">
     <h1 class="text-4xl font-bold text-slate-900 mb-6">Week 1 - HTML &amp; CSS Fundamentals Notes</h1>
     
       <p class="text-slate-600 mb-6">Week 1</p>
@@ -912,7 +930,8 @@
 </div>
 </div>
     </div>
-  </main>
+    </main>
+  </div>
 </div>
 
   </main>

@@ -1,12 +1,11 @@
 {{ define "main" }}
 {{ partial "mobile-navbar.html" . }}
-<div class="flex">
-  {{ if not (or .IsHome (eq .Type "courses-root")) }}
+<div class="course-page-layout">
+  <div class="course-container">
     {{ partial "course-sidebar.html" . }}
-  {{ end }}
-  
-  <!-- Main Content -->
-  <main class="flex-1 ml-0 lg:ml-80 p-6 lg:p-12 max-w-3xl">
+
+    <!-- Main Content -->
+    <main class="course-content">
     <h1 class="text-4xl font-bold text-slate-900 mb-6">{{ .Title }}</h1>
     {{ with .Params.week }}
       <p class="text-slate-600 mb-6">Week {{ . }}</p>
@@ -15,6 +14,7 @@
     <div class="prose prose-lg max-w-none">
       {{ .Content }}
     </div>
-  </main>
+    </main>
+  </div>
 </div>
 {{ end }}

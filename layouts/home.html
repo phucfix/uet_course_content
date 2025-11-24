@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>{{ .Site.Title }}</title>
+	<link rel="icon" href="/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+	<style>
+		/* minimal inline styles copied from baseof to ensure consistent look */
+		:root{--font-sans:'Inter','PT Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
+		html{font-family:var(--font-sans);scroll-behavior:smooth}
+		body{background:linear-gradient(180deg,#ffffff 0%,#fbfdff 100%);color:#0f172a;min-height:100vh}
+		.hero{background-size:cover;background-position:center}
+		.hero h1{font-family:'Merriweather',serif}
+		.max-w-6xl{max-width:72rem}
+	</style>
+</head>
+<body class="min-h-screen text-slate-900 bg-white">
+	<!-- Mobile navbar partial output (inline simplified) -->
+	<div class="lg:hidden inset-x-0 bg-slate-900 text-white z-30">
+		<div class="h-12 flex items-center justify-between px-4"><button id="toggleMobileMenu" class="px-3 py-1.5 rounded bg-slate-800 text-white text-sm">Menu</button></div>
+	</div>
+
+	<main class="site-main site-main--home">
+		<!-- Hero -->
+		<section class="hero bg-[#273549] text-white py-14 lg:py-20">
+			<div class="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-between">
+				<div class="flex items-center gap-6">
+					<img src="/img/Logo-DH-Cong-Nghe-UET.webp" alt="logo" class="h-10" />
+					<div>
+						<h1 class="text-4xl lg:text-5xl font-serif font-semibold tracking-tight">Free Courses</h1>
+						<p class="text-slate-200 max-w-2xl">Browse curated free course content and lecture notes from UET Learning. Click a course to view weeks, notes and problem sets.</p>
+					</div>
+				</div>
+				<div class="hidden lg:block">
+					<div class="flex items-center gap-3">
+						<a href="/courses/" class="px-4 py-2 border border-white/20 text-white rounded">VIEW ALL COURSES</a>
+						<div class="w-40">
+							<input id="course-search" placeholder="Search" class="w-full px-3 py-2 rounded text-black" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Filters bar -->
+		<section class="filters bg-white border-b border-slate-200">
+			<div class="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex flex-wrap items-center gap-4">
+				<div class="text-sm text-slate-600">107 results for</div>
+				<div class="flex items-center gap-2">
+					<span class="bg-slate-100 px-3 py-1 rounded text-sm">FREE</span>
+					<a class="text-sm text-red-600 ml-2">Clear all filters</a>
+				</div>
+				<div class="ml-auto flex gap-3">
+					<button class="text-sm px-3 py-2 border rounded">Subject Area</button>
+					<button class="text-sm px-3 py-2 border rounded">Price</button>
+					<button class="text-sm px-3 py-2 border rounded">Start Date</button>
+					<button class="text-sm px-3 py-2 border rounded">Duration</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Courses grid -->
+		<section class="courses py-10">
+			<div class="max-w-6xl mx-auto px-6 lg:px-8">
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+					{{ $courses := site.GetPage "section" "courses" }}
+					{{ if $courses }}
+						{{ range $courses.Sections }}
+							<a href="{{ .RelPermalink }}" class="course-card block bg-white rounded shadow-sm overflow-hidden hover:shadow-md" data-course-name="{{ lower .Title }}" data-course-desc="{{ lower (.Params.description | default "") }}">
+								{{ $img := .Params.image | default "/img/course-placeholder.jpg" }}
+								<div class="h-40 bg-slate-300/60" style="background-image: url('{{ $img }}'); background-size: cover; background-position: center;"></div>
+								<div class="p-4">
+									<div class="text-xs text-slate-400 uppercase mb-2 flex items-center gap-2">
+										<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
+										<span>{{ with .Params.category }}{{ . }}{{ else }}Computer Science{{ end }}</span>
+									</div>
+									<h3 class="text-lg font-semibold text-slate-900 mb-1">{{ .Title }}</h3>
+									{{ with .Params.description }}<p class="text-sm text-slate-600">{{ . }}</p>{{ end }}
+								</div>
+							</a>
+						{{ end }}
+					{{ end }}
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script>
+		// Client-side search for courses on homepage
+		(function(){
+			const searchInput = document.getElementById('course-search');
+			if (!searchInput) return;
+			const cards = Array.from(document.querySelectorAll('.course-card'));
+			const resultsEl = document.createElement('div');
+			resultsEl.id = 'search-results';
+			resultsEl.className = 'mt-4 hidden';
+			searchInput.parentNode.parentNode.appendChild(resultsEl);
+
+			searchInput.addEventListener('input', function(e){
+				const q = e.target.value.toLowerCase().trim();
+				if (!q) {
+					cards.forEach(c => c.style.display = 'block');
+					resultsEl.classList.add('hidden');
+					return;
+				}
+				let found = false;
+				cards.forEach(c => {
+					const n = c.getAttribute('data-course-name') || '';
+					const d = c.getAttribute('data-course-desc') || '';
+					if (n.includes(q) || d.includes(q)) { c.style.display = 'block'; found = true; } else { c.style.display = 'none'; }
+				});
+				if (!found) {
+					resultsEl.innerHTML = `<p class="text-slate-600">Không tìm thấy khóa học nào với từ khóa "${q}"</p>`;
+					resultsEl.classList.remove('hidden');
+				} else {
+					resultsEl.classList.add('hidden');
+				}
+			});
+		})();
+	</script>
+</body>
+</html>
