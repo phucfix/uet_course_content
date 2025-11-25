@@ -1,5 +1,6 @@
 ---
 title: "Introduction to Computer Science"
+image: "/img/courses/cs.jpg"
 type: "course-welcome"
 description: "Giới thiệu về Khoa học Máy tính"
 url: "/courses/cs50/"

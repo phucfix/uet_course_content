@@ -1,5 +1,6 @@
 ---
 title: "Database Systems"
+image: "/img/courses/sql.jpg"
 type: "course-welcome"
 description: "Học về hệ thống cơ sở dữ liệu, SQL và database design"
 url: "/courses/database/"

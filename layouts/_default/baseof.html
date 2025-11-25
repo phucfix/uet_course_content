@@ -86,7 +86,7 @@
       margin: 0; /* remove centered margins */
       padding: 0; /* remove gutters so sidebar can sit flush */
       flex: 1 0 auto;
-      display: flex; /* enable two-column independent scrolling */
+      display: block; /* changed from flex to block */
       align-items:stretch;
     }
 
@@ -135,6 +135,11 @@
   /* Course card image area */
   .courses .h-40 { height: 10rem; }
 
+  /* Details/Summary styling */
+  details summary { list-style: none; }
+  details summary::-webkit-details-marker { display: none; }
+  details[open] > summary { border-bottom: 1px solid #e2e8f0; }
+
   /* Cards like sample */
   .course-card { border-radius: 6px; overflow: hidden; background: #fff; box-shadow: 0 6px 18px rgba(15,23,42,0.06); border: 1px solid rgba(15,23,42,0.04); }
   .course-card .card-body { padding: 1.25rem; }
@@ -156,29 +161,19 @@
   /* Slight homepage background gradient for hero transition */
   .site-main--home { background: linear-gradient(180deg, #24324a 0%, #2f435a 32%, #ffffff 66%); }
   /* Course two-column layout - full-bleed responsive */
-  .course-page-layout { display:block; }
+  .course-page-layout { display:block; width:100%; height:100%; }
   .course-container { display:flex; align-items:stretch; gap:0; padding:0; width:100%; box-sizing:border-box; }
   /* Sidebar is a fixed-width column; full height and scrollable */
-  .course-sidebar { width:240px; flex:0 0 240px; height:100vh; overflow:auto; }
-  .course-sidebar-inner { position:static; top:auto; height:auto; overflow:visible; padding-left:8px; padding-right:8px; }
+  .course-sidebar { width:210px; flex:0 0 210px; height:100vh; overflow:auto; }
+  .course-sidebar-inner { position:static; top:auto; height:auto; overflow:visible; padding:0 16px; }
   /* Content fills remaining space and is independently scrollable */
-  .course-content { flex:1 1 auto; width:auto; padding:18px 12px 18px 24px; height:100vh; overflow:auto; box-sizing:border-box; }
-  @media(max-width:1024px){ .course-container{flex-direction:column;padding:0 8px;gap:12px} .course-sidebar{width:100%;flex:auto} .course-sidebar-inner{position:relative;height:auto} .course-content{width:100%;padding:12px} }
+  .course-content { flex:1 1 auto; width:auto; padding:0; height:100vh; overflow:auto; box-sizing:border-box; }
+  @media(max-width:1024px){ .course-container{flex-direction:column;padding:0;gap:0} .course-sidebar{width:100%;flex:auto;height:auto} .course-sidebar-inner{position:relative;height:auto;padding:12px 16px} .course-content{width:100%;padding:0;height:auto} }
   /* Improve prose width for readability */
   .prose-container { max-width:920px; margin:0 auto; }
   </style>
 </head>
 <body class="min-h-screen text-slate-900 bg-white">
-  {{ if not .IsHome }}
-  <header class="site-header">
-    <div class="site-header-inner">
-      <nav class="site-nav">
-        <a href="/">Trang chủ</a>
-        <a href="/courses/">Khóa học</a>
-      </nav>
-    </div>
-  </header>
-  {{ end }}
   {{ partial "mobile-navbar.html" . }}
   <main class="site-main {{ if .IsHome }}site-main--home{{ end }}">
     {{ block "main" . }}{{ end }}

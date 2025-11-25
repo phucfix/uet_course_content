@@ -47,9 +47,9 @@
 
 {{ if $videoId }}
   <!-- Embedded YouTube Video -->
-  <div class="relative w-full mb-4" style="padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000;">
+  <div class="relative w-full mb-4" style="padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000; border-radius: 0.5rem;">
     <iframe 
-      class="absolute top-0 left-0 w-full h-full rounded-lg"
+      class="absolute top-0 left-0 w-full h-full"
       src="https://www.youtube.com/embed/{{ $videoId }}{{ if $startTime }}?start={{ $startTime }}{{ end }}"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

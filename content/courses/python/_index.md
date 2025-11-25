@@ -1,5 +1,6 @@
 ---
 title: "Python Programming"
+image: "/img/courses/python.jpg"
 type: "course-welcome"
 description: "Học lập trình Python từ cơ bản đến nâng cao"
 url: "/courses/python/"

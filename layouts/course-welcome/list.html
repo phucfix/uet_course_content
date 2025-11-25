@@ -5,77 +5,139 @@
 
     <!-- Main Content -->
     <main class="course-content">
-      <!-- Welcome Section -->
-      <h1 class="text-4xl font-bold text-slate-900 mb-6">Welcome</h1>
-
-      <div class="prose prose-lg max-w-none mb-8 text-slate-700 leading-relaxed">
-        {{ .Content }}
-      </div>
-
-      <!-- How to Take this Course Section -->
-      <div class="mb-12">
-        <h2 class="text-2xl font-bold text-slate-900 mb-4">How to Take this Course</h2>
-        <p class="text-slate-700 mb-6 leading-relaxed">
-          Khóa học này được tổ chức theo các tuần học. Mỗi tuần bao gồm video bài giảng, ghi chú và bài tập.
-        </p>
-
-        <!-- Workflow Diagram -->
-        <div class="mb-8">
-          <div class="flex flex-col items-center space-y-3">
-            <!-- Watch Lecture -->
-            <div class="bg-purple-100 border-2 border-purple-300 px-8 py-4 rounded text-center" style="width: 200px;">
-              <div class="font-semibold text-slate-900">Watch Lecture</div>
-            </div>
-
-            <!-- Arrow with recommended -->
-            <div class="flex flex-col items-center">
-              <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-              </svg>
-              <span class="text-xs text-slate-500 mt-1">recommended</span>
-            </div>
-
-            <!-- Watch Section -->
-            <div class="bg-purple-100 border-2 border-purple-300 px-8 py-4 rounded text-center" style="width: 200px;">
-              <div class="font-semibold text-slate-900">Watch Section</div>
-            </div>
-
-            <!-- Arrow with recommended -->
-            <div class="flex flex-col items-center">
-              <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-              </svg>
-              <span class="text-xs text-slate-500 mt-1">recommended</span>
-            </div>
-
-            <!-- Watch Shorts -->
-            <div class="bg-purple-100 border-2 border-purple-300 px-8 py-4 rounded text-center" style="width: 200px;">
-              <div class="font-semibold text-slate-900">Watch Shorts</div>
-            </div>
-
-            <!-- Arrow -->
-            <div class="flex flex-col items-center">
-              <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      <div class="px-6 py-6">
+        <!-- Welcome Header with gradient background -->
+        <div class="mb-8 p-8 bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-2xl border border-blue-100 shadow-sm">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-lg">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
               </svg>
             </div>
-
-            <!-- Submit Problem Set -->
-            <div class="bg-purple-100 border-2 border-purple-300 px-8 py-4 rounded text-center" style="width: 200px;">
-              <div class="font-semibold text-slate-900">Submit Problem Set</div>
+            <div>
+              <h1 class="text-4xl font-bold text-slate-900">Welcome</h1>
+              <p class="text-slate-600 mt-1">Chào mừng bạn đến với khóa học</p>
             </div>
           </div>
         </div>
 
-        <p class="text-slate-700 mb-4 leading-relaxed">
-          Nộp bài tập và dự án cuối khóa để nhận phản hồi. Sử dụng hệ thống nộp bài để gửi các bài tập của bạn.
-        </p>
+        <!-- Content Section -->
+        <div class="prose prose-lg max-w-none mb-12 text-slate-700 leading-relaxed">
+          {{ .Content }}
+        </div>
 
-        <ul class="text-slate-700 mb-4 space-y-2 list-disc list-inside">
-          <li>Nộp bài tập qua hệ thống để được đánh giá</li>
-          <li>Nộp dự án cuối khóa để hoàn thành khóa học</li>
-          <li>Sử dụng sidebar bên trái để điều hướng giữa các tuần học</li>
-        </ul>
+        <!-- How to Take this Course Section -->
+        <div class="mb-12 bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+              </svg>
+            </div>
+            <h2 class="text-3xl font-bold text-slate-900">How to Take this Course</h2>
+          </div>
+          
+          <p class="text-slate-700 mb-8 leading-relaxed text-lg">
+            Khóa học này được tổ chức theo các tuần học. Mỗi tuần bao gồm video bài giảng, ghi chú và bài tập.
+          </p>
+          
+          <!-- Workflow Diagram with improved styling -->
+          <div class="mb-10">
+            <div class="flex flex-col items-center space-y-4">
+              <!-- Watch Lecture -->
+              <div class="bg-gradient-to-r from-purple-100 to-purple-200 border-2 border-purple-400 px-10 py-5 rounded-xl text-center shadow-md hover:shadow-lg transition-shadow" style="width: 240px;">
+                <div class="flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5 text-purple-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <div class="font-bold text-slate-900">Watch Lecture</div>
+                </div>
+              </div>
+              
+              <!-- Arrow with recommended -->
+              <div class="flex flex-col items-center">
+                <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+                <span class="text-xs font-medium text-slate-500 mt-1 bg-slate-100 px-2 py-1 rounded">recommended</span>
+              </div>
+              
+              <!-- Watch Section -->
+              <div class="bg-gradient-to-r from-purple-100 to-purple-200 border-2 border-purple-400 px-10 py-5 rounded-xl text-center shadow-md hover:shadow-lg transition-shadow" style="width: 240px;">
+                <div class="flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5 text-purple-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                  </svg>
+                  <div class="font-bold text-slate-900">Watch Section</div>
+                </div>
+              </div>
+              
+              <!-- Arrow with recommended -->
+              <div class="flex flex-col items-center">
+                <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+                <span class="text-xs font-medium text-slate-500 mt-1 bg-slate-100 px-2 py-1 rounded">recommended</span>
+              </div>
+              
+              <!-- Watch Shorts -->
+              <div class="bg-gradient-to-r from-purple-100 to-purple-200 border-2 border-purple-400 px-10 py-5 rounded-xl text-center shadow-md hover:shadow-lg transition-shadow" style="width: 240px;">
+                <div class="flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5 text-purple-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
+                  </svg>
+                  <div class="font-bold text-slate-900">Watch Shorts</div>
+                </div>
+              </div>
+              
+              <!-- Arrow -->
+              <div class="flex flex-col items-center">
+                <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+              </div>
+              
+              <!-- Submit Problem Set -->
+              <div class="bg-gradient-to-r from-green-100 to-green-200 border-2 border-green-400 px-10 py-5 rounded-xl text-center shadow-md hover:shadow-lg transition-shadow" style="width: 240px;">
+                <div class="flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <div class="font-bold text-slate-900">Submit Problem Set</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Additional Info -->
+          <div class="bg-blue-50 rounded-xl p-6 border border-blue-100">
+            <p class="text-slate-700 mb-4 leading-relaxed">
+              Nộp bài tập và dự án cuối khóa để nhận phản hồi. Sử dụng hệ thống nộp bài để gửi các bài tập của bạn.
+            </p>
+            
+            <ul class="text-slate-700 space-y-3">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>Nộp bài tập qua hệ thống để được đánh giá</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>Nộp dự án cuối khóa để hoàn thành khóa học</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>Sử dụng sidebar bên trái để điều hướng giữa các tuần học</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </main>
   </div>

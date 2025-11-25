@@ -1,5 +1,6 @@
 ---
 title: "Web Development"
+image: "/img/courses/web.jpg"
 type: "course-welcome"
 description: "Học phát triển web với HTML, CSS, JavaScript và các framework hiện đại"
 url: "/courses/web-dev/"
