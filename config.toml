@@ -7,10 +7,11 @@ taxonomies = {}
 
 [markup]
   [markup.highlight]
-    noClasses = true
-    style = "dracula"
-    lineNos = true
-    lineNumbersInTable = true
+    noClasses = false
+    style = "github"
+    lineNos = false
+    lineNumbersInTable = false
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+      wrapCodeBlock = false

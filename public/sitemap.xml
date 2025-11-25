@@ -2,132 +2,132 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/courses/cs50ai/</loc>
+    <loc>//localhost:33371/courses/cs50ai/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/python/week1/psets/calculator/</loc>
+    <loc>//localhost:33371/courses/python/week1/psets/calculator/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/weeks/1/psets/cash/</loc>
+    <loc>//localhost:33371/courses/cs50/weeks/1/psets/cash/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/</loc>
+    <loc>//localhost:33371/courses/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/weeks/1/psets/credit/</loc>
+    <loc>//localhost:33371/courses/cs50/weeks/1/psets/credit/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/database/</loc>
+    <loc>//localhost:33371/courses/database/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/python/week2/psets/file_manager/</loc>
+    <loc>//localhost:33371/courses/python/week2/psets/file_manager/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/final/</loc>
+    <loc>//localhost:33371/courses/cs50/final/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50ai/final/</loc>
+    <loc>//localhost:33371/courses/cs50ai/final/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/database/final/</loc>
+    <loc>//localhost:33371/courses/database/final/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/python/final/</loc>
+    <loc>//localhost:33371/courses/python/final/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/web-dev/final/</loc>
+    <loc>//localhost:33371/courses/web-dev/final/</loc>
   </url><url>
-    <loc>//localhost:1313/about/</loc>
+    <loc>//localhost:33371/about/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/python/week1/psets/guess_number/</loc>
+    <loc>//localhost:33371/courses/python/week1/psets/guess_number/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/</loc>
+    <loc>//localhost:33371/courses/cs50/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/database/week1/psets/library_system/</loc>
+    <loc>//localhost:33371/courses/database/week1/psets/library_system/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/weeks/0/psets/mario/</loc>
+    <loc>//localhost:33371/courses/cs50/weeks/0/psets/mario/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/web-dev/week1/psets/portfolio/</loc>
+    <loc>//localhost:33371/courses/web-dev/week1/psets/portfolio/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/python/</loc>
+    <loc>//localhost:33371/courses/python/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/weeks/0/psets/scratch/</loc>
+    <loc>//localhost:33371/courses/cs50/weeks/0/psets/scratch/</loc>
   </url><url>
-    <loc>//localhost:1313/</loc>
+    <loc>//localhost:33371/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/web-dev/</loc>
+    <loc>//localhost:33371/courses/web-dev/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/week0/</loc>
+    <loc>//localhost:33371/courses/cs50/week0/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50ai/week0/</loc>
+    <loc>//localhost:33371/courses/cs50ai/week0/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/database/week0/</loc>
+    <loc>//localhost:33371/courses/database/week0/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/python/week0/</loc>
+    <loc>//localhost:33371/courses/python/week0/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/web-dev/week0/</loc>
+    <loc>//localhost:33371/courses/web-dev/week0/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/weeks/0/notes/</loc>
+    <loc>//localhost:33371/courses/cs50/weeks/0/notes/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/weeks/0/psets/</loc>
+    <loc>//localhost:33371/courses/cs50/weeks/0/psets/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/week1/</loc>
+    <loc>//localhost:33371/courses/cs50/week1/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50ai/week1/</loc>
+    <loc>//localhost:33371/courses/cs50ai/week1/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/weeks/1/notes/</loc>
+    <loc>//localhost:33371/courses/cs50/weeks/1/notes/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/web-dev/week1/</loc>
+    <loc>//localhost:33371/courses/web-dev/week1/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/web-dev/weeks/1/notes/</loc>
+    <loc>//localhost:33371/courses/web-dev/weeks/1/notes/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/database/week1/</loc>
+    <loc>//localhost:33371/courses/database/week1/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/database/weeks/1/notes/</loc>
+    <loc>//localhost:33371/courses/database/weeks/1/notes/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/python/week1/</loc>
+    <loc>//localhost:33371/courses/python/week1/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/python/weeks/1/notes/</loc>
+    <loc>//localhost:33371/courses/python/weeks/1/notes/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/weeks/1/psets/</loc>
+    <loc>//localhost:33371/courses/cs50/weeks/1/psets/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/database/weeks/1/psets/</loc>
+    <loc>//localhost:33371/courses/database/weeks/1/psets/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/python/weeks/1/psets/</loc>
+    <loc>//localhost:33371/courses/python/weeks/1/psets/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/web-dev/weeks/1/psets/</loc>
+    <loc>//localhost:33371/courses/web-dev/weeks/1/psets/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/week2/</loc>
+    <loc>//localhost:33371/courses/cs50/week2/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50ai/week2/</loc>
+    <loc>//localhost:33371/courses/cs50ai/week2/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/database/week2/</loc>
+    <loc>//localhost:33371/courses/database/week2/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/web-dev/week2/</loc>
+    <loc>//localhost:33371/courses/web-dev/week2/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/python/week2/</loc>
+    <loc>//localhost:33371/courses/python/week2/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/python/weeks/2/notes/</loc>
+    <loc>//localhost:33371/courses/python/weeks/2/notes/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/python/weeks/2/psets/</loc>
+    <loc>//localhost:33371/courses/python/weeks/2/psets/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/week3/</loc>
+    <loc>//localhost:33371/courses/cs50/week3/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50ai/week3/</loc>
+    <loc>//localhost:33371/courses/cs50ai/week3/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/database/week3/</loc>
+    <loc>//localhost:33371/courses/database/week3/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/python/week3/</loc>
+    <loc>//localhost:33371/courses/python/week3/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/web-dev/week3/</loc>
+    <loc>//localhost:33371/courses/web-dev/week3/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/week4/</loc>
+    <loc>//localhost:33371/courses/cs50/week4/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50ai/week4/</loc>
+    <loc>//localhost:33371/courses/cs50ai/week4/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/database/week4/</loc>
+    <loc>//localhost:33371/courses/database/week4/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/python/week4/</loc>
+    <loc>//localhost:33371/courses/python/week4/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/web-dev/week4/</loc>
+    <loc>//localhost:33371/courses/web-dev/week4/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/week5/</loc>
+    <loc>//localhost:33371/courses/cs50/week5/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50ai/week5/</loc>
+    <loc>//localhost:33371/courses/cs50ai/week5/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/database/week5/</loc>
+    <loc>//localhost:33371/courses/database/week5/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/python/week5/</loc>
+    <loc>//localhost:33371/courses/python/week5/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/web-dev/week5/</loc>
+    <loc>//localhost:33371/courses/web-dev/week5/</loc>
   </url>
 </urlset>

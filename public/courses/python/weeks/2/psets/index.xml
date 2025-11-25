@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Week 2 Problem Sets on UET Learning Course</title>
-    <link>//localhost:1313/courses/python/weeks/2/psets/</link>
+    <link>//localhost:33371/courses/python/weeks/2/psets/</link>
     <description>Recent content in Week 2 Problem Sets on UET Learning Course</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:1313/courses/python/weeks/2/psets/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:33371/courses/python/weeks/2/psets/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>File Manager</title>
-      <link>//localhost:1313/courses/python/week2/psets/file_manager/</link>
+      <link>//localhost:33371/courses/python/week2/psets/file_manager/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/courses/python/week2/psets/file_manager/</guid>
+      <guid>//localhost:33371/courses/python/week2/psets/file_manager/</guid>
       <description>&lt;h1 id=&#34;file-manager&#34;&gt;File Manager&lt;/h1&gt;&#xA;&lt;p&gt;Tạo một chương trình quản lý file cho phép người dùng đọc, ghi và xử lý file.&lt;/p&gt;&#xA;&lt;h2 id=&#34;yêu-cầu&#34;&gt;Yêu cầu&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Menu cho phép:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Đọc file&lt;/li&gt;&#xA;&lt;li&gt;Ghi file&lt;/li&gt;&#xA;&lt;li&gt;Tìm kiếm trong file&lt;/li&gt;&#xA;&lt;li&gt;Đếm số từ trong file&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Xử lý lỗi khi file không tồn tại&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;gợi-ý&#34;&gt;Gợi ý&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sử dụng &lt;code&gt;try-except&lt;/code&gt; để xử lý lỗi&lt;/li&gt;&#xA;&lt;li&gt;Sử dụng functions để tổ chức code&lt;/li&gt;&#xA;&lt;li&gt;Sử dụng &lt;code&gt;with&lt;/code&gt; statement khi làm việc với file&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
