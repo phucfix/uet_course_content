@@ -1,56 +1,32 @@
-<!-- Desktop Sidebar -->
-<aside class="course-sidebar hidden lg:block bg-slate-900 text-white">
-  <div class="course-sidebar-inner space-y-8 py-6">
-    <!-- Course Info -->
-    <div>
-      <h1 class="text-xl font-bold leading-snug mb-1">{{ .Title }}</h1>
-      {{ with .Params.description }}
-        <p class="text-slate-400 text-xs mt-2 leading-relaxed">{{ . }}</p>
-      {{ end }}
+<!-- Desktop Sidebar - CS50 Style -->
+<aside class="course-sidebar">
+  <div class="sidebar-inner">
+    <!-- Course Title -->
+    <div class="sidebar-header">
+      <a href="/" class="sidebar-brand">{{ .Site.Title }}</a>
     </div>
-
-    <!-- Donate Link if applicable -->
-    {{ if .Site.Params.donate_url }}
-    <div>
-      <a href="{{ .Site.Params.donate_url }}" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-white text-sm flex items-center gap-1">
-        <span>Donate</span>
-        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-        </svg>
-      </a>
-    </div>
-    {{ end }}
 
     <!-- All Courses -->
-    <div>
-      <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-3 font-semibold">Courses</h2>
-      <nav class="space-y-1">
-        {{ $courses := site.GetPage "section" "courses" }}
-        {{ if $courses }}
-          {{ range $courses.Sections }}
-            <a href="{{ .RelPermalink }}" class="block py-2 px-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 rounded transition-colors {{ if eq .RelPermalink $.RelPermalink }}text-white bg-slate-800 font-semibold{{ end }}">{{ .Title }}</a>
-          {{ end }}
+    <nav class="sidebar-nav">
+      <h3>Courses</h3>
+      {{ $courses := site.GetPage "section" "courses" }}
+      {{ if $courses }}
+        {{ range $courses.Sections }}
+          <a href="{{ .RelPermalink }}" {{ if eq .RelPermalink $.RelPermalink }}class="active"{{ end }}>{{ .Title }}</a>
         {{ end }}
-      </nav>
-    </div>
+      {{ end }}
+    </nav>
 
     <!-- Tools -->
-    <div>
-      <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-3 font-semibold">Tools</h2>
-      <nav class="space-y-1">
-        <a href="http://localhost:4000" target="_blank" rel="noopener noreferrer" class="block py-2 px-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 rounded transition-colors flex items-center gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-          </svg>
-          UET Duck AI
-        </a>
-        <a href="https://codespaces.new/uet36/code36?quickstart=1" target="_blank" rel="noopener noreferrer" class="block py-2 px-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 rounded transition-colors">Visual Studio Code</a>
-      </nav>
-    </div>
+    <nav class="sidebar-nav">
+      <h3>Tools</h3>
+      <a href="http://localhost:4000" target="_blank">UET Duck AI</a>
+      <a href="https://codespaces.new/uet36/code36?quickstart=1" target="_blank">VS Code</a>
+    </nav>
 
     <!-- Course Weeks -->
-    <div>
-      <h2 class="text-xs uppercase tracking-wide text-slate-400 mb-3 font-semibold">Weeks</h2>
+    <nav class="sidebar-nav">
+      <h3>Weeks</h3>
       {{ $currentPage := . }}
       {{ $coursePage := . }}
       {{ if ne .Type "course-welcome" }}
@@ -59,7 +35,7 @@
           {{ $coursePage = $coursePage.Parent }}
         {{ end }}
         {{ if $coursePage }}
-          <a href="{{ $coursePage.RelPermalink }}" class="block py-2 px-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 rounded transition-colors mb-1">Welcome</a>
+          <a href="{{ $coursePage.RelPermalink }}">Welcome</a>
         {{ end }}
       {{ end }}
       {{ $courseWeeks := slice }}
@@ -81,18 +57,12 @@
           {{ end }}
         {{ end }}
       {{ end }}
-      {{ if or $courseWeeks $finalWeek }}
-        <nav class="space-y-1">
-          {{ range sort $courseWeeks "Params.week" "asc" }}
-            <a href="{{ .RelPermalink }}" class="block py-2 px-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 rounded transition-colors {{ if eq .RelPermalink $currentPage.RelPermalink }}text-white bg-slate-800 font-semibold{{ end }}">{{ .Title }}</a>
-          {{ end }}
-          {{ if $finalWeek }}
-            <a href="{{ $finalWeek.RelPermalink }}" class="block py-2 px-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 rounded transition-colors {{ if eq $finalWeek.RelPermalink $currentPage.RelPermalink }}text-white bg-slate-800 font-semibold{{ end }}">{{ $finalWeek.Title }}</a>
-          {{ end }}
-        </nav>
-      {{ else }}
-        <p class="text-xs text-slate-500 py-2 px-2">Chưa có tuần học</p>
+      {{ range sort $courseWeeks "Params.week" "asc" }}
+        <a href="{{ .RelPermalink }}" {{ if eq .RelPermalink $currentPage.RelPermalink }}class="active"{{ end }}>{{ .Title }}</a>
       {{ end }}
-    </div>
+      {{ if $finalWeek }}
+        <a href="{{ $finalWeek.RelPermalink }}" {{ if eq $finalWeek.RelPermalink $currentPage.RelPermalink }}class="active"{{ end }}>{{ $finalWeek.Title }}</a>
+      {{ end }}
+    </nav>
   </div>
 </aside>

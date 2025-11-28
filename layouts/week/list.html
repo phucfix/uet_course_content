@@ -1,105 +1,47 @@
 {{ define "main" }}
 {{ $course := .Params.course }}
 {{ $week := .Params.week }}
-<div class="fade-in">
-  <!-- Week Header with Badge -->
-  <div class="mb-6 sm:mb-8 lg:mb-10">
-    <div class="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full text-sm sm:text-base font-bold mb-4 sm:mb-5 shadow-lg">
-      <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-      </svg>
-      <span>Tuần {{ $week }}</span>
-    </div>
-    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-2 sm:mb-3">{{ .Title }}</h1>
-    <p class="text-base sm:text-lg lg:text-xl text-slate-600">{{ with .Params.description }}{{ . }}{{ else }}Ghi chú và bài tập cho Tuần {{ $week }}{{ end }}</p>
-  </div>
+<div style="max-width: 768px; margin: 0 auto; padding: 2rem 1rem;">
+  <header style="margin-bottom: 1.5rem; border-bottom: 1px solid #dee2e6; padding-bottom: 1rem;">
+    <p style="color: #6c757d; font-size: 0.875rem; margin: 0 0 0.25rem 0;">Week {{ $week }}</p>
+    <h1 style="font-size: 2rem; font-weight: 700; color: #000; margin: 0 0 0.5rem 0;">{{ .Title }}</h1>
+    <p style="color: #6c757d; margin: 0;">{{ with .Params.description }}{{ . }}{{ else }}Notes and problem sets for Week {{ $week }}{{ end }}</p>
+  </header>
 
   <!-- Notes Section -->
   {{ $notes := first 1 (where .Pages "Type" "notes") }}
   {{ with $notes }}
     {{ $n := index . 0 }}
-    <div class="mb-10 sm:mb-12 lg:mb-14 bg-white rounded-2xl border border-blue-100 overflow-hidden card-hover shadow-sm hover:shadow-xl transition-all duration-300">
-      <div class="bg-gradient-to-br from-blue-500 to-blue-700 p-6 sm:p-8">
-        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div class="flex items-center gap-3 sm:gap-4">
-            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
-              <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-              </svg>
-            </div>
-            <div>
-              <h2 class="text-2xl sm:text-3xl font-bold text-white">Ghi chú</h2>
-              <p class="text-blue-100 text-sm mt-1">Tài liệu bài giảng</p>
-            </div>
-          </div>
-          <a class="flex items-center gap-2 bg-white text-blue-600 hover:bg-blue-50 px-5 py-3 rounded-xl font-semibold text-sm sm:text-base transition-all shadow-lg hover:shadow-xl self-start sm:self-auto" href="{{ $n.RelPermalink }}">
-            <span>Xem ghi chú</span>
-            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div class="p-6 sm:p-8">
-        <p class="text-base sm:text-lg text-slate-600 leading-relaxed">{{ with $n.Params.description }}{{ . }}{{ else }}Ghi chú bài giảng chi tiết cho tuần này, bao gồm các khái niệm chính và ví dụ minh họa.{{ end }}</p>
-      </div>
-    </div>
+    <section style="margin-bottom: 2rem;">
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: #000; margin-bottom: 0.75rem;">Notes</h2>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li style="padding: 0.5rem 0;">
+          <a href="{{ $n.RelPermalink }}" style="color: #007bff; text-decoration: none;">{{ $n.Title }}</a>
+          {{ with $n.Params.description }}
+          <p style="color: #6c757d; margin: 0.25rem 0 0 0; font-size: 0.875rem;">{{ . }}</p>
+          {{ end }}
+        </li>
+      </ul>
+    </section>
   {{ end }}
 
   <!-- Problem Sets Section -->
   {{ $psets := where .Pages "Type" "psets-list" }}
   {{ with first 1 $psets }}
     {{ $psSec := index . 0 }}
-    <div class="mb-6 sm:mb-8">
-      <div class="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
-          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
-          </svg>
-        </div>
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Bài tập</h2>
-      </div>
-    </div>
-    
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
-      {{ range $psSec.Pages }}
-      <a href="{{ .RelPermalink }}" class="group block bg-white rounded-2xl border border-slate-200 overflow-hidden card-hover shadow-sm hover:shadow-xl hover:border-green-300 transition-all duration-300">
-        <!-- Card Header with Gradient -->
-        <div class="relative h-28 bg-gradient-to-br from-green-50 via-green-100 to-green-200 overflow-hidden">
-          <div class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-green-700/20"></div>
-          <div class="absolute inset-0 flex items-center justify-center">
-            <div class="w-14 h-14 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-              <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-              </svg>
-            </div>
-          </div>
-          <div class="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -mr-12 -mt-12"></div>
-        </div>
-        
-        <!-- Card Content -->
-        <div class="p-6">
-          <div class="flex items-center justify-between mb-3">
-            <h3 class="text-xl font-bold text-slate-900 group-hover:text-green-600 transition-colors">{{ .Title }}</h3>
-            <svg class="w-5 h-5 text-green-600 group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-            </svg>
-          </div>
-          <p class="text-sm text-slate-600 leading-relaxed">{{ with .Params.description }}{{ . }}{{ else }}Bài tập thực hành cho tuần này{{ end }}</p>
-          
-          <!-- Footer -->
-          <div class="mt-4 pt-4 border-t border-slate-100">
-            <span class="inline-flex items-center text-xs font-semibold text-green-600">
-              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-              Bắt đầu làm bài
-            </span>
-          </div>
-        </div>
-      </a>
-      {{ end }}
-    </div>
+    <section>
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: #000; margin-bottom: 0.75rem;">Problem Sets</h2>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        {{ range $psSec.Pages }}
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid #e9ecef;">
+          <a href="{{ .RelPermalink }}" style="color: #007bff; text-decoration: none;">{{ .Title }}</a>
+          {{ with .Params.description }}
+          <p style="color: #6c757d; margin: 0.25rem 0 0 0; font-size: 0.875rem;">{{ . }}</p>
+          {{ end }}
+        </li>
+        {{ end }}
+      </ul>
+    </section>
   {{ end }}
 </div>
 {{ end }}

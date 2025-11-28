@@ -1,294 +1,105 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=33371&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>UET Learning Course</title>
 	<meta property="og:title" content="UET Learning Course" />
 	
 	<link rel="icon" href="/favicon.ico" />
-	<link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
 	<link rel="icon" type="image/webp" href="/img/Logo-DH-Cong-Nghe-UET.webp" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-	<link rel="shortcut icon" href="/favicon.ico" />
-	<link rel="shortcut icon" href="/img/Logo-DH-Cong-Nghe-UET.webp" />
-	<link rel="icon" type="image/webp" sizes="32x32" href="/img/Logo-DH-Cong-Nghe-UET.webp" />
-	<link rel="icon" type="image/webp" sizes="16x16" href="/img/Logo-DH-Cong-Nghe-UET.webp" />
 	<link rel="apple-touch-icon" href="/img/Logo-DH-Cong-Nghe-UET.webp" />
-	<meta name="theme-color" content="#24324a" />
+	<meta name="theme-color" content="#24292e" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@300;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-	<script src="https://cdn.tailwindcss.com"></script>
-	<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 	<style>
 		 
-		:root {
-			--font-sans: 'Inter', 'PT Sans', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-			--bg: #0f172a;
-			--muted: #6b7280;
-			--accent: #2563eb;
-			--card: #ffffff;
-			--surface: #f8fafc;
-		}
-
-		html {
-			font-family: var(--font-sans);
-			scroll-behavior: smooth;
-			height: 100%;
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-		}
-
-		body {
-			background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
-			color: #0f172a;
-			min-height: 100vh;
-			line-height: 1.6;
-		}
-
-		.hero {
-			background-size: cover;
-			background-position: center;
-		}
-
-		.hero h1 {
-			font-family: 'Merriweather', serif;
-		}
-
-		.max-w-6xl {
-			max-width: 72rem;
-		}
-
-		.course-card {
-			transition: transform .22s ease, box-shadow .22s ease;
-		}
-
-		.course-card:hover {
-			transform: translateY(-6px);
-			box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
-		}
-
-		.fade-in {
-			animation: fadeIn 0.45s ease-out;
-		}
-
-		@keyframes fadeIn {
-			from {
-				opacity: 0;
-				transform: translateY(8px);
-			}
-			to {
-				opacity: 1;
-				transform: translateY(0);
-			}
+		* { box-sizing: border-box; margin: 0; padding: 0; }
+		html { scroll-behavior: smooth; }
+		body { font-family: 'PT Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: #212529; line-height: 1.6; }
+		a { color: #007bff; text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		
+		 
+		.header { background: #24292e; color: #fff; padding: 2rem 1rem; }
+		.header-inner { max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 1.5rem; }
+		.header img { height: 60px; width: auto; }
+		.header h1 { font-size: 1.75rem; font-weight: 700; margin: 0; }
+		.header p { color: #adb5bd; margin: 0.25rem 0 0 0; }
+		
+		 
+		.main { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
+		.main h2 { font-size: 1.5rem; font-weight: 700; color: #000; margin-bottom: 1rem; border-bottom: 1px solid #dee2e6; padding-bottom: 0.5rem; }
+		
+		 
+		.course-list { list-style: none; }
+		.course-item { padding: 1rem 0; border-bottom: 1px solid #e9ecef; }
+		.course-item:last-child { border-bottom: none; }
+		.course-item a { font-size: 1.125rem; font-weight: 600; color: #007bff; }
+		.course-item p { color: #6c757d; margin: 0.25rem 0 0 0; font-size: 0.9375rem; }
+		
+		 
+		.footer { background: #f8f9fa; border-top: 1px solid #dee2e6; padding: 1.5rem 1rem; text-align: center; color: #6c757d; font-size: 0.875rem; }
+		
+		 
+		@media (max-width: 640px) {
+			.header-inner { flex-direction: column; text-align: center; }
 		}
 	</style>
 </head>
-<body class="min-h-screen text-slate-900 bg-white">
+<body>
 	
-	<div class="lg:hidden inset-x-0 bg-slate-900 text-white z-30">
-		<div class="h-12 flex items-center justify-between px-4"><button id="toggleMobileMenu" class="px-3 py-1.5 rounded bg-slate-800 text-white text-sm">Menu</button></div>
-	</div>
-
-	<main class="site-main site-main--home">
-		
-		<section class="hero bg-gradient-to-br from-[#1e293b] via-[#273549] to-[#334155] text-white py-16 lg:py-24">
-			<div class="max-w-6xl mx-auto px-6 lg:px-8">
-				<div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
-					
-					<div class="flex items-center gap-6 lg:gap-8">
-						<img src="/img/Logo-DH-Cong-Nghe-UET.webp" alt="UET Logo" class="h-20 lg:h-24 w-auto" />
-						<div>
-							<div class="text-sm lg:text-base text-blue-300 font-semibold tracking-wide mb-2">UNIVERSITY OF ENGINEERING AND TECHNOLOGY</div>
-							<h1 class="text-4xl lg:text-5xl font-serif font-bold tracking-tight mb-3">Free Courses</h1>
-							<p class="text-slate-300 text-base lg:text-lg max-w-2xl leading-relaxed">Browse curated free course content and lecture notes from UET Learning. Click a course to view weeks, notes and problem sets.</p>
-						</div>
-					</div>
-					
-					<div class="hidden lg:block">
-						<div class="flex flex-col items-end gap-3">
-							<a href="/courses/" class="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold shadow-lg transition-colors">VIEW ALL COURSES</a>
-							<div class="w-56">
-								<input id="course-search" placeholder="Search courses..." class="w-full px-4 py-2.5 rounded-lg text-slate-900 border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-							</div>
-						</div>
-					</div>
-				</div>
+	<header class="header">
+		<div class="header-inner">
+			<img src="/img/Logo-DH-Cong-Nghe-UET.webp" alt="UET Logo" />
+			<div>
+				<h1>UET Learning</h1>
+				<p>Free course content from University of Engineering and Technology</p>
 			</div>
-		</section>
+		</div>
+	</header>
 
-		
-		<section class="about-section bg-gradient-to-b from-white to-slate-50 py-12 border-b border-slate-200">
-			<div class="max-w-6xl mx-auto px-6 lg:px-8">
-				<div class="text-center mb-8">
-					<h2 class="text-3xl font-bold text-slate-900 mb-4">About University of Engineering and Technology</h2>
-					<div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-				</div>
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-					<div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
-						<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-							<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-							</svg>
-						</div>
-						<h3 class="text-xl font-bold text-slate-900 mb-2">World-Class Education</h3>
-						<p class="text-slate-600 text-sm leading-relaxed">UET provides cutting-edge technology education with experienced faculty and modern facilities, preparing students for global careers in engineering and technology.</p>
-					</div>
-					<div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
-						<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-							<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-							</svg>
-						</div>
-						<h3 class="text-xl font-bold text-slate-900 mb-2">Innovation & Research</h3>
-						<p class="text-slate-600 text-sm leading-relaxed">Our university leads in research and innovation, with numerous labs and projects in AI, robotics, data science, and emerging technologies.</p>
-					</div>
-					<div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
-						<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-							<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-							</svg>
-						</div>
-						<h3 class="text-xl font-bold text-slate-900 mb-2">Global Community</h3>
-						<p class="text-slate-600 text-sm leading-relaxed">Join a diverse community of students, alumni, and partners from around the world, building the future of technology together.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		
-		<section class="filters bg-white border-b border-slate-200">
-			<div class="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex flex-wrap items-center gap-4">
-				<div class="text-sm text-slate-600">107 results for</div>
-				<div class="flex items-center gap-2">
-					<span class="bg-slate-100 px-3 py-1 rounded text-sm">FREE</span>
-					<a class="text-sm text-red-600 ml-2">Clear all filters</a>
-				</div>
-				<div class="ml-auto flex gap-3">
-					<button class="text-sm px-3 py-2 border rounded">Subject Area</button>
-					<button class="text-sm px-3 py-2 border rounded">Price</button>
-					<button class="text-sm px-3 py-2 border rounded">Start Date</button>
-					<button class="text-sm px-3 py-2 border rounded">Duration</button>
-				</div>
-			</div>
-		</section>
-
-		
-		<section class="courses py-10">
-			<div class="max-w-6xl mx-auto px-6 lg:px-8">
-				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-					
-					
-						
-							<a href="/courses/cs50ai/" class="course-card block bg-white rounded shadow-sm overflow-hidden hover:shadow-md" data-course-name="artificial intelligence" data-course-desc="giới thiệu về trí tuệ nhân tạo và machine learning">
-								
-								<div class="h-40 bg-slate-300/60" style="background-image: url('/img/courses/ai.png'); background-size: cover; background-position: center;"></div>
-								<div class="p-4">
-									<div class="text-xs text-slate-400 uppercase mb-2 flex items-center gap-2">
-										<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
-										<span>Computer Science</span>
-									</div>
-									<h3 class="text-lg font-semibold text-slate-900 mb-1">Artificial Intelligence</h3>
-									<p class="text-sm text-slate-600">Giới thiệu về Trí tuệ Nhân tạo và Machine Learning</p>
-								</div>
-							</a>
-						
-							<a href="/courses/database/" class="course-card block bg-white rounded shadow-sm overflow-hidden hover:shadow-md" data-course-name="database systems" data-course-desc="học về hệ thống cơ sở dữ liệu, sql và database design">
-								
-								<div class="h-40 bg-slate-300/60" style="background-image: url('/img/courses/sql.jpg'); background-size: cover; background-position: center;"></div>
-								<div class="p-4">
-									<div class="text-xs text-slate-400 uppercase mb-2 flex items-center gap-2">
-										<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
-										<span>Computer Science</span>
-									</div>
-									<h3 class="text-lg font-semibold text-slate-900 mb-1">Database Systems</h3>
-									<p class="text-sm text-slate-600">Học về hệ thống cơ sở dữ liệu, SQL và database design</p>
-								</div>
-							</a>
-						
-							<a href="/courses/cs50/" class="course-card block bg-white rounded shadow-sm overflow-hidden hover:shadow-md" data-course-name="introduction to computer science" data-course-desc="giới thiệu về khoa học máy tính">
-								
-								<div class="h-40 bg-slate-300/60" style="background-image: url('/img/courses/cs.jpg'); background-size: cover; background-position: center;"></div>
-								<div class="p-4">
-									<div class="text-xs text-slate-400 uppercase mb-2 flex items-center gap-2">
-										<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
-										<span>Computer Science</span>
-									</div>
-									<h3 class="text-lg font-semibold text-slate-900 mb-1">Introduction to Computer Science</h3>
-									<p class="text-sm text-slate-600">Giới thiệu về Khoa học Máy tính</p>
-								</div>
-							</a>
-						
-							<a href="/courses/python/" class="course-card block bg-white rounded shadow-sm overflow-hidden hover:shadow-md" data-course-name="python programming" data-course-desc="học lập trình python từ cơ bản đến nâng cao">
-								
-								<div class="h-40 bg-slate-300/60" style="background-image: url('/img/courses/python.jpg'); background-size: cover; background-position: center;"></div>
-								<div class="p-4">
-									<div class="text-xs text-slate-400 uppercase mb-2 flex items-center gap-2">
-										<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
-										<span>Computer Science</span>
-									</div>
-									<h3 class="text-lg font-semibold text-slate-900 mb-1">Python Programming</h3>
-									<p class="text-sm text-slate-600">Học lập trình Python từ cơ bản đến nâng cao</p>
-								</div>
-							</a>
-						
-							<a href="/courses/web-dev/" class="course-card block bg-white rounded shadow-sm overflow-hidden hover:shadow-md" data-course-name="web development" data-course-desc="học phát triển web với html, css, javascript và các framework hiện đại">
-								
-								<div class="h-40 bg-slate-300/60" style="background-image: url('/img/courses/web.jpg'); background-size: cover; background-position: center;"></div>
-								<div class="p-4">
-									<div class="text-xs text-slate-400 uppercase mb-2 flex items-center gap-2">
-										<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
-										<span>Computer Science</span>
-									</div>
-									<h3 class="text-lg font-semibold text-slate-900 mb-1">Web Development</h3>
-									<p class="text-sm text-slate-600">Học phát triển web với HTML, CSS, JavaScript và các framework hiện đại</p>
-								</div>
-							</a>
-						
-					
-				</div>
-			</div>
-		</section>
+	
+	<main class="main">
+		<h2>Courses</h2>
+		<ul class="course-list">
+			
+			
+				
+				<li class="course-item">
+					<a href="/courses/cs50ai/">Artificial Intelligence</a>
+					<p>Giới thiệu về Trí tuệ Nhân tạo và Machine Learning</p>
+				</li>
+				
+				<li class="course-item">
+					<a href="/courses/database/">Database Systems</a>
+					<p>Học về hệ thống cơ sở dữ liệu, SQL và database design</p>
+				</li>
+				
+				<li class="course-item">
+					<a href="/courses/cs50/">Introduction to Computer Science</a>
+					<p>Giới thiệu về Khoa học Máy tính</p>
+				</li>
+				
+				<li class="course-item">
+					<a href="/courses/python/">Python Programming</a>
+					<p>Học lập trình Python từ cơ bản đến nâng cao</p>
+				</li>
+				
+				<li class="course-item">
+					<a href="/courses/web-dev/">Web Development</a>
+					<p>Học phát triển web với HTML, CSS, JavaScript và các framework hiện đại</p>
+				</li>
+				
+			
+		</ul>
 	</main>
 
-	<script>
-		
-		(function(){
-			const searchInput = document.getElementById('course-search');
-			if (!searchInput) return;
-			const cards = Array.from(document.querySelectorAll('.course-card'));
-			const resultsEl = document.createElement('div');
-			resultsEl.id = 'search-results';
-			resultsEl.className = 'mt-4 hidden';
-			searchInput.parentNode.parentNode.appendChild(resultsEl);
-
-			searchInput.addEventListener('input', function(e){
-				const q = e.target.value.toLowerCase().trim();
-				if (!q) {
-					cards.forEach(c => c.style.display = 'block');
-					resultsEl.classList.add('hidden');
-					return;
-				}
-				let found = false;
-				cards.forEach(c => {
-					const n = c.getAttribute('data-course-name') || '';
-					const d = c.getAttribute('data-course-desc') || '';
-					if (n.includes(q) || d.includes(q)) { c.style.display = 'block'; found = true; } else { c.style.display = 'none'; }
-				});
-				if (!found) {
-					resultsEl.innerHTML = `<p class="text-slate-600">Không tìm thấy khóa học nào với từ khóa "${q}"</p>`;
-					resultsEl.classList.remove('hidden');
-				} else {
-					resultsEl.classList.add('hidden');
-				}
-			});
-		})();
-	</script>
+	
+	<footer class="footer">
+		<p>© 2025 University of Engineering and Technology. All rights reserved.</p>
+	</footer>
 </body>
 </html>

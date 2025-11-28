@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=33371&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Calculator | UET Learning Course</title>
@@ -30,116 +30,62 @@
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
   <style>
      
-    :root {
-      --font-sans: 'Inter', 'PT Sans', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      --bg: #0f172a;
-      --muted: #6b7280;
-      --accent: #2563eb;
-      --card: #ffffff;
-      --surface: #f8fafc;
-    }
-
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap');
-
-    html {
-      --font-sans: 'PT Sans', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      scroll-behavior: smooth;
-      height: 100%;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-
-    body {
-      background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
-      color: #0f172a;
-    }
+    html { scroll-behavior: smooth; height: 100%; }
+    body { font-family: 'PT Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: #212529; line-height: 1.6; }
 
      
-    .prose { color: #0f172a; max-width: 80ch; }
-    .prose h1, .prose h2, .prose h3, .prose h4 { color: var(--bg); font-weight: 700; margin-top: 1.6em; margin-bottom: 0.6em; }
-    .prose h1 { font-size: 2.25em; }
-    .prose a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
-
-    .prose ul { list-style-type: square; padding-left: 1.5em; }
-    .prose ul > li { margin-bottom: 0.5em; }
-
-    .prose pre, .prose code { font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', monospace; }
-
-    .prose pre {
-      background: #f8f9fa;
-      border-radius: 8px;
-      border: 1px solid #e5e7eb;
-      padding: 1.25em 1em;
-      margin: 1.25em 0;
-      font-size: 1.05em;
-      overflow-x: auto;
-      box-shadow: none;
-    }
-
-    .prose code {
-      background: #f3f4f6;
-      border-radius: 4px;
-      padding: 0.2em 0.4em;
-      font-size: 0.95em;
-      color: #374151;
-      border: 1px solid #e5e7eb;
-      box-shadow: none;
-    }
+    .prose { color: #212529; max-width: 768px; font-size: 1.0625rem; }
+    .prose h1, .prose h2, .prose h3, .prose h4 { color: #000; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.5em; }
+    .prose h1 { font-size: 2rem; border-bottom: 1px solid #dee2e6; padding-bottom: 0.3em; }
+    .prose h2 { font-size: 1.5rem; }
+    .prose h3 { font-size: 1.25rem; }
+    .prose a { color: #007bff; text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .prose p { margin-bottom: 1rem; }
+    .prose ul, .prose ol { padding-left: 2em; margin-bottom: 1rem; }
+    .prose ul { list-style-type: disc; }
+    .prose li { margin-bottom: 0.25em; }
 
      
     pre {
-      background: #0b1220;
-      color: #e6eef8;
+      background: #1e1e1e;
+      color: #d4d4d4;
       padding: 1rem;
-      border-radius: 0.5rem;
-      overflow: auto;
-      margin: 1.25em 0;
-      box-shadow: 0 6px 12px rgba(2,6,23,0.04);
+      border-radius: 4px;
+      overflow-x: auto;
+      margin: 1rem 0;
+      font-size: 0.875rem;
+      line-height: 1.5;
     }
-
-    pre code { display: block; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace; font-size: 0.92em; line-height: 1.6; }
-    code { background: #f1f5f9; padding: 0.18rem 0.38rem; border-radius: 0.25rem; }
+    pre code { font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace; background: transparent; padding: 0; border: none; }
+    code { font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace; background: #f1f3f5; padding: 0.125rem 0.25rem; border-radius: 3px; font-size: 0.875em; color: #e83e8c; }
 
      
-    .card-hover { transition: transform .22s ease, box-shadow .22s ease; }
-    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 14px 28px rgba(15,23,42,0.08); }
+    .course-sidebar { background: #24292e; color: #fff; }
+    .course-sidebar a { color: #79b8ff; text-decoration: none; }
+    .course-sidebar a:hover { text-decoration: underline; }
 
-    aside { background: linear-gradient(180deg, #071023 0%, #06101b 100%); }
-    aside h1, aside h2 { color: #e6eef8; }
-    aside a { color: #cfe8ff; }
+     
+    .course-container { display: flex; min-height: 100vh; }
+    .course-sidebar { width: 220px; flex-shrink: 0; padding: 1.5rem 1rem; overflow-y: auto; }
+    .course-content { flex: 1; padding: 2rem; overflow-y: auto; }
+    @media (max-width: 768px) {
+      .course-container { flex-direction: column; }
+      .course-sidebar { width: 100%; }
+    }
 
-    .fade-in { animation: fadeIn 0.45s ease-out; }
-    @keyframes fadeIn { from{ opacity:0; transform: translateY(8px);} to{ opacity:1; transform: translateY(0);} }
-
-    .courses .h-40 { height: 10rem; }
-    details summary { list-style: none; }
+     
+    details summary { cursor: pointer; padding: 0.5rem 0; font-weight: 600; }
     details summary::-webkit-details-marker { display: none; }
-    details[open] > summary { border-bottom: 1px solid #e2e8f0; }
+    details summary::before { content: '▸ '; }
+    details[open] summary::before { content: '▾ '; }
 
-    .course-card { border-radius: 6px; overflow: hidden; background: #fff; box-shadow: 0 6px 18px rgba(15,23,42,0.06); border: 1px solid rgba(15,23,42,0.04); }
-    .course-card .card-body { padding: 1.25rem; }
-    .course-card .course-meta { color: #6b7280; font-size: 0.85rem; margin-bottom: 0.5rem; display:block }
-    .courses-grid-3 { display:grid; grid-template-columns: 1fr; gap:1.25rem }
-    @media(min-width:640px){ .courses-grid-3 { grid-template-columns: repeat(2, 1fr); } }
-    @media(min-width:1024px){ .courses-grid-3 { grid-template-columns: repeat(3, 1fr); } }
+     
+    .course-card { background: #fff; border: 1px solid #dee2e6; border-radius: 4px; overflow: hidden; }
+    .course-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
 
-    .site-main--home { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
-    .site-main--home .hero, .site-main--home .filters, .site-main--home .courses { max-width: none !important; padding-left: 0 !important; padding-right: 0 !important; }
-
-    .site-header .brand-center { position: absolute; left: 50%; transform: translateX(-50%); display:flex; align-items:center; gap:8px }
-    .site-header .menu-btn { background:transparent; border:1px solid rgba(255,255,255,0.12); color:#fff; padding:6px 10px; border-radius:6px }
-    .site-header .search-box input { border-radius:8px; border:1px solid rgba(0,0,0,0.08); padding:8px 10px; width:220px }
-    @media(max-width:640px){ .site-header .brand-center{ position:static; transform:none; margin:0 auto } .site-header-inner{justify-content:space-between} .site-header .search-box input{width:140px} }
-
-    .site-main--home { background: linear-gradient(180deg, #24324a 0%, #2f435a 32%, #ffffff 66%); }
-    .course-page-layout { display:block; width:100%; height:100%; }
-    .course-container { display:flex; align-items:stretch; gap:0; padding:0; width:100%; box-sizing:border-box; }
-    .course-sidebar { width:210px; flex:0 0 210px; height:100vh; overflow:auto; }
-    .course-sidebar-inner { position:static; top:auto; height:auto; overflow:visible; padding:0 16px; }
-    .course-content { flex:1 1 auto; width:auto; padding:0; height:100vh; overflow:auto; box-sizing:border-box; }
-    @media(max-width:1024px){ .course-container{flex-direction:column;padding:0;gap:0} .course-sidebar{width:100%;flex:auto;height:auto} .course-sidebar-inner{position:relative;height:auto;padding:12px 16px} .course-content{width:100%;padding:0;height:auto} }
-    .prose-container { max-width:920px; margin:0 auto; }
+     
+    .mermaid { margin: 1rem 0; background: #f8f9fa; padding: 1rem; border-radius: 4px; }
   </style>
 </head>
 <body class="min-h-screen text-slate-900 bg-white">
@@ -239,16 +185,15 @@
 
   <main class="site-main ">
     
-<div class="fade-in">
-  <article class="prose-container bg-white rounded-xl border border-slate-200 shadow-sm p-4 sm:p-6 lg:p-8 xl:p-12">
-    <div class="mb-6 sm:mb-8 pb-4 sm:pb-6 border-b border-slate-200">
-      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-2 sm:mb-3">Calculator</h1>
-      
-      <p class="text-base sm:text-lg text-slate-600">Xây dựng một máy tính đơn giản</p>
-      
-    </div>
-    <div class="prose prose-lg max-w-none">
-      <h1 id="calculator">Calculator</h1>
+<article style="max-width: 768px; margin: 0 auto; padding: 2rem 1rem;">
+  <header style="margin-bottom: 1.5rem; border-bottom: 1px solid #dee2e6; padding-bottom: 1rem;">
+    <h1 style="font-size: 2rem; font-weight: 700; color: #000; margin: 0 0 0.5rem 0;">Calculator</h1>
+    
+    <p style="color: #6c757d; margin: 0;">Xây dựng một máy tính đơn giản</p>
+    
+  </header>
+  <div class="prose">
+    <h1 id="calculator">Calculator</h1>
 <p>Viết một chương trình máy tính đơn giản có thể thực hiện các phép toán cơ bản.</p>
 <h2 id="yêu-cầu">Yêu cầu</h2>
 <ol>
@@ -268,9 +213,8 @@
 <li>Xử lý trường hợp chia cho 0</li>
 </ul>
 
-    </div>
-  </article>
-</div>
+  </div>
+</article>
 
   </main>
   <script>try{ if(window.mermaid){ window.mermaid.initialize({ startOnLoad: true, theme: 'default' }); }}catch(e){}</script>

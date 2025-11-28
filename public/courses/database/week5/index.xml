@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Week 5 on UET Learning Course</title>
-    <link>//localhost:33371/courses/database/week5/</link>
+    <link>//localhost:1314/courses/database/week5/</link>
     <description>Recent content in Week 5 on UET Learning Course</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:33371/courses/database/week5/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/courses/database/week5/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -1,31 +1,21 @@
 {{ define "main" }}
-<div class="fade-in">
-  <div class="mb-8">
-    <h1 class="text-4xl font-bold text-slate-900 mb-3">{{ .Title }}</h1>
+<div style="max-width: 768px; margin: 0 auto; padding: 2rem 1rem;">
+  <header style="margin-bottom: 1.5rem; border-bottom: 1px solid #dee2e6; padding-bottom: 1rem;">
+    <h1 style="font-size: 2rem; font-weight: 700; color: #000; margin: 0 0 0.5rem 0;">{{ .Title }}</h1>
     {{ with .Description }}
-    <p class="text-lg text-slate-600">{{ . }}</p>
+    <p style="color: #6c757d; margin: 0;">{{ . }}</p>
     {{ end }}
-  </div>
+  </header>
   
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <ul style="list-style: none; padding: 0; margin: 0;">
     {{ range .Pages }}
-    <a href="{{ .RelPermalink }}" class="group block bg-white rounded-xl border border-slate-200 p-6 card-hover shadow-sm hover:border-blue-300">
-      <div class="flex items-start justify-between mb-3">
-        <h2 class="text-xl font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">{{ .Title }}</h2>
-        <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-        </svg>
-      </div>
+    <li style="padding: 0.75rem 0; border-bottom: 1px solid #e9ecef;">
+      <a href="{{ .RelPermalink }}" style="color: #007bff; text-decoration: none; font-size: 1.125rem;">{{ .Title }}</a>
       {{ with .Description }}
-      <p class="text-sm text-slate-600 line-clamp-2">{{ . }}</p>
+      <p style="color: #6c757d; margin: 0.25rem 0 0 0; font-size: 0.875rem;">{{ . }}</p>
       {{ end }}
-      {{ with .Params.date }}
-      <div class="mt-4 text-xs text-slate-500">
-        {{ .Format "January 2, 2006" }}
-      </div>
-      {{ end }}
-    </a>
+    </li>
     {{ end }}
-  </div>
+  </ul>
 </div>
 {{ end }}

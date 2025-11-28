@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Week 0 Problem Sets on UET Learning Course</title>
-    <link>//localhost:33371/courses/cs50/weeks/0/psets/</link>
+    <link>//localhost:1314/courses/cs50/weeks/0/psets/</link>
     <description>Recent content in Week 0 Problem Sets on UET Learning Course</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:33371/courses/cs50/weeks/0/psets/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1314/courses/cs50/weeks/0/psets/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mario</title>
-      <link>//localhost:33371/courses/cs50/weeks/0/psets/mario/</link>
+      <link>//localhost:1314/courses/cs50/weeks/0/psets/mario/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:33371/courses/cs50/weeks/0/psets/mario/</guid>
+      <guid>//localhost:1314/courses/cs50/weeks/0/psets/mario/</guid>
       <description>&lt;h3 id=&#34;mario-less&#34;&gt;Mario (Less)&lt;/h3&gt;&#xA;&lt;p&gt;Write a program that prints a half-pyramid using hashes (#) for a given height. This exercise will help you practice using loops and user input.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Example Output:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#&#xA;##&#xA;###&#xA;####&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Try to make your pyramid as tall as the user wants!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Scratch</title>
-      <link>//localhost:33371/courses/cs50/weeks/0/psets/scratch/</link>
+      <link>//localhost:1314/courses/cs50/weeks/0/psets/scratch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:33371/courses/cs50/weeks/0/psets/scratch/</guid>
+      <guid>//localhost:1314/courses/cs50/weeks/0/psets/scratch/</guid>
       <description>&lt;h3 id=&#34;scratch-project&#34;&gt;Scratch Project&lt;/h3&gt;&#xA;&lt;p&gt;Create a Scratch project where your character says hello and moves around the stage. Add at least one loop to make the character repeat an action, such as moving or changing color.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Ideas:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Make your character dance or jump.&lt;/li&gt;&#xA;&lt;li&gt;Add sound effects when the character says hello.&lt;/li&gt;&#xA;&lt;li&gt;Use loops to create animations or repeated actions.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Share your project with your classmates!&lt;/p&gt;</description>
     </item>
   </channel>
