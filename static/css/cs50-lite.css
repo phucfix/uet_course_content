@@ -8,6 +8,8 @@
 }
 html,body{
   height:100%;
+  margin:0;
+  padding:0;
   font-family:var(--font-sans);
   color:var(--text);
   background:var(--bg);
@@ -22,7 +24,7 @@ html,body{
 .site-title{font-weight:700;font-size:1.15rem;color:var(--text);text-decoration:none}
 .site-nav a{margin-left:16px;color:var(--muted);text-decoration:none}
 .site-nav a:hover{color:var(--text)}
-.site-main{max-width:1100px;margin:24px auto;padding:0 20px;display:flex;gap:24px}
+.site-main{max-width:none;margin:0;padding:0;display:flex;gap:24px;align-items:flex-start}
 .content-area{flex:1}
 .sidebar{width:260px;flex-shrink:0}
 .sidebar .section-title{font-size:0.75rem;color:var(--muted);text-transform:uppercase;margin-bottom:8px}
@@ -35,7 +37,7 @@ html,body{
 .sidebar .label{vertical-align:middle}
 
 /* Course sidebar - CS50-like */
-.course-sidebar{background:#0f1724;color:#e6eef8;padding:12px;border-radius:0;max-height:calc(100vh - 28px);overflow-y:auto;padding-right:6px}
+.course-sidebar{background:#0f1724;color:#e6eef8;padding:12px;border-radius:0;height:100vh;overflow-y:auto;padding-right:6px;box-sizing:border-box}
 .course-sidebar .site-title{color:#fff;font-weight:800;font-size:1.35rem;line-height:1.05;margin-bottom:6px}
 .course-sidebar .site-subtitle{display:block;color:#9fb0cc;font-size:0.9rem;margin-bottom:12px}
 .course-sidebar .sidebar-inner{display:flex;flex-direction:column;gap:18px}
@@ -95,18 +97,19 @@ html,body{
 .course-sidebar .courses-list a:hover{color:#fff;background:rgba(255,255,255,0.02)}
 
 /* ensure course sidebar sits nicely on small screens */
-.course-page-layout{max-width:1100px;margin:20px auto;padding:0 20px}
-.course-container{display:flex;gap:24px;align-items:flex-start}
-.course-content{flex:1}
+.course-page-layout{width:100%;margin:0;padding:0}
+.course-container{display:flex;gap:24px;align-items:flex-start;height:100vh;overflow:hidden}
+.course-content{flex:1;padding:20px;box-sizing:border-box;height:100vh;overflow-y:auto}
 .course-list{list-style:none;padding:0;margin:0}
 .course-list li{border-bottom:1px solid rgba(255,255,255,0.03);padding:12px 0}
 
 @media (max-width:900px){
-  .course-sidebar{padding:12px;margin-bottom:12px}
+  .course-sidebar{padding:12px;margin-bottom:12px;height:auto}
   .sidebar-social{justify-content:flex-start}
   .mobile-social{display:flex;gap:8px;margin-bottom:10px}
   .mobile-social .social-link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px}
-  .course-container{flex-direction:column}
+  .course-container{flex-direction:column;height:auto}
+  .course-content{height:auto;overflow:visible;padding:16px}
 }
 
 
