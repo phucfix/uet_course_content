@@ -328,3 +328,33 @@ Visit [GitHub](https://github.com) for more info.
 - **Ranges**: `{{ range .Pages }}...{{ end }}`
 
 
+## Problems pages (Danh sách bài toán)
+
+Thêm trang `problems` cho mỗi tuần bằng cách tạo thư mục `problems/` với `_index.md` có `type: "problems-list"`.
+
+Mỗi problem con có thể là một file markdown với field `external` (URL bên ngoài) và `description`.
+
+Ví dụ:
+
+```markdown
+---
+title: "Week 0 Problems"
+week: 0
+type: "problems-list"
+---
+```
+
+Và một problem con:
+
+```markdown
+---
+title: "Mario (External)"
+description: "Half-pyramid challenge"
+external: "https://cs50.harvard.edu/x/2025/psets/0/mario/"
+---
+external: "https://cs50.harvard.edu/x/2025/psets/0/mario/"
+---
+```
+
+Giao diện sẽ hiển thị link ngoài nếu `external` tồn tại; nếu không sẽ link tới trang nội bộ.
+

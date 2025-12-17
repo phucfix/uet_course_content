@@ -25,6 +25,25 @@
     </section>
   {{ end }}
 
+  <!-- Problems Section -->
+  {{ $probs := where .Pages "Type" "problems-list" }}
+  {{ with first 1 $probs }}
+    {{ $probSec := index . 0 }}
+    <section style="margin-bottom: 2rem;">
+      <h2 style="font-size: 1.25rem; font-weight: 600; color: #000; margin-bottom: 0.75rem;">Problems</h2>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        {{ range $probSec.Pages }}
+        <li style="padding: 0.5rem 0;">
+          <a href="{{ if .Params.external }}{{ .Params.external }}{{ else }}{{ .RelPermalink }}{{ end }}" style="color: #007bff; text-decoration: none;" {{ if .Params.external }}target="_blank" rel="noopener"{{ end }}>{{ .Title }}</a>
+          {{ with .Params.description }}
+          <p style="color: #6c757d; margin: 0.25rem 0 0 0; font-size: 0.875rem;">{{ . }}</p>
+          {{ end }}
+        </li>
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+
   <!-- Problem Sets Section -->
   {{ $psets := where .Pages "Type" "psets-list" }}
   {{ with first 1 $psets }}

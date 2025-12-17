@@ -7,5 +7,12 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="//localhost:1313/courses/cs50ai/week2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Week 2 - Knowledge Representation</title>
+      <link>//localhost:1313/courses/cs50ai/weeks/2/notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/courses/cs50ai/weeks/2/notes/</guid>
+      <description>&lt;h2 id=&#34;knowledge-representation&#34;&gt;Knowledge Representation&lt;/h2&gt;&#xA;&lt;p&gt;Intro to predicates, facts, and simple rule-based systems. Practice encoding knowledge as simple data structures.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

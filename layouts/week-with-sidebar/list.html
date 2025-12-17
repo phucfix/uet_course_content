@@ -42,6 +42,23 @@
           </li>
         </ul>
 
+        <!-- Problems -->
+        {{ $probs := where .Pages "Type" "problems-list" }}
+        {{ with first 1 $probs }}
+          {{ $probSec := index . 0 }}
+          <h2>Problems</h2>
+          <ul>
+            {{ range $probSec.Pages }}
+              <li>
+                <a href="{{ if .Params.external }}{{ .Params.external }}{{ else }}{{ .RelPermalink }}{{ end }}" {{ if .Params.external }}target="_blank" rel="noopener"{{ end }}>{{ .Title }}</a>
+                {{ with .Params.description }}
+                  <span class="text-muted"> - {{ . }}</span>
+                {{ end }}
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+
         <!-- Problem Set -->
         {{ $psets := where .Pages "Type" "psets-list" }}
         {{ with first 1 $psets }}

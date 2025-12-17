@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Week 5 Problems on UET Learning Course</title>
+    <link>//localhost:1313/courses/cs50ai/weeks/5/problems/</link>
+    <description>Recent content in Week 5 Problems on UET Learning Course</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/courses/cs50ai/weeks/5/problems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple Neural Network</title>
+      <link>//localhost:1313/courses/cs50ai/week5/problems/simple_nn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/courses/cs50ai/week5/problems/simple_nn/</guid>
+      <description>&lt;p&gt;Build a 1-hidden-layer neural network and train on a toy dataset.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
