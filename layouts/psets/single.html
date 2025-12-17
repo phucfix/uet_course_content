@@ -1,17 +1,21 @@
 {{ define "main" }}
-<div class="course-container">
-  {{ partial "course-sidebar.html" . }}
-  <main class="course-content">
-    <article class="prose" style="max-width: 768px;">
-      <h1>{{ .Title }}</h1>
-      {{ with .Params.week }}
-        <p style="color: #6c757d; font-size: 0.875rem;">Week {{ . }}</p>
-      {{ end }}
-      {{ with .Params.description }}
-        <p style="color: #6c757d;">{{ . }}</p>
-      {{ end }}
-      {{ .Content }}
-    </article>
-  </main>
+<div class="course-page-layout">
+  <div class="course-container">
+    {{ partial "course-sidebar.html" . }}
+    <main class="course-content">
+      <div class="content-wrapper">
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.week }}
+          <p style="color: #64748b; font-size: 0.875rem; margin-top: -0.5rem;">Week {{ . }}</p>
+        {{ end }}
+        {{ with .Params.description }}
+          <p style="color: #64748b; margin-bottom: 1.5rem;">{{ . }}</p>
+        {{ end }}
+        <article class="prose">
+          {{ .Content }}
+        </article>
+      </div>
+    </main>
+  </div>
 </div>
 {{ end }}

@@ -8,6 +8,8 @@
 }
 html,body{
   height:100%;
+  margin:0;
+  padding:0;
   font-family:var(--font-sans);
   color:var(--text);
   background:var(--bg);
@@ -22,17 +24,163 @@ html,body{
 .site-title{font-weight:700;font-size:1.15rem;color:var(--text);text-decoration:none}
 .site-nav a{margin-left:16px;color:var(--muted);text-decoration:none}
 .site-nav a:hover{color:var(--text)}
-.site-main{max-width:1100px;margin:24px auto;padding:0 20px;display:flex;gap:24px}
+.site-main{max-width:none;margin:0;padding:0;display:flex;gap:24px;align-items:flex-start}
 .content-area{flex:1}
 .sidebar{width:260px;flex-shrink:0}
 .sidebar .section-title{font-size:0.75rem;color:var(--muted);text-transform:uppercase;margin-bottom:8px}
 .sidebar a{display:block;color:var(--muted);padding:6px 0;text-decoration:none}
 .sidebar a.active{color:var(--text);font-weight:600}
-pre{background:var(--code-bg);padding:1rem;border-radius:6px;overflow:auto}
-code{background:var(--code-bg);padding:0.18rem 0.35rem;border-radius:4px}
-h1,h2,h3{color:var(--text);font-weight:700}
+/* Sidebar list + icon tweaks */
+.sidebar-list{list-style:none;padding:0;margin:0}
+.sidebar-list li{margin:4px 0;list-style:none}
+.sidebar .icon{width:18px;height:18px;display:inline-block;vertical-align:middle}
+.sidebar .label{vertical-align:middle}
+
+/* Course sidebar - CS50-like */
+.course-sidebar{background:#0f1724;color:#e6eef8;padding:12px;border-radius:0;height:100vh;overflow-y:auto;padding-right:6px;box-sizing:border-box}
+.course-sidebar .site-title{color:#fff;font-weight:800;font-size:1.35rem;line-height:1.05;margin-bottom:6px}
+.course-sidebar .site-subtitle{display:block;color:#9fb0cc;font-size:0.9rem;margin-bottom:12px}
+.course-sidebar .sidebar-inner{display:flex;flex-direction:column;gap:18px}
+.course-sidebar .section-title{color:#9fb0cc;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:12px}
+.course-sidebar .sidebar-nav{padding:6px 0}
+.course-sidebar .sidebar-nav:not(:first-of-type){border-top:1px solid rgba(255,255,255,0.03);padding-top:8px;margin-top:8px}
+.course-sidebar .sidebar-list a{display:block;color:#cbd5e1;padding:6px 8px;border-radius:0;text-decoration:none;font-size:0.98rem}
+.course-sidebar .sidebar-list li{margin:6px 0}
+.course-sidebar .week-link{display:flex;align-items:center;gap:12px}
+.course-sidebar .week-badge{min-width:34px;height:34px;border-radius:6px;background:transparent;color:#9fb0cc;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:0.95rem;border:1px solid rgba(255,255,255,0.03)}
+.course-sidebar .week-title{color:#e6eef8;display:block}
+.course-sidebar .week-meta{display:block;color:#9fb0cc;font-size:0.8rem;margin-bottom:3px}
+.course-sidebar .week-label{display:block;color:#e6eef8;font-weight:600;padding:6px 8px;border-radius:6px}
+.course-sidebar .week-label:hover{background:rgba(255,255,255,0.02);color:#fff}
+.course-sidebar .sidebar-list a:hover{background:rgba(255,255,255,0.03);color:#fff;text-decoration:none}
+.course-sidebar .sidebar-list a[aria-current="page"]{background:transparent;color:#fff;font-weight:700;border-left:3px solid var(--cs50-blue);padding-left:10px}
+.course-sidebar .week-link[aria-current="page"] .week-badge{background:var(--cs50-blue);color:#fff}
+.course-sidebar .week-link[aria-current="page"] .week-title{font-weight:700}
+
+
+/* social icons inline (single row) */
+.sidebar-social{display:flex;flex-direction:row;gap:8px;margin-bottom:12px;align-items:center;flex-wrap:wrap}
+.sidebar-social .social-link{width:36px;height:36px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;background:transparent;color:#e6eef8;text-decoration:none;border:1px solid rgba(255,255,255,0.03)}
+.sidebar-social .social-link:hover{background:transparent;color:var(--cs50-blue);border-color:rgba(255,255,255,0.03)}
+.sidebar-social svg{width:18px;height:18px}
+
+/* contact/donate and quick links */
+.sidebar-contact{padding:12px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:8px}
+.sidebar-contact .instructor{font-weight:700;color:#fff}
+.sidebar-contact .contact-email{font-size:0.9rem;color:#9fb0cc}
+.donate-link{display:inline-flex;align-items:center;gap:8px;background:transparent;padding:4px 6px;border-radius:6px;color:#fff;border:none;text-decoration:none;font-weight:700;font-size:0.95rem}
+.donate-link:hover{background:var(--cs50-blue);border-color:var(--cs50-blue)}
+
+.quick-links{display:flex;flex-direction:column;gap:6px}
+.quick-links a{display:flex;align-items:center;gap:10px;color:#cbd5e1;text-decoration:none;padding:8px 8px;border-radius:6px}
+.quick-links a:hover{background:rgba(255,255,255,0.03);color:#fff}
+.quick-links .fa{width:18px;text-align:center}
+
+/* final project highlight */
+.final-project{margin-top:10px;padding:8px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);font-weight:700;color:#ffdce0}
+.final-project a{color:#ffdce0;text-decoration:none}
+.final-project a:hover{text-decoration:underline;color:#fff}
+
+/* Tool link layout */
+.tool-link{display:flex;align-items:center;gap:10px}
+.tool-link .icon{background:rgba(255,255,255,0.02);width:34px;height:34px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center}
+.tool-link .icon svg{width:18px;height:18px;color:inherit}
+.tool-link .label{font-weight:600}
+..tool-link .icon-emoji{display:inline-flex;width:34px;height:34px;border-radius:6px;align-items:center;justify-content:center;background:rgba(255,255,255,0.02);font-size:18px}
+
+/* icon badges for tools */
+.icon-badge{display:inline-flex;width:34px;height:34px;border-radius:6px;align-items:center;justify-content:center;background:rgba(255,255,255,0.02);font-weight:800;color:var(--cs50-blue);font-size:0.85rem}
+.icon-badge.code{font-family:monospace;background:rgba(255,255,255,0.01);color:#9fb0cc}
+
+/* Courses (bottom) styling smaller/muted */
+.course-sidebar .courses-list a{color:#9fb0cc;font-size:0.95rem;padding:8px 6px}
+.course-sidebar .courses-list a:hover{color:#fff;background:rgba(255,255,255,0.02)}
+
+/* ensure course sidebar sits nicely on small screens */
+.course-page-layout{width:100%;margin:0;padding:0}
+.course-container{display:flex;gap:24px;align-items:flex-start;height:100vh;overflow:hidden}
+.course-content{flex:1;padding:20px;box-sizing:border-box;height:100vh;overflow-y:auto}
+.course-list{list-style:none;padding:0;margin:0}
+.course-list li{border-bottom:1px solid rgba(255,255,255,0.03);padding:12px 0}
+
+@media (max-width:900px){
+  .course-sidebar{padding:12px;margin-bottom:12px;height:auto}
+  .sidebar-social{justify-content:flex-start}
+  .mobile-social{display:flex;gap:8px;margin-bottom:10px}
+  .mobile-social .social-link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px}
+  .course-container{flex-direction:column;height:auto}
+  .course-content{height:auto;overflow:visible;padding:16px}
+}
+
+
+/* Typography & Markdown content styles */
+pre{background:var(--code-bg);padding:1rem;border-radius:6px;overflow:auto;margin:1.5rem 0;font-size:0.9rem}
+code{background:var(--code-bg);padding:0.18rem 0.35rem;border-radius:4px;font-family:monospace}
+pre code{background:none;padding:0}
+h1{color:var(--text);font-weight:700;font-size:2rem;margin:2rem 0 1rem 0;border-bottom:3px solid var(--cs50-blue);padding-bottom:0.5rem}
+h2{color:var(--text);font-weight:700;font-size:1.5rem;margin:1.75rem 0 0.75rem 0;border-bottom:2px solid #e0e7ff;padding-bottom:0.25rem}
+h3{color:var(--text);font-weight:700;font-size:1.25rem;margin:1.5rem 0 0.5rem 0}
+h4,h5,h6{color:var(--text);font-weight:600;margin:1rem 0 0.5rem 0}
+p{line-height:1.75;margin:1rem 0}
+ul,ol{line-height:1.75;margin:1.25rem 0;padding-left:2rem}
+li{margin:0.5rem 0}
+a{color:var(--cs50-blue);text-decoration:underline;cursor:pointer}
+.course-sidebar a{color:inherit;text-decoration:none}
+a:hover{color:#0556d4}
+.prose a{text-decoration:underline}
+img{max-width:100%;height:auto;margin:1.5rem 0;border-radius:8px;border:1px solid #e2e8f0}
+blockquote{border-left:4px solid var(--cs50-blue);padding-left:1rem;margin:1.5rem 0;color:var(--muted);font-style:italic}
+table{border-collapse:collapse;width:100%;margin:1.5rem 0}
+table th,table td{border:1px solid #cbd5e1;padding:0.75rem;text-align:left}
+table th{background:#f1f5f9;font-weight:600}
+hr{border:none;border-top:2px solid #e2e8f0;margin:2rem 0}
+/* Harvard CS50-inspired content style */
+.prose{max-width:800px;margin:0 auto;font-size:1.08rem;line-height:1.8;color:var(--text);}
+.prose h1{font-size:2.2rem;margin:2.2rem 0 1.2rem 0;font-weight:800;color:var(--cs50-blue);border-bottom:4px solid var(--cs50-blue);padding-bottom:0.4rem;letter-spacing:-1px;}
+.prose h2{font-size:1.5rem;margin:1.7rem 0 1rem 0;font-weight:700;color:var(--text);border-bottom:2px solid #e0e7ff;padding-bottom:0.2rem;}
+.prose h3{font-size:1.15rem;margin:1.2rem 0 0.7rem 0;font-weight:700;color:var(--text);}
+.prose h4,.prose h5,.prose h6{font-weight:600;margin:1rem 0 0.5rem 0;color:var(--muted);}
+.prose p{margin:1.1rem 0;}
+.prose ul,.prose ol{margin:1.2rem 0 1.2rem 1.5rem;padding:0;}
+.prose li{margin:0.5rem 0;}
+.prose a{color:var(--cs50-blue);text-decoration:underline;word-break:break-word;}
+.prose a:hover{color:#0556d4;text-decoration:underline;}
+.prose img{max-width:100%;height:auto;margin:1.5rem 0;border-radius:10px;border:1.5px solid #e2e8f0;box-shadow:0 2px 8px 0 #e0e7ff44;}
+.prose blockquote{border-left:4px solid var(--cs50-blue);padding-left:1.2rem;margin:1.5rem 0;color:var(--muted);font-style:italic;background:#f8fafc;}
+.prose pre{background:var(--code-bg);padding:1.1rem 1.2rem;border-radius:8px;overflow:auto;margin:1.5rem 0;font-size:0.98rem;}
+.prose code{background:var(--code-bg);padding:0.18rem 0.35rem;border-radius:4px;font-family:monospace;}
+.prose hr{border:none;border-top:2px solid #e2e8f0;margin:2rem 0;}
+.prose table{border-collapse:collapse;width:100%;margin:1.5rem 0;}
+.prose th,.prose td{border:1px solid #cbd5e1;padding:0.75rem;text-align:left;}
+.prose th{background:#f1f5f9;font-weight:600;}
+/* Sidebar spacing improvements */
+.sidebar-nav{margin-bottom:2rem}
+.sidebar-nav:last-child{margin-bottom:0}
+.sidebar-list{list-style:none;padding:0;margin:0.5rem 0;padding-left:0}
+.sidebar-list li{margin:8px 0;list-style:none;margin-left:0}
+.course-sidebar ul,.course-sidebar ol{margin:0;padding:0;list-style:none}
+.weeks-list{padding-left:0;margin:0;list-style:none}
+.weeks-list li{list-style:none;margin:6px 0;padding-left:0}
+.weeks-list li::marker{display:none}
+.course-sidebar .week-title{font-size:0.98rem;color:#e6eef8}
+.sidebar-list a{padding:8px 0;border-radius:4px;transition:background-color 0.2s}
+.sidebar-list a:hover{background-color:#f1f5f9;color:var(--text)}
+.sidebar .icon{width:18px;height:18px;display:inline-block;vertical-align:middle;margin-right:8px}
+.sidebar .label{vertical-align:middle;display:inline}
+.sidebar .section-title{margin-bottom:12px}
+/* Course content spacing */
+.course-content{padding:0}
+.content-wrapper{max-width:800px}
 /* small responsive adjustments */
 @media (max-width:900px){
   .site-main{flex-direction:column;padding:0 14px}
   .sidebar{width:100%}
+  h1{font-size:1.75rem}
+  h2{font-size:1.25rem}
 }
+
+/* custom scrollbar for sidebar */
+.course-sidebar::-webkit-scrollbar{width:10px}
+.course-sidebar::-webkit-scrollbar-track{background:transparent}
+.course-sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.06);border-radius:999px}
+.course-sidebar::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,0.12)}

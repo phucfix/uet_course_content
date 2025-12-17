@@ -15,3 +15,9 @@ taxonomies = {}
     [markup.goldmark.renderer]
       unsafe = true
       wrapCodeBlock = false
+
+[params]
+  # Base URL of your course-platform backend (no trailing slash)
+  codespaces_backend = "http://localhost:3000"
+  # Default repo to open in Codespaces (owner/repo)
+  codespaces_repo = "uet36/code18"

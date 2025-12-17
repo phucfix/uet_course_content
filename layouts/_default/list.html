@@ -1,21 +1,44 @@
 {{ define "main" }}
-<div style="max-width: 768px; margin: 0 auto; padding: 2rem 1rem;">
-  <header style="margin-bottom: 1.5rem; border-bottom: 1px solid #dee2e6; padding-bottom: 1rem;">
-    <h1 style="font-size: 2rem; font-weight: 700; color: #000; margin: 0 0 0.5rem 0;">{{ .Title }}</h1>
-    {{ with .Description }}
-    <p style="color: #6c757d; margin: 0;">{{ . }}</p>
-    {{ end }}
-  </header>
-  
-  <ul style="list-style: none; padding: 0; margin: 0;">
-    {{ range .Pages }}
-    <li style="padding: 0.75rem 0; border-bottom: 1px solid #e9ecef;">
-      <a href="{{ .RelPermalink }}" style="color: #007bff; text-decoration: none; font-size: 1.125rem;">{{ .Title }}</a>
-      {{ with .Description }}
-      <p style="color: #6c757d; margin: 0.25rem 0 0 0; font-size: 0.875rem;">{{ . }}</p>
-      {{ end }}
-    </li>
-    {{ end }}
-  </ul>
-</div>
+  {{ $isCourse := or (eq .Section "courses") (eq .Type "course-welcome") (and .Parent (eq .Parent.Type "course-welcome")) (and .Parent.Parent (eq .Parent.Parent.Type "course-welcome")) }}
+
+  {{ if $isCourse }}
+    <div class="course-page-layout">
+      <div class="course-container">
+        {{ partial "course-sidebar.html" . }}
+        <main class="course-content px-6 py-6">
+          <div class="prose">
+            <header class="mb-6">
+              <h1 class="text-3xl font-bold text-slate-900">{{ .Title }}</h1>
+              {{ with .Description }}<p class="text-slate-600">{{ . }}</p>{{ end }}
+            </header>
+            <ul class="course-list">
+              {{ range .Pages }}
+                <li class="mb-4">
+                  <a href="{{ .RelPermalink }}" class="text-blue-600 font-semibold text-lg">{{ .Title }}</a>
+                  {{ with .Description }}<p class="text-slate-600 mt-1">{{ . }}</p>{{ end }}
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        </main>
+      </div>
+    </div>
+  {{ else }}
+    <div style="max-width: 768px; margin: 0 auto; padding: 2rem 1rem;">
+      <header style="margin-bottom: 1.5rem; border-bottom: 1px solid #dee2e6; padding-bottom: 1rem;">
+        <h1 style="font-size: 2rem; font-weight: 700; color: #000; margin: 0 0 0.5rem 0;">{{ .Title }}</h1>
+        <p style="color: #6c757d; margin: 0;">{{ with .Description }}{{ . }}{{ else }}Browse{{ end }}</p>
+      </header>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        {{ range .Sections }}
+        <li style="padding: 1rem 0; border-bottom: 1px solid #e9ecef;">
+          <a href="{{ .RelPermalink }}" style="color: #007bff; text-decoration: none; font-size: 1.125rem; font-weight: 600;">{{ .Title }}</a>
+          {{ with .Params.description }}
+          <p style="color: #6c757d; margin: 0.25rem 0 0 0; font-size: 0.9375rem;">{{ . }}</p>
+          {{ end }}
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  {{ end }}
 {{ end }}
