@@ -35,14 +35,14 @@ html,body{
 .sidebar .label{vertical-align:middle}
 
 /* Course sidebar - CS50-like */
-.course-sidebar{background:#0b1220;color:#e6eef8;padding:12px;border-radius:4px;max-height:calc(100vh - 28px);overflow-y:auto;padding-right:6px}
+.course-sidebar{background:#0f1724;color:#e6eef8;padding:12px;border-radius:0;max-height:calc(100vh - 28px);overflow-y:auto;padding-right:6px}
 .course-sidebar .site-title{color:#fff;font-weight:800;font-size:1.35rem;line-height:1.05;margin-bottom:6px}
 .course-sidebar .site-subtitle{display:block;color:#9fb0cc;font-size:0.9rem;margin-bottom:12px}
 .course-sidebar .sidebar-inner{display:flex;flex-direction:column;gap:18px}
 .course-sidebar .section-title{color:#9fb0cc;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:12px}
 .course-sidebar .sidebar-nav{padding:6px 0}
 .course-sidebar .sidebar-nav:not(:first-of-type){border-top:1px solid rgba(255,255,255,0.03);padding-top:8px;margin-top:8px}
-.course-sidebar .sidebar-list a{display:block;align-items:center;gap:12px;color:#cbd5e1;padding:6px 8px;border-radius:6px;text-decoration:none;font-size:0.98rem}
+.course-sidebar .sidebar-list a{display:block;color:#cbd5e1;padding:6px 8px;border-radius:0;text-decoration:none;font-size:0.98rem}
 .course-sidebar .sidebar-list li{margin:6px 0}
 .course-sidebar .week-link{display:flex;align-items:center;gap:12px}
 .course-sidebar .week-badge{min-width:34px;height:34px;border-radius:6px;background:transparent;color:#9fb0cc;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:0.95rem;border:1px solid rgba(255,255,255,0.03)}
@@ -56,11 +56,11 @@ html,body{
 .course-sidebar .week-link[aria-current="page"] .week-title{font-weight:700}
 
 
-/* social icons inline */
-.sidebar-social{display:flex;flex-direction:row;gap:8px;margin-bottom:12px;align-items:center;flex-wrap:wrap}
-.sidebar-social .social-link{width:34px;height:34px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;background:transparent;color:#e6eef8;text-decoration:none;border:1px solid rgba(255,255,255,0.03)}
-.sidebar-social .social-link:hover{background:var(--cs50-blue);color:#fff;border-color:var(--cs50-blue)}
-.sidebar-social svg{width:16px;height:16px}
+/* social icons - simple vertical stack */
+.sidebar-social{display:flex;flex-direction:column;gap:10px;margin-bottom:12px;align-items:flex-start}
+.sidebar-social .social-link{width:36px;height:36px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;background:transparent;color:#e6eef8;text-decoration:none;border:1px solid rgba(255,255,255,0.03)}
+.sidebar-social .social-link:hover{background:transparent;color:var(--cs50-blue);border-color:rgba(255,255,255,0.03)}
+.sidebar-social svg{width:18px;height:18px}
 
 /* contact/donate and quick links */
 .sidebar-contact{padding:12px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:8px}
@@ -156,8 +156,8 @@ hr{border:none;border-top:2px solid #e2e8f0;margin:2rem 0}
 .sidebar-list{list-style:none;padding:0;margin:0.5rem 0;padding-left:0}
 .sidebar-list li{margin:8px 0;list-style:none;margin-left:0}
 .course-sidebar ul,.course-sidebar ol{margin:0;padding:0;list-style:none}
-.weeks-list{padding-left:0;margin:0}
-.weeks-list li{list-style:none;margin:8px 0}
+.weeks-list{padding-left:0;margin:0;list-style:none}
+.weeks-list li{list-style:none;margin:6px 0;padding-left:0}
 .weeks-list li::marker{display:none}
 .course-sidebar .week-title{font-size:0.98rem;color:#e6eef8}
 .sidebar-list a{padding:8px 0;border-radius:4px;transition:background-color 0.2s}
