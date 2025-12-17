@@ -16,3 +16,23 @@ Create a Scratch project where your character says hello and moves around the st
 - Use loops to create animations or repeated actions.
 
 Share your project with your classmates!
+
+## How to check / Cách kiểm tra
+
+Chạy:
+
+```bash
+check50 uet36/2025/x/{tên_problem}
+```
+
+(Thay {tên_problem} bằng tên problem thật sự)
+
+## How to submit / Cách nộp
+
+Chạy:
+
+```bash
+submit50 uet36/2025/x/{tên_problem}
+```
+
+(Thay {tên_problem} bằng tên problem thật sự)

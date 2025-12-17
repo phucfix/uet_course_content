@@ -26,7 +26,8 @@ html,body{
 .site-nav a:hover{color:var(--text)}
 .site-main{max-width:none;margin:0;padding:0;display:flex;gap:24px;align-items:flex-start}
 .content-area{flex:1}
-.sidebar{width:260px;flex-shrink:0}
+.sidebar{width:320px;flex-shrink:0}
+.course-sidebar{width:320px;}
 .sidebar .section-title{font-size:0.75rem;color:var(--muted);text-transform:uppercase;margin-bottom:8px}
 .sidebar a{display:block;color:var(--muted);padding:6px 0;text-decoration:none}
 .sidebar a.active{color:var(--text);font-weight:600}

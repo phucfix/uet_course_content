@@ -25,3 +25,23 @@ Tạo một chương trình quản lý file cho phép người dùng đọc, ghi
 - Sử dụng functions để tổ chức code
 - Sử dụng `with` statement khi làm việc với file
 
+## How to check / Cách kiểm tra
+
+Chạy:
+
+```bash
+check50 uet36/2025/x/{tên_problem}
+```
+
+(Thay {tên_problem} bằng tên problem thật sự)
+
+## How to submit / Cách nộp
+
+Chạy:
+
+```bash
+submit50 uet36/2025/x/{tên_problem}
+```
+
+(Thay {tên_problem} bằng tên problem thật sự)
+

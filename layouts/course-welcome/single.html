@@ -18,6 +18,19 @@
               <h1 class="text-2xl font-bold text-slate-900">Welcome</h1>
               <p class="text-slate-600 mt-1">Chào mừng bạn đến với khóa học</p>
             </div>
+
+            <!-- Enroll button -->
+            {{- $backend := .Site.Params.codespaces_backend | default "http://localhost:3000" -}}
+            {{- $frontend := .Site.Params.frontend_url | default "http://localhost:5173" -}}
+            {{- $courseUrl := .Params.url | default .RelPermalink -}}
+            {{- $slug := replace (replace $courseUrl "/courses/" "") "/" "" -}}
+            {{- $returnTo := printf "%s%s?enrollCourseSlug=%s" $frontend $courseUrl $slug -}}
+            <div class="ml-auto">
+              <a href="{{ $backend }}/auth/github?returnTo={{ urlquery $returnTo }}" class="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-500 text-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 10-8 0v3H5l7 7 7-7h-3V7z"/></svg>
+                Enroll
+              </a>
+            </div>
           </div>
         </div>
     

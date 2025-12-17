@@ -30,3 +30,23 @@ Kết quả: 15
 - Sử dụng `if-elif-else` để xử lý các phép toán khác nhau
 - Xử lý trường hợp chia cho 0
 
+## How to check / Cách kiểm tra
+
+Chạy:
+
+```bash
+check50 uet36/2025/x/{tên_problem}
+```
+
+(Thay {tên_problem} bằng tên problem thật sự)
+
+## How to submit / Cách nộp
+
+Chạy:
+
+```bash
+submit50 uet36/2025/x/{tên_problem}
+```
+
+(Thay {tên_problem} bằng tên problem thật sự)
+

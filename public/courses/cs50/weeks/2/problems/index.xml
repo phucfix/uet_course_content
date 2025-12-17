@@ -8,11 +8,11 @@
     <language>en-us</language>
     <atom:link href="//localhost:1313/courses/cs50/weeks/2/problems/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Readability (External)</title>
+      <title>Readability</title>
       <link>//localhost:1313/courses/cs50/week2/problems/readability/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/courses/cs50/week2/problems/readability/</guid>
-      <description>&lt;p&gt;Use the official CS50 page for the full problem statement and tests.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Write a program that asks for a block of text and computes a reading-grade level using a readability formula (e.g., Coleman-Liau index). The program should count letters, words, and sentences, compute the index, and print the appropriate grade level (e.g., &amp;ldquo;Grade 8&amp;rdquo; or &amp;ldquo;Before Grade 1&amp;rdquo;).&lt;/p&gt;&#xA;&lt;p&gt;Tasks:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Parse the text to count alphabetic characters (letters), words (separated by spaces), and sentences (ending in &lt;code&gt;.?!&lt;/code&gt;).&lt;/li&gt;&#xA;&lt;li&gt;Compute the index using the chosen formula and round to the nearest integer.&lt;/li&gt;&#xA;&lt;li&gt;Print the resulting grade phrasing.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Hints:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

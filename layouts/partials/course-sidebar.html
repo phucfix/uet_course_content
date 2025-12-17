@@ -54,6 +54,25 @@
         {{ else if .Parent.Parent }}
           {{ if eq .Parent.Parent.Type "course-welcome" }}
             {{ $courseRoot = .Parent.Parent }}
+          {{ else if .Parent.Parent.Parent }}
+            {{ if eq .Parent.Parent.Parent.Type "course-welcome" }}
+              {{ $courseRoot = .Parent.Parent.Parent }}
+            {{ else if .Parent.Parent.Parent.Parent }}
+              {{ if eq .Parent.Parent.Parent.Parent.Type "course-welcome" }}
+                {{ $courseRoot = .Parent.Parent.Parent.Parent }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{/* Fallback: try to derive course page by slug from file path */}}
+      {{ if not $courseRoot }}
+        {{ $parts := split .File.Path "/" }}
+        {{ if ge (len $parts) 3 }}
+          {{ $maybeSlug := index $parts 2 }}
+          {{ $maybePage := site.GetPage (printf "/courses/%s/" $maybeSlug) }}
+          {{ if $maybePage }}
+            {{ $courseRoot = $maybePage }}
           {{ end }}
         {{ end }}
       {{ end }}

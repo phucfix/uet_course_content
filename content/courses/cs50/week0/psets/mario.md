@@ -19,3 +19,23 @@ Write a program that prints a half-pyramid using hashes (#) for a given height. 
 ```
 
 Try to make your pyramid as tall as the user wants!
+
+## How to check / Cách kiểm tra
+
+Chạy:
+
+```bash
+check50 uet36/2025/x/{tên_problem}
+```
+
+(Thay {tên_problem} bằng tên problem thật sự)
+
+## How to submit / Cách nộp
+
+Chạy:
+
+```bash
+submit50 uet36/2025/x/{tên_problem}
+```
+
+(Thay {tên_problem} bằng tên problem thật sự)

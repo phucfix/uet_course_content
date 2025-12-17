@@ -32,3 +32,23 @@ Xây dựng một trang portfolio cá nhân sử dụng HTML và CSS.
 - Sử dụng CSS variables cho colors
 - Thêm animations cho các elements
 
+## How to check / Cách kiểm tra
+
+Chạy:
+
+```bash
+check50 uet36/2025/x/{tên_problem}
+```
+
+(Thay {tên_problem} bằng tên problem thật sự)
+
+## How to submit / Cách nộp
+
+Chạy:
+
+```bash
+submit50 uet36/2025/x/{tên_problem}
+```
+
+(Thay {tên_problem} bằng tên problem thật sự)
+

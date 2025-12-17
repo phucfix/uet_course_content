@@ -13,6 +13,58 @@
               {{ with .Description }}<p class="text-slate-600">{{ . }}</p>{{ end }}
             </header>
             {{ .Content }}
+
+            {{/* If this page is a problem (path contains /problems/), show submit instructions and Enroll CTA */}}
+            {{ if strings.Contains .File.Path "problems/" }}
+              {{- $frontend := .Site.Params.frontend_url | default "http://localhost:5173" -}}
+              {{- $courseUrl := "" -}}
+              {{- $slug := "" -}}
+              {{ $weekNum := .Params.week }}
+              {{ if not $weekNum }}{{ $weekNum = .Parent.Params.week }}{{ end }}
+              {{ $weekStr := (print $weekNum) }}
+              {{ $courseRoot := "" }}
+              {{ if eq .Type "course-welcome" }}
+                {{ $courseRoot = . }}
+              {{ else if .Parent }}
+                {{ if eq .Parent.Type "course-welcome" }}
+                  {{ $courseRoot = .Parent }}
+                {{ else if .Parent.Parent }}
+                  {{ if eq .Parent.Parent.Type "course-welcome" }}
+                    {{ $courseRoot = .Parent.Parent }}
+                  {{ else if .Parent.Parent.Parent }}
+                    {{ if eq .Parent.Parent.Parent.Type "course-welcome" }}
+                      {{ $courseRoot = .Parent.Parent.Parent }}
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+
+              {{ if $courseRoot }}
+                {{- $courseUrl = $courseRoot.RelPermalink -}}
+                {{- $slug = replace (replace $courseUrl "/courses/" "") "/" "" -}}
+              {{ else }}
+                {{ $parts := split .File.Path "/" }}
+                {{ if ge (len $parts) 3 }}
+                  {{- $slug = index $parts 2 -}}
+                {{ end }}
+                {{- $courseUrl = printf "/courses/%s/" $slug -}}
+              {{ end }}
+
+              {{ $problemSlug := .File.BaseFileName }}
+
+              <div class="mt-8 p-6 bg-white rounded-md border border-slate-200">
+                <h2 class="text-lg font-semibold mb-2">Submitting this problem</h2>
+                <p class="text-slate-700 mb-4">To submit your solution, please enroll in the course and then submit from the course progress page. Click the button below to enroll (or sign in via GitHub) and you will be redirected to the course page with the appropriate week opened for submission.</p>
+              {{- $returnTo := printf "%s%s?enrollCourseSlug=%s" $frontend $courseUrl $slug -}}
+              {{- if ne $weekStr "" }}
+                {{- $returnTo = printf "%s&enrollWeek=%s" $returnTo $weekStr -}}
+              {{- end }}
+              {{- $returnTo = printf "%s&openSubmit=1&problem=%s" $returnTo $problemSlug -}}
+                <a href="{{ .Site.Params.codespaces_backend }}/auth/github?returnTo={{ urlquery $returnTo }}" class="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-500 text-sm">Enroll to Submit</a>
+                <span class="ml-3 text-sm text-slate-500">or go directly to <a href="{{ $frontend }}{{ $courseUrl }}" class="text-green-600 hover:underline">course page</a></span>
+              </div>
+            {{ end }}
+
           </article>
         </main>
       </div>

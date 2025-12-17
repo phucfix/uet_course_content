@@ -19,5 +19,7 @@ taxonomies = {}
 [params]
   # Base URL of your course-platform backend (no trailing slash)
   codespaces_backend = "http://localhost:3000"
+  # Base URL of the course-platform frontend (used for enroll redirect)
+  frontend_url = "http://localhost:5173"
   # Default repo to open in Codespaces (owner/repo)
   codespaces_repo = "uet36/code18"

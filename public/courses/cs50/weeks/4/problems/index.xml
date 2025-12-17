@@ -8,7 +8,7 @@
     <language>en-us</language>
     <atom:link href="//localhost:1313/courses/cs50/weeks/4/problems/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Speller (External)</title>
+      <title>Speller</title>
       <link>//localhost:1313/courses/cs50/week4/problems/speller/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/courses/cs50/week4/problems/speller/</guid>

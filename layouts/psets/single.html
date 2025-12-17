@@ -11,6 +11,64 @@
         {{ with .Params.description }}
           <p style="color: #64748b; margin-bottom: 1.5rem;">{{ . }}</p>
         {{ end }}
+
+        <!-- Enroll to Submit button -->
+        {{/* Find course root (walk up parent chain up to 3 levels) */}}
+        {{ $courseRoot := "" }}
+        {{ if eq .Type "course-welcome" }}
+          {{ $courseRoot = . }}
+        {{ else if .Parent }}
+          {{ if eq .Parent.Type "course-welcome" }}
+            {{ $courseRoot = .Parent }}
+          {{ else if .Parent.Parent }}
+            {{ if eq .Parent.Parent.Type "course-welcome" }}
+              {{ $courseRoot = .Parent.Parent }}
+            {{ else if .Parent.Parent.Parent }}
+              {{ if eq .Parent.Parent.Parent.Type "course-welcome" }}
+                {{ $courseRoot = .Parent.Parent.Parent }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        {{ if $courseRoot }}
+          {{- $backend := .Site.Params.codespaces_backend | default "http://localhost:3000" -}}
+          {{- $frontend := .Site.Params.frontend_url | default "http://localhost:5173" -}}
+          {{- $courseUrl := $courseRoot.RelPermalink -}}
+          {{- $slug := replace (replace $courseUrl "/courses/" "") "/" "" -}}
+          {{- $weekNum := .Params.week | default "" -}}
+          {{- $weekStr := (print $weekNum) -}}
+          {{- $returnTo := printf "%s%s?enrollCourseSlug=%s" $frontend $courseUrl $slug -}}
+          {{- if ne $weekStr "" }}
+            {{- $returnTo = printf "%s&enrollWeek=%s" $returnTo $weekStr -}}
+          {{- end }}
+          <div style="margin-top: 1rem;">
+            <a href="{{ $backend }}/auth/github?returnTo={{ urlquery $returnTo }}" class="inline-flex items-center gap-2 px-3 py-1 bg-green-600 text-white rounded-md hover:bg-green-500 text-sm">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 10-8 0v3H5l7 7 7-7h-3V7z"/></svg>
+              Enroll to Submit
+            </a>
+          </div>
+        {{ else }}
+          {{/* Fallback: derive course slug from file path (content/courses/<slug>/...) */}}
+          {{ $parts := split .File.Path "/" }}
+          {{ $slug := "" }}
+          {{ if ge (len $parts) 3 }}
+            {{ $slug = index $parts 2 }}
+          {{ end }}
+          {{ if $slug }}
+            {{- $backend := .Site.Params.codespaces_backend | default "http://localhost:3000" -}}
+            {{- $frontend := .Site.Params.frontend_url | default "http://localhost:5173" -}}
+            {{- $courseUrl := printf "/courses/%s/" $slug -}}
+            {{- $weekNum := .Params.week | default "" -}}
+            {{- $weekStr := (print $weekNum) -}}
+            {{- $returnTo := printf "%s%s?enrollCourseSlug=%s&enrollWeek=%s" $frontend $courseUrl $slug $weekStr -}}
+            <div style="margin-top: 1rem;">
+              <a href="{{ $backend }}/auth/github?returnTo={{ urlquery $returnTo }}" class="inline-flex items-center gap-2 px-3 py-1 bg-green-600 text-white rounded-md hover:bg-green-500 text-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 10-8 0v3H5l7 7 7-7h-3V7z"/></svg>
+                Enroll to Submit
+              </a>
+            </div>
+          {{ end }}
+        {{ end }}
         <article class="prose">
           {{ .Content }}
         </article>

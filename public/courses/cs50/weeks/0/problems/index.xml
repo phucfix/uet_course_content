@@ -8,11 +8,11 @@
     <language>en-us</language>
     <atom:link href="//localhost:1313/courses/cs50/weeks/0/problems/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Mario (External)</title>
+      <title>Mario</title>
       <link>//localhost:1313/courses/cs50/week0/problems/mario/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/courses/cs50/week0/problems/mario/</guid>
-      <description>&lt;p&gt;Use the external link to go to the original problem description.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Write a program that prompts the user for a non-negative integer height (e.g., between 0 and 23) and prints a right-aligned half-pyramid of that height using the &lt;code&gt;#&lt;/code&gt; character. Non-positive heights should produce no pyramid.&lt;/p&gt;&#xA;&lt;p&gt;Example (height = 3):&lt;/p&gt;&#xA;&lt;h1&gt;&lt;/h1&gt;&#xA;&lt;h2&gt;&lt;/h2&gt;&#xA;&lt;h3&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Tasks:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Prompt for an integer height and validate the input range.&lt;/li&gt;&#xA;&lt;li&gt;Print a half-pyramid aligned to the right for the given height.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Hints:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Use nested loops: the outer loop over rows, the inner loops for spaces and &lt;code&gt;#&lt;/code&gt; characters.&lt;/li&gt;&#xA;&lt;li&gt;Start with a small example on paper to determine how many spaces and hashes each row needs.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Notes: Add sample tests and expected outputs in a &lt;code&gt;tests/&lt;/code&gt; folder if you want to add automated checks later.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

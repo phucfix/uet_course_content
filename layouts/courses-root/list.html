@@ -7,11 +7,21 @@
   
   <ul style="list-style: none; padding: 0; margin: 0;">
     {{ range .Sections }}
-    <li style="padding: 1rem 0; border-bottom: 1px solid #e9ecef;">
-      <a href="{{ .RelPermalink }}" style="color: #007bff; text-decoration: none; font-size: 1.125rem; font-weight: 600;">{{ .Title }}</a>
-      {{ with .Params.description }}
-      <p style="color: #6c757d; margin: 0.25rem 0 0 0; font-size: 0.9375rem;">{{ . }}</p>
-      {{ end }}
+    <li style="padding: 1rem 0; border-bottom: 1px solid #e9ecef; display:flex; align-items:center; justify-content:space-between;">
+      <div>
+        <a href="{{ .RelPermalink }}" style="color: #007bff; text-decoration: none; font-size: 1.125rem; font-weight: 600;">{{ .Title }}</a>
+        {{ with .Params.description }}
+        <p style="color: #6c757d; margin: 0.25rem 0 0 0; font-size: 0.9375rem;">{{ . }}</p>
+        {{ end }}
+      </div>
+      {{- $backend := .Site.Params.codespaces_backend | default "http://localhost:3000" -}}
+      {{- $frontend := .Site.Params.frontend_url | default "http://localhost:5173" -}}
+      {{- $courseUrl := .RelPermalink -}}
+      {{- $slug := replace (replace $courseUrl "/courses/" "") "/" "" -}}
+      {{- $returnTo := printf "%s%s?enrollCourseSlug=%s" $frontend $courseUrl $slug -}}
+      <div>
+        <a href="{{ $backend }}/auth/github?returnTo={{ urlquery $returnTo }}" style="background:#16a34a;color:white;padding:0.5rem 0.75rem;border-radius:6px;text-decoration:none;font-size:0.9rem;">Enroll</a>
+      </div>
     </li>
     {{ end }}
   </ul>

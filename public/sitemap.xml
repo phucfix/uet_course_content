@@ -60,11 +60,21 @@
   </url><url>
     <loc>//localhost:1313/courses/python/week1/problems/list_processing/</loc>
   </url><url>
-    <loc>//localhost:1313/courses/cs50/weeks/0/psets/mario/</loc>
-  </url><url>
     <loc>//localhost:1313/courses/cs50/week0/problems/mario/</loc>
   </url><url>
+    <loc>//localhost:1313/courses/cs50/weeks/0/psets/mario/</loc>
+  </url><url>
     <loc>//localhost:1313/courses/web-dev/week1/psets/portfolio/</loc>
+  </url><url>
+    <loc>//localhost:1313/courses/cs50/psets/</loc>
+  </url><url>
+    <loc>//localhost:1313/courses/cs50ai/psets/</loc>
+  </url><url>
+    <loc>//localhost:1313/courses/database/psets/</loc>
+  </url><url>
+    <loc>//localhost:1313/courses/python/psets/</loc>
+  </url><url>
+    <loc>//localhost:1313/courses/web-dev/psets/</loc>
   </url><url>
     <loc>//localhost:1313/courses/cs50ai/week0/problems/python_practice/</loc>
   </url><url>

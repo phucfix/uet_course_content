@@ -8,11 +8,11 @@
     <language>en-us</language>
     <atom:link href="//localhost:1313/courses/cs50/weeks/1/problems/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Credit (External)</title>
+      <title>Credit Card Validation</title>
       <link>//localhost:1313/courses/cs50/week1/problems/credit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/courses/cs50/week1/problems/credit/</guid>
-      <description>&lt;p&gt;Follow the external link to view the official problem statement.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Write a program that prompts for a credit card number (as a string), checks whether it is valid using the Luhn algorithm, and prints the card type (&lt;code&gt;VISA&lt;/code&gt;, &lt;code&gt;AMEX&lt;/code&gt;, &lt;code&gt;MASTERCARD&lt;/code&gt;) or &lt;code&gt;INVALID&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Tasks:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Read the card number as a string to preserve leading digits.&lt;/li&gt;&#xA;&lt;li&gt;Implement the Luhn checksum algorithm to determine validity.&lt;/li&gt;&#xA;&lt;li&gt;Detect card type by length and starting digits (e.g., 16-digit starting with 4 -&amp;gt; VISA; 15-digit starting with 34 or 37 -&amp;gt; AMEX; 16-digit ranges 51-55 -&amp;gt; MASTERCARD).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Hints:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
