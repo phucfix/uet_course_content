@@ -12,14 +12,14 @@
       <link>//localhost:1313/courses/cs50/weeks/1/psets/cash/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/courses/cs50/weeks/1/psets/cash/</guid>
-      <description>&lt;p&gt;Implement the greedy algorithm to compute change owed.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Implement the greedy algorithm to compute change owed.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-to-check--cách-kiểm-tra&#34;&gt;How to check / Cách kiểm tra&lt;/h2&gt;&#xA;&lt;p&gt;Chạy:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;check50 uet36/2025/x/&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;tên_problem&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(Thay {tên_problem} bằng tên problem thật sự)&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-to-submit--cách-nộp&#34;&gt;How to submit / Cách nộp&lt;/h2&gt;&#xA;&lt;p&gt;Chạy:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;submit50 uet36/2025/x/&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;tên_problem&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(Thay {tên_problem} bằng tên problem thật sự)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Credit</title>
       <link>//localhost:1313/courses/cs50/weeks/1/psets/credit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/courses/cs50/weeks/1/psets/credit/</guid>
-      <description>&lt;p&gt;Implement Luhn&amp;rsquo;s algorithm to validate card numbers.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Implement Luhn&amp;rsquo;s algorithm to validate card numbers.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-to-check--cách-kiểm-tra&#34;&gt;How to check / Cách kiểm tra&lt;/h2&gt;&#xA;&lt;p&gt;Chạy:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;check50 uet36/2025/x/&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;tên_problem&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(Thay {tên_problem} bằng tên problem thật sự)&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-to-submit--cách-nộp&#34;&gt;How to submit / Cách nộp&lt;/h2&gt;&#xA;&lt;p&gt;Chạy:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;submit50 uet36/2025/x/&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;tên_problem&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(Thay {tên_problem} bằng tên problem thật sự)&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
