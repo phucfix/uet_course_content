@@ -155,7 +155,7 @@ hr{border:none;border-top:2px solid #e2e8f0;margin:2rem 0}
 .prose th,.prose td{border:1px solid #cbd5e1;padding:0.75rem;text-align:left;}
 .prose th{background:#f1f5f9;font-weight:600;}
 /* Sidebar spacing improvements */
-.sidebar-nav{margin-bottom:2rem}
+.sidebar-nav{margin-bottom:1rem}
 .sidebar-nav:last-child{margin-bottom:0}
 .sidebar-list{list-style:none;padding:0;margin:0.5rem 0;padding-left:0}
 .sidebar-list li{margin:8px 0;list-style:none;margin-left:0}

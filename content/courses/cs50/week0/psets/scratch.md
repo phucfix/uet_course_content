@@ -25,8 +25,6 @@ Chạy:
 check50 uet36/2025/x/{tên_problem}
 ```
 
-(Thay {tên_problem} bằng tên problem thật sự)
-
 ## How to submit / Cách nộp
 
 Chạy:

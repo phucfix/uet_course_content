@@ -25,17 +25,13 @@ Try to make your pyramid as tall as the user wants!
 Chạy:
 
 ```bash
-check50 uet36/2025/x/{tên_problem}
+check50 uet36/2025/x/{mario}
 ```
-
-(Thay {tên_problem} bằng tên problem thật sự)
 
 ## How to submit / Cách nộp
 
 Chạy:
 
 ```bash
-submit50 uet36/2025/x/{tên_problem}
+submit50 uet36/2025/x/{mario}
 ```
-
-(Thay {tên_problem} bằng tên problem thật sự)
