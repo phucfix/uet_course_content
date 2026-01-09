@@ -1,13 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Week 1 Problem Sets on UET Learning Course</title><link>/courses/web-dev/weeks/1/psets/</link><description>Recent content in Week 1 Problem Sets on UET Learning Course</description><generator>Hugo</generator><language>en-us</language><atom:link href="/courses/web-dev/weeks/1/psets/index.xml" rel="self" type="application/rss+xml"/><item><title>Personal Portfolio</title><link>/courses/web-dev/week1/psets/portfolio/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/courses/web-dev/week1/psets/portfolio/</guid><description>&lt;h2 id="problem-to-solve"&gt;Problem to Solve&lt;/h2&gt;
-&lt;p&gt;Bạn sẽ xây dựng một trang portfolio cá nhân để giới thiệu bản thân, kỹ năng và các dự án. Đây là một bài tập quan trọng giúp bạn thực hành HTML và CSS, đồng thời tạo ra một sản phẩm thực tế có thể sử dụng khi xin việc.&lt;/p&gt;
-&lt;h2 id="background"&gt;Background&lt;/h2&gt;
-&lt;p&gt;Một portfolio website chuyên nghiệp cần:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Thiết kế đẹp mắt&lt;/strong&gt;: Màu sắc hài hòa, typography rõ ràng&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Responsive&lt;/strong&gt;: Hiển thị tốt trên mọi thiết bị&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;User-friendly&lt;/strong&gt;: Dễ điều hướng, thông tin rõ ràng&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Semantic HTML&lt;/strong&gt;: Sử dụng đúng các thẻ HTML5&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="specification"&gt;Specification&lt;/h2&gt;
-&lt;h3 id="cấu-trúc-trang"&gt;Cấu trúc trang&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;1. Header / Navigation&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Week 1 Problem Sets on UET Learning Course</title>
+    <link>//localhost:1313/courses/web-dev/weeks/1/psets/</link>
+    <description>Recent content in Week 1 Problem Sets on UET Learning Course</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/courses/web-dev/weeks/1/psets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Personal Portfolio</title>
+      <link>//localhost:1313/courses/web-dev/week1/psets/portfolio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/courses/web-dev/week1/psets/portfolio/</guid>
+      <description>&lt;h2 id=&#34;problem-to-solve&#34;&gt;Problem to Solve&lt;/h2&gt;&#xA;&lt;p&gt;Bạn sẽ xây dựng một trang portfolio cá nhân để giới thiệu bản thân, kỹ năng và các dự án. Đây là một bài tập quan trọng giúp bạn thực hành HTML và CSS, đồng thời tạo ra một sản phẩm thực tế có thể sử dụng khi xin việc.&lt;/p&gt;&#xA;&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;Một portfolio website chuyên nghiệp cần:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Thiết kế đẹp mắt&lt;/strong&gt;: Màu sắc hài hòa, typography rõ ràng&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Responsive&lt;/strong&gt;: Hiển thị tốt trên mọi thiết bị&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;User-friendly&lt;/strong&gt;: Dễ điều hướng, thông tin rõ ràng&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Semantic HTML&lt;/strong&gt;: Sử dụng đúng các thẻ HTML5&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;specification&#34;&gt;Specification&lt;/h2&gt;&#xA;&lt;h3 id=&#34;cấu-trúc-trang&#34;&gt;Cấu trúc trang&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;1. Header / Navigation&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

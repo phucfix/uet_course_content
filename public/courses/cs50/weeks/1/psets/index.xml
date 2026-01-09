@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Week 1 Problem Sets on UET Learning Course</title><link>/courses/cs50/weeks/1/psets/</link><description>Recent content in Week 1 Problem Sets on UET Learning Course</description><generator>Hugo</generator><language>en-us</language><atom:link href="/courses/cs50/weeks/1/psets/index.xml" rel="self" type="application/rss+xml"/><item><title>Cash</title><link>/courses/cs50/weeks/1/psets/cash/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/courses/cs50/weeks/1/psets/cash/</guid><description>&lt;h2 id="problem-to-solve"&gt;Problem to Solve&lt;/h2&gt;
-&lt;p&gt;Suppose you work at a store and a customer gives you $1.00 (100 cents) for candy that costs $0.50 (50 cents). You&amp;rsquo;ll need to pay them their &amp;ldquo;change,&amp;rdquo; the amount left over after paying for the cost of the candy. When making change, odds are you want to minimize the number of coins you&amp;rsquo;re dispensing for each customer, lest you run out (or annoy the customer!).&lt;/p&gt;
-&lt;p&gt;In a file called &lt;code&gt;cash.c&lt;/code&gt;, implement a program in C that prints the minimum coins needed to make the given amount of change, in cents, as in the below:&lt;/p&gt;</description></item><item><title>Credit</title><link>/courses/cs50/weeks/1/psets/credit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/courses/cs50/weeks/1/psets/credit/</guid><description>&lt;h2 id="problem-to-solve"&gt;Problem to Solve&lt;/h2&gt;
-&lt;p&gt;A credit (or debit) card, of course, is a plastic card with which you can pay for goods and services. Printed on that card is a number that&amp;rsquo;s also stored in a database somewhere, so that when your card is used to buy something, the creditor knows whom to bill. There are a lot of people with credit cards in this world, so those numbers are pretty long: American Express uses 15-digit numbers, MasterCard uses 16-digit numbers, and Visa uses 13- and 16-digit numbers.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Week 1 Problem Sets on UET Learning Course</title>
+    <link>//localhost:1313/courses/cs50/weeks/1/psets/</link>
+    <description>Recent content in Week 1 Problem Sets on UET Learning Course</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/courses/cs50/weeks/1/psets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cash</title>
+      <link>//localhost:1313/courses/cs50/weeks/1/psets/cash/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/courses/cs50/weeks/1/psets/cash/</guid>
+      <description>&lt;h2 id=&#34;problem-to-solve&#34;&gt;Problem to Solve&lt;/h2&gt;&#xA;&lt;p&gt;Suppose you work at a store and a customer gives you $1.00 (100 cents) for candy that costs $0.50 (50 cents). You&amp;rsquo;ll need to pay them their &amp;ldquo;change,&amp;rdquo; the amount left over after paying for the cost of the candy. When making change, odds are you want to minimize the number of coins you&amp;rsquo;re dispensing for each customer, lest you run out (or annoy the customer!).&lt;/p&gt;&#xA;&lt;p&gt;In a file called &lt;code&gt;cash.c&lt;/code&gt;, implement a program in C that prints the minimum coins needed to make the given amount of change, in cents, as in the below:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Credit</title>
+      <link>//localhost:1313/courses/cs50/weeks/1/psets/credit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/courses/cs50/weeks/1/psets/credit/</guid>
+      <description>&lt;h2 id=&#34;problem-to-solve&#34;&gt;Problem to Solve&lt;/h2&gt;&#xA;&lt;p&gt;A credit (or debit) card, of course, is a plastic card with which you can pay for goods and services. Printed on that card is a number that&amp;rsquo;s also stored in a database somewhere, so that when your card is used to buy something, the creditor knows whom to bill. There are a lot of people with credit cards in this world, so those numbers are pretty long: American Express uses 15-digit numbers, MasterCard uses 16-digit numbers, and Visa uses 13- and 16-digit numbers.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

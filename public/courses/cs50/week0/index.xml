@@ -1,11 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Week 0 on UET Learning Course</title><link>/courses/cs50/week0/</link><description>Recent content in Week 0 on UET Learning Course</description><generator>Hugo</generator><language>en-us</language><atom:link href="/courses/cs50/week0/index.xml" rel="self" type="application/rss+xml"/><item><title>Week 0 - Scratch</title><link>/courses/cs50/weeks/0/notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/courses/cs50/weeks/0/notes/</guid><description>&lt;p&gt;Welcome to Week 0! In this note, you&amp;rsquo;ll learn the basics of computational thinking and how to start programming with Scratch.&lt;/p&gt;
-&lt;h2 id="what-is-computational-thinking"&gt;What is Computational Thinking?&lt;/h2&gt;
-&lt;p&gt;Computational thinking is a problem-solving process that includes (but is not limited to) the following characteristics:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Decomposition: Breaking down complex problems into smaller, manageable parts.&lt;/li&gt;
-&lt;li&gt;Pattern Recognition: Observing patterns, trends, and regularities in data.&lt;/li&gt;
-&lt;li&gt;Abstraction: Identifying the general principles that generate these patterns.&lt;/li&gt;
-&lt;li&gt;Algorithms: Developing step-by-step solutions to problems.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="getting-started-with-scratch"&gt;Getting Started with Scratch&lt;/h2&gt;
-&lt;p&gt;Scratch is a visual programming language that helps you learn the logic of coding without worrying about syntax. You can create interactive stories, games, and animations.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Week 0 on UET Learning Course</title>
+    <link>//localhost:1313/courses/cs50/week0/</link>
+    <description>Recent content in Week 0 on UET Learning Course</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/courses/cs50/week0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Week 0 - Scratch</title>
+      <link>//localhost:1313/courses/cs50/weeks/0/notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/courses/cs50/weeks/0/notes/</guid>
+      <description>&lt;p&gt;Welcome to Week 0! In this note, you&amp;rsquo;ll learn the basics of computational thinking and how to start programming with Scratch.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-computational-thinking&#34;&gt;What is Computational Thinking?&lt;/h2&gt;&#xA;&lt;p&gt;Computational thinking is a problem-solving process that includes (but is not limited to) the following characteristics:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Decomposition: Breaking down complex problems into smaller, manageable parts.&lt;/li&gt;&#xA;&lt;li&gt;Pattern Recognition: Observing patterns, trends, and regularities in data.&lt;/li&gt;&#xA;&lt;li&gt;Abstraction: Identifying the general principles that generate these patterns.&lt;/li&gt;&#xA;&lt;li&gt;Algorithms: Developing step-by-step solutions to problems.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;getting-started-with-scratch&#34;&gt;Getting Started with Scratch&lt;/h2&gt;&#xA;&lt;p&gt;Scratch is a visual programming language that helps you learn the logic of coding without worrying about syntax. You can create interactive stories, games, and animations.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

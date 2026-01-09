@@ -1,12 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Week 0 Problems on UET Learning Course</title><link>/courses/python/weeks/0/problems/</link><description>Recent content in Week 0 Problems on UET Learning Course</description><generator>Hugo</generator><language>en-us</language><atom:link href="/courses/python/weeks/0/problems/index.xml" rel="self" type="application/rss+xml"/><item><title>FizzBuzz</title><link>/courses/python/week0/problems/fizzbuzz/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/courses/python/week0/problems/fizzbuzz/</guid><description>&lt;h2 id="problem-to-solve"&gt;Problem to Solve&lt;/h2&gt;
-&lt;p&gt;FizzBuzz là một bài tập kinh điển trong lập trình, thường được sử dụng trong các buổi phỏng vấn. Nhiệm vụ của bạn là viết chương trình in các số từ 1 đến 100, nhưng với một vài quy tắc đặc biệt.&lt;/p&gt;
-&lt;h2 id="background"&gt;Background&lt;/h2&gt;
-&lt;p&gt;Bài tập này giúp bạn làm quen với:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Vòng lặp &lt;code&gt;for&lt;/code&gt; trong Python&lt;/li&gt;
-&lt;li&gt;Câu điều kiện &lt;code&gt;if-elif-else&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Toán tử chia lấy dư (modulo) &lt;code&gt;%&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Thứ tự kiểm tra điều kiện&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="specification"&gt;Specification&lt;/h2&gt;
-&lt;p&gt;Viết chương trình &lt;code&gt;fizzbuzz.py&lt;/code&gt; in các số từ 1 đến 100 theo quy tắc:&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Week 0 Problems on UET Learning Course</title>
+    <link>//localhost:1313/courses/python/weeks/0/problems/</link>
+    <description>Recent content in Week 0 Problems on UET Learning Course</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/courses/python/weeks/0/problems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FizzBuzz</title>
+      <link>//localhost:1313/courses/python/week0/problems/fizzbuzz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/courses/python/week0/problems/fizzbuzz/</guid>
+      <description>&lt;h2 id=&#34;problem-to-solve&#34;&gt;Problem to Solve&lt;/h2&gt;&#xA;&lt;p&gt;FizzBuzz là một bài tập kinh điển trong lập trình, thường được sử dụng trong các buổi phỏng vấn. Nhiệm vụ của bạn là viết chương trình in các số từ 1 đến 100, nhưng với một vài quy tắc đặc biệt.&lt;/p&gt;&#xA;&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;Bài tập này giúp bạn làm quen với:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Vòng lặp &lt;code&gt;for&lt;/code&gt; trong Python&lt;/li&gt;&#xA;&lt;li&gt;Câu điều kiện &lt;code&gt;if-elif-else&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Toán tử chia lấy dư (modulo) &lt;code&gt;%&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Thứ tự kiểm tra điều kiện&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;specification&#34;&gt;Specification&lt;/h2&gt;&#xA;&lt;p&gt;Viết chương trình &lt;code&gt;fizzbuzz.py&lt;/code&gt; in các số từ 1 đến 100 theo quy tắc:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

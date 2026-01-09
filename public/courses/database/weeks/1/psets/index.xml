@@ -1,13 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Week 1 Problem Sets on UET Learning Course</title><link>/courses/database/weeks/1/psets/</link><description>Recent content in Week 1 Problem Sets on UET Learning Course</description><generator>Hugo</generator><language>en-us</language><atom:link href="/courses/database/weeks/1/psets/index.xml" rel="self" type="application/rss+xml"/><item><title>Library Management System</title><link>/courses/database/week1/psets/library_system/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/courses/database/week1/psets/library_system/</guid><description>&lt;h2 id="problem-to-solve"&gt;Problem to Solve&lt;/h2&gt;
-&lt;p&gt;Bạn được giao nhiệm vụ thiết kế và xây dựng cơ sở dữ liệu cho một hệ thống quản lý thư viện. Hệ thống cần lưu trữ thông tin về sách, tác giả, thể loại, thành viên và các giao dịch mượn/trả sách.&lt;/p&gt;
-&lt;h2 id="background"&gt;Background&lt;/h2&gt;
-&lt;p&gt;Một hệ thống quản lý thư viện hiệu quả cần:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Tính toàn vẹn dữ liệu&lt;/strong&gt;: Đảm bảo dữ liệu chính xác và nhất quán&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mối quan hệ rõ ràng&lt;/strong&gt;: Liên kết giữa sách, tác giả, và giao dịch mượn&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Truy vấn hiệu quả&lt;/strong&gt;: Tìm kiếm sách, theo dõi tình trạng mượn&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Chuẩn hóa&lt;/strong&gt;: Tránh trùng lặp dữ liệu&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="specification"&gt;Specification&lt;/h2&gt;
-&lt;h3 id="tables-cần-tạo"&gt;Tables cần tạo&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;1. categories&lt;/strong&gt; - Thể loại sách&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Week 1 Problem Sets on UET Learning Course</title>
+    <link>//localhost:1313/courses/database/weeks/1/psets/</link>
+    <description>Recent content in Week 1 Problem Sets on UET Learning Course</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/courses/database/weeks/1/psets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Library Management System</title>
+      <link>//localhost:1313/courses/database/week1/psets/library_system/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/courses/database/week1/psets/library_system/</guid>
+      <description>&lt;h2 id=&#34;problem-to-solve&#34;&gt;Problem to Solve&lt;/h2&gt;&#xA;&lt;p&gt;Bạn được giao nhiệm vụ thiết kế và xây dựng cơ sở dữ liệu cho một hệ thống quản lý thư viện. Hệ thống cần lưu trữ thông tin về sách, tác giả, thể loại, thành viên và các giao dịch mượn/trả sách.&lt;/p&gt;&#xA;&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;Một hệ thống quản lý thư viện hiệu quả cần:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tính toàn vẹn dữ liệu&lt;/strong&gt;: Đảm bảo dữ liệu chính xác và nhất quán&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Mối quan hệ rõ ràng&lt;/strong&gt;: Liên kết giữa sách, tác giả, và giao dịch mượn&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Truy vấn hiệu quả&lt;/strong&gt;: Tìm kiếm sách, theo dõi tình trạng mượn&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Chuẩn hóa&lt;/strong&gt;: Tránh trùng lặp dữ liệu&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;specification&#34;&gt;Specification&lt;/h2&gt;&#xA;&lt;h3 id=&#34;tables-cần-tạo&#34;&gt;Tables cần tạo&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;1. categories&lt;/strong&gt; - Thể loại sách&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

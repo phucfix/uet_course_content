@@ -1,10 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Week 4 Problems on UET Learning Course</title><link>/courses/python/weeks/4/problems/</link><description>Recent content in Week 4 Problems on UET Learning Course</description><generator>Hugo</generator><language>en-us</language><atom:link href="/courses/python/weeks/4/problems/index.xml" rel="self" type="application/rss+xml"/><item><title>Simple Scraper</title><link>/courses/python/week4/problems/simple_scraper/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/courses/python/week4/problems/simple_scraper/</guid><description>&lt;p&gt;Use requests and BeautifulSoup to extract a list of article titles.&lt;/p&gt;
-&lt;h2 id="getting-started"&gt;Getting Started&lt;/h2&gt;
-&lt;p&gt;Log into &lt;a href="http://localhost:3000/auth/github?returnTo=http%3A%2F%2Flocalhost%3A5173%2Fcourses%2Fpython%2F%3FenrollCourseSlug%3Dpython%26enrollWeek%3D4%26openSubmit%3D1%26problem%3Dsimple_scraper"&gt;cs50.dev&lt;/a&gt; using your GitHub account and click Authorize cs50, then close the tab.&lt;/p&gt;
-&lt;h2 id="how-to-check--cách-kiểm-tra"&gt;How to check / Cách kiểm tra&lt;/h2&gt;
-&lt;p&gt;Chạy:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;check50 --local uet36/problems/2025/python/simple_scraper
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="how-to-submit--cách-nộp"&gt;How to submit / Cách nộp&lt;/h2&gt;
-&lt;p&gt;Chạy:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;submit50 --local uet36/problems/2025/python/simple_scraper
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Week 4 Problems on UET Learning Course</title>
+    <link>//localhost:1313/courses/python/weeks/4/problems/</link>
+    <description>Recent content in Week 4 Problems on UET Learning Course</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/courses/python/weeks/4/problems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple Scraper</title>
+      <link>//localhost:1313/courses/python/week4/problems/simple_scraper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/courses/python/week4/problems/simple_scraper/</guid>
+      <description>&lt;p&gt;Use requests and BeautifulSoup to extract a list of article titles.&lt;/p&gt;&#xA;&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;&#xA;&lt;p&gt;Log into &lt;a href=&#34;http://localhost:3000/auth/github?returnTo=http%3A%2F%2Flocalhost%3A5173%2Fcourses%2Fpython%2F%3FenrollCourseSlug%3Dpython%26enrollWeek%3D4%26openSubmit%3D1%26problem%3Dsimple_scraper&#34;&gt;cs50.dev&lt;/a&gt; using your GitHub account and click Authorize cs50, then close the tab.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-to-check--cách-kiểm-tra&#34;&gt;How to check / Cách kiểm tra&lt;/h2&gt;&#xA;&lt;p&gt;Chạy:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;check50 --local uet36/problems/2025/python/simple_scraper&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;how-to-submit--cách-nộp&#34;&gt;How to submit / Cách nộp&lt;/h2&gt;&#xA;&lt;p&gt;Chạy:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;submit50 --local uet36/problems/2025/python/simple_scraper&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

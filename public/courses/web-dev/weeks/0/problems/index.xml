@@ -1,11 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Week 0 Problems on UET Learning Course</title><link>/courses/web-dev/weeks/0/problems/</link><description>Recent content in Week 0 Problems on UET Learning Course</description><generator>Hugo</generator><language>en-us</language><atom:link href="/courses/web-dev/weeks/0/problems/index.xml" rel="self" type="application/rss+xml"/><item><title>Static Homepage</title><link>/courses/web-dev/week0/problems/static_page/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/courses/web-dev/week0/problems/static_page/</guid><description>&lt;h2 id="problem-to-solve"&gt;Problem to Solve&lt;/h2&gt;
-&lt;p&gt;Tạo một trang web tĩnh đơn giản sử dụng HTML và CSS. Đây là bước đầu tiên để trở thành một web developer.&lt;/p&gt;
-&lt;h2 id="background"&gt;Background&lt;/h2&gt;
-&lt;p&gt;Một trang web cơ bản gồm:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;HTML&lt;/strong&gt;: Cấu trúc nội dung (content structure)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CSS&lt;/strong&gt;: Định dạng và style (presentation)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Trong bài này, bạn sẽ học các thẻ HTML cơ bản và cách áp dụng CSS để tạo giao diện đẹp.&lt;/p&gt;
-&lt;h2 id="specification"&gt;Specification&lt;/h2&gt;
-&lt;p&gt;Tạo file &lt;code&gt;index.html&lt;/code&gt; và &lt;code&gt;style.css&lt;/code&gt; với các yêu cầu sau:&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Week 0 Problems on UET Learning Course</title>
+    <link>//localhost:1313/courses/web-dev/weeks/0/problems/</link>
+    <description>Recent content in Week 0 Problems on UET Learning Course</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/courses/web-dev/weeks/0/problems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Static Homepage</title>
+      <link>//localhost:1313/courses/web-dev/week0/problems/static_page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/courses/web-dev/week0/problems/static_page/</guid>
+      <description>&lt;h2 id=&#34;problem-to-solve&#34;&gt;Problem to Solve&lt;/h2&gt;&#xA;&lt;p&gt;Tạo một trang web tĩnh đơn giản sử dụng HTML và CSS. Đây là bước đầu tiên để trở thành một web developer.&lt;/p&gt;&#xA;&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;Một trang web cơ bản gồm:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;HTML&lt;/strong&gt;: Cấu trúc nội dung (content structure)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;CSS&lt;/strong&gt;: Định dạng và style (presentation)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Trong bài này, bạn sẽ học các thẻ HTML cơ bản và cách áp dụng CSS để tạo giao diện đẹp.&lt;/p&gt;&#xA;&lt;h2 id=&#34;specification&#34;&gt;Specification&lt;/h2&gt;&#xA;&lt;p&gt;Tạo file &lt;code&gt;index.html&lt;/code&gt; và &lt;code&gt;style.css&lt;/code&gt; với các yêu cầu sau:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
