@@ -18,10 +18,10 @@ taxonomies = {}
 
 [params]
   # Base URL of your course-platform backend (no trailing slash)
-  codespaces_backend = "http://localhost:3000"
+  codespaces_backend = "https://api.phucnguyen.xyz"
   # Base URL of the course-platform frontend (used for enroll redirect)
-  frontend_url = "http://localhost:5173"
+  frontend_url = "https://phucnguyen.xyz"
   # Base URL of the UET Duck AI chatbot
-  duck_ai_url = "http://localhost:4000"
+  duck_ai_url = "https://ai.phucnguyen.xyz"
   # Default repo to open in Codespaces (owner/repo)
   codespaces_repo = "uet36/code18"
