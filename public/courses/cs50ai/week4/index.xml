@@ -1,18 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Week 4 on UET Learning Course</title>
-    <link>//localhost:1313/courses/cs50ai/week4/</link>
-    <description>Recent content in Week 4 on UET Learning Course</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="//localhost:1313/courses/cs50ai/week4/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Week 4 - Machine Learning Basics</title>
-      <link>//localhost:1313/courses/cs50ai/weeks/4/notes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/courses/cs50ai/weeks/4/notes/</guid>
-      <description>&lt;h2 id=&#34;machine-learning-basics&#34;&gt;Machine Learning Basics&lt;/h2&gt;&#xA;&lt;p&gt;Overview of training data, features, labels, classifiers, and evaluation (accuracy, precision, recall).&lt;/p&gt;&#xA;&lt;p&gt;Practice: implement a simple k-NN classifier on a small dataset.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Week 4 on UET Learning Course</title><link>/courses/cs50ai/week4/</link><description>Recent content in Week 4 on UET Learning Course</description><generator>Hugo</generator><language>en-us</language><atom:link href="/courses/cs50ai/week4/index.xml" rel="self" type="application/rss+xml"/><item><title>Week 4 - Machine Learning Basics</title><link>/courses/cs50ai/weeks/4/notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/courses/cs50ai/weeks/4/notes/</guid><description>&lt;h2 id="machine-learning-basics"&gt;Machine Learning Basics&lt;/h2&gt;
+&lt;p&gt;Overview of training data, features, labels, classifiers, and evaluation (accuracy, precision, recall).&lt;/p&gt;
+&lt;p&gt;Practice: implement a simple k-NN classifier on a small dataset.&lt;/p&gt;</description></item></channel></rss>

@@ -1,18 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Week 0 Problems on UET Learning Course</title>
-    <link>//localhost:1313/courses/database/weeks/0/problems/</link>
-    <description>Recent content in Week 0 Problems on UET Learning Course</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="//localhost:1313/courses/database/weeks/0/problems/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Create Table</title>
-      <link>//localhost:1313/courses/database/week0/problems/create_table/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/courses/database/week0/problems/create_table/</guid>
-      <description>&lt;p&gt;Practice creating tables and inserting sample rows.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Week 0 Problems on UET Learning Course</title><link>/courses/database/weeks/0/problems/</link><description>Recent content in Week 0 Problems on UET Learning Course</description><generator>Hugo</generator><language>en-us</language><atom:link href="/courses/database/weeks/0/problems/index.xml" rel="self" type="application/rss+xml"/><item><title>Create Table</title><link>/courses/database/week0/problems/create_table/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/courses/database/week0/problems/create_table/</guid><description>&lt;h2 id="problem-to-solve"&gt;Problem to Solve&lt;/h2&gt;
+&lt;p&gt;Bạn sẽ học cách thiết kế và tạo bảng trong SQLite. Đây là kỹ năng nền tảng quan trọng nhất trong việc làm việc với cơ sở dữ liệu.&lt;/p&gt;
+&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+&lt;p&gt;Trong SQL, bảng (table) là cấu trúc cơ bản để lưu trữ dữ liệu. Mỗi bảng gồm:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Columns (cột)&lt;/strong&gt;: Định nghĩa loại dữ liệu được lưu&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rows (hàng)&lt;/strong&gt;: Chứa dữ liệu thực tế&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Constraints&lt;/strong&gt;: Quy tắc đảm bảo tính toàn vẹn dữ liệu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="specification"&gt;Specification&lt;/h2&gt;
+&lt;p&gt;Tạo file &lt;code&gt;students.sql&lt;/code&gt; chứa các lệnh SQL để:&lt;/p&gt;</description></item></channel></rss>

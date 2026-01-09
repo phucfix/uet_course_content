@@ -27,7 +27,7 @@
         {{ $duckAI := default "http://localhost:4000" .Site.Params.duck_ai_url }}
         <li>
           <a class="tool-link" href="{{ $duckAI }}" target="_blank" rel="noopener">
-            <span class="icon-badge" aria-hidden="true">AI</span>
+            <span class="icon-badge duck" aria-hidden="true">🦆</span>
             <span class="label">UET Duck AI</span>
           </a>
         </li>
@@ -35,7 +35,9 @@
         {{ $repo := default "your-org/your-repo" .Site.Params.codespaces_repo }}
         <li>
           <a class="tool-link" href="{{ $backend }}/api/codespaces/start?repo={{ $repo }}" target="_blank" rel="noopener">
-            <span class="icon-badge code" aria-hidden="true">&lt;/&gt;</span>
+            <span class="icon-badge code" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z"/></svg>
+            </span>
             <span class="label">VS Code</span>
           </a>
         </li>
@@ -48,13 +50,17 @@
         {{ $frontendURL := default "http://localhost:5173" .Site.Params.frontend_url }}
         <li>
           <a class="tool-link" href="{{ $frontendURL }}" target="_blank" rel="noopener">
-            <span class="icon-badge" aria-hidden="true">📊</span>
+            <span class="icon-badge gradebook" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            </span>
             <span class="label">Gradebook</span>
           </a>
         </li>
         <li>
           <a class="tool-link" href="#" target="_blank" rel="noopener">
-            <span class="icon-badge" aria-hidden="true">📋</span>
+            <span class="icon-badge syllabus" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9h-4v4h-2v-4H9V9h4V5h2v4h4v2z"/></svg>
+            </span>
             <span class="label">Syllabus</span>
           </a>
         </li>

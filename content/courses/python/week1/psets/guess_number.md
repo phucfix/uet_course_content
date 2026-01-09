@@ -5,51 +5,71 @@ course: "Python Programming"
 description: "Trò chơi đoán số"
 ---
 
-# Guess the Number
+## Problem to Solve
 
-Viết một trò chơi đoán số, nơi máy tính chọn một số ngẫu nhiên và người chơi phải đoán.
+Bạn sẽ tạo một trò chơi đoán số, trong đó máy tính sẽ "nghĩ" một số ngẫu nhiên và người chơi phải đoán số đó. Sau mỗi lần đoán, máy tính sẽ cho biết số đoán lớn hơn hay nhỏ hơn số bí mật.
 
-## Yêu cầu
+## Background
 
-1. Máy tính chọn một số ngẫu nhiên từ 1 đến 100
-2. Người chơi nhập số đoán
-3. Máy tính cho biết số đoán lớn hơn hay nhỏ hơn số đúng
-4. Lặp lại cho đến khi đoán đúng
-5. Đếm số lần đoán
+Trò chơi đoán số là một ví dụ kinh điển để học về:
+- Tạo số ngẫu nhiên với module `random`
+- Vòng lặp `while` và điều kiện dừng
+- So sánh số và đưa ra phản hồi
+- Đếm số lần lặp
 
-## Ví dụ
+Đây cũng là cơ hội tốt để hiểu về thuật toán **binary search** - chiến thuật đoán tối ưu là luôn đoán số ở giữa khoảng còn lại.
+
+## Specification
+
+Viết một chương trình `guess.py` thực hiện các yêu cầu sau:
+
+1. Tạo một số ngẫu nhiên từ 1 đến 100
+2. Cho phép người chơi nhập số đoán
+3. Sau mỗi lần đoán, thông báo số đoán "quá lớn" hoặc "quá nhỏ"
+4. Tiếp tục cho đến khi người chơi đoán đúng
+5. Đếm và hiển thị số lần đoán khi kết thúc
+6. **Bonus**: Thêm giới hạn số lần đoán (ví dụ: 7 lần)
+
+## Examples
 
 ```
+$ python guess.py
 Tôi đang nghĩ về một số từ 1 đến 100...
 Đoán số của tôi: 50
-Quá lớn! Hãy thử lại: 25
-Quá nhỏ! Hãy thử lại: 35
-Đúng rồi! Bạn đã đoán đúng sau 3 lần!
+Quá lớn! Hãy thử lại.
+Đoán số của tôi: 25
+Quá nhỏ! Hãy thử lại.
+Đoán số của tôi: 37
+Quá lớn! Hãy thử lại.
+Đoán số của tôi: 31
+Đúng rồi! Bạn đã đoán đúng sau 4 lần!
 ```
 
-## Gợi ý
+## Hints
 
-- Sử dụng `random.randint()` để tạo số ngẫu nhiên
-- Sử dụng vòng lặp `while` để tiếp tục cho đến khi đoán đúng
-- Sử dụng biến đếm để theo dõi số lần đoán
+- Import module random: `import random`
+- Sử dụng `random.randint(1, 100)` để tạo số ngẫu nhiên từ 1 đến 100
+- Sử dụng vòng lặp `while True:` với `break` khi đoán đúng
+- Sử dụng biến đếm (counter) để theo dõi số lần đoán
+- Xử lý trường hợp người dùng nhập không phải số
+
+## Getting Started
+
+Log into [cs50.dev](http://localhost:3000/auth/github?returnTo=http%3A%2F%2Flocalhost%3A5173%2Fcourses%2Fpython%2F%3FenrollCourseSlug%3Dpython%26enrollWeek%3D1%26openSubmit%3D1%26problem%3Dguess_number) using your GitHub account and click Authorize cs50, then close the tab.
 
 ## How to check / Cách kiểm tra
 
 Chạy:
 
 ```bash
-check50 uet36/2025/x/{tên_problem}
+check50 --local uet36/problems/2025/python/guess_number
 ```
-
-(Thay {tên_problem} bằng tên problem thật sự)
 
 ## How to submit / Cách nộp
 
 Chạy:
 
 ```bash
-submit50 uet36/2025/x/{tên_problem}
+submit50 --local uet36/problems/2025/python/guess_number
 ```
-
-(Thay {tên_problem} bằng tên problem thật sự)
 

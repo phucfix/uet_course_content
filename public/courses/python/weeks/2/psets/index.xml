@@ -1,18 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Week 2 Problem Sets on UET Learning Course</title>
-    <link>//localhost:1313/courses/python/weeks/2/psets/</link>
-    <description>Recent content in Week 2 Problem Sets on UET Learning Course</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="//localhost:1313/courses/python/weeks/2/psets/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>File Manager</title>
-      <link>//localhost:1313/courses/python/week2/psets/file_manager/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/courses/python/week2/psets/file_manager/</guid>
-      <description>&lt;h1 id=&#34;file-manager&#34;&gt;File Manager&lt;/h1&gt;&#xA;&lt;p&gt;Tạo một chương trình quản lý file cho phép người dùng đọc, ghi và xử lý file.&lt;/p&gt;&#xA;&lt;h2 id=&#34;yêu-cầu&#34;&gt;Yêu cầu&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Menu cho phép:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Đọc file&lt;/li&gt;&#xA;&lt;li&gt;Ghi file&lt;/li&gt;&#xA;&lt;li&gt;Tìm kiếm trong file&lt;/li&gt;&#xA;&lt;li&gt;Đếm số từ trong file&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Xử lý lỗi khi file không tồn tại&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;gợi-ý&#34;&gt;Gợi ý&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sử dụng &lt;code&gt;try-except&lt;/code&gt; để xử lý lỗi&lt;/li&gt;&#xA;&lt;li&gt;Sử dụng functions để tổ chức code&lt;/li&gt;&#xA;&lt;li&gt;Sử dụng &lt;code&gt;with&lt;/code&gt; statement khi làm việc với file&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;how-to-check--cách-kiểm-tra&#34;&gt;How to check / Cách kiểm tra&lt;/h2&gt;&#xA;&lt;p&gt;Chạy:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Week 2 Problem Sets on UET Learning Course</title><link>/courses/python/weeks/2/psets/</link><description>Recent content in Week 2 Problem Sets on UET Learning Course</description><generator>Hugo</generator><language>en-us</language><atom:link href="/courses/python/weeks/2/psets/index.xml" rel="self" type="application/rss+xml"/><item><title>File Manager</title><link>/courses/python/week2/psets/file_manager/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/courses/python/week2/psets/file_manager/</guid><description>&lt;h2 id="problem-to-solve"&gt;Problem to Solve&lt;/h2&gt;
+&lt;p&gt;Bạn sẽ xây dựng một chương trình quản lý file với giao diện dòng lệnh (CLI). Chương trình cho phép người dùng thực hiện các thao tác cơ bản với file như đọc, ghi, tìm kiếm và thống kê.&lt;/p&gt;
+&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+&lt;p&gt;Làm việc với file là một kỹ năng quan trọng trong lập trình Python. Module này giúp bạn hiểu:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mở và đóng file với &lt;code&gt;open()&lt;/code&gt; và &lt;code&gt;with&lt;/code&gt; statement&lt;/li&gt;
+&lt;li&gt;Đọc file với &lt;code&gt;read()&lt;/code&gt;, &lt;code&gt;readline()&lt;/code&gt;, &lt;code&gt;readlines()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Ghi file với &lt;code&gt;write()&lt;/code&gt; và &lt;code&gt;writelines()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Xử lý exceptions với &lt;code&gt;try-except&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Tổ chức code với functions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="specification"&gt;Specification&lt;/h2&gt;
+&lt;p&gt;Viết một chương trình &lt;code&gt;file_manager.py&lt;/code&gt; với menu cho phép:&lt;/p&gt;</description></item></channel></rss>

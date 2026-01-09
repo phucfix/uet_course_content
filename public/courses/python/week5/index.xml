@@ -1,18 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Week 5 on UET Learning Course</title>
-    <link>//localhost:1313/courses/python/week5/</link>
-    <description>Recent content in Week 5 on UET Learning Course</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="//localhost:1313/courses/python/week5/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Week 5 - Testing &amp; Debugging</title>
-      <link>//localhost:1313/courses/python/weeks/5/notes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/courses/python/weeks/5/notes/</guid>
-      <description>&lt;h2 id=&#34;testing--debugging&#34;&gt;Testing &amp;amp; Debugging&lt;/h2&gt;&#xA;&lt;p&gt;Write tests with pytest and learn debugging patterns (assertions, logging).&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Week 5 on UET Learning Course</title><link>/courses/python/week5/</link><description>Recent content in Week 5 on UET Learning Course</description><generator>Hugo</generator><language>en-us</language><atom:link href="/courses/python/week5/index.xml" rel="self" type="application/rss+xml"/><item><title>Week 5 - Testing &amp; Debugging</title><link>/courses/python/weeks/5/notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/courses/python/weeks/5/notes/</guid><description>&lt;h2 id="testing--debugging"&gt;Testing &amp;amp; Debugging&lt;/h2&gt;
+&lt;p&gt;Write tests with pytest and learn debugging patterns (assertions, logging).&lt;/p&gt;</description></item></channel></rss>

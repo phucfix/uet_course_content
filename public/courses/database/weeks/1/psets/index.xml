@@ -1,18 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Week 1 Problem Sets on UET Learning Course</title>
-    <link>//localhost:1313/courses/database/weeks/1/psets/</link>
-    <description>Recent content in Week 1 Problem Sets on UET Learning Course</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="//localhost:1313/courses/database/weeks/1/psets/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Library Management System</title>
-      <link>//localhost:1313/courses/database/week1/psets/library_system/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/courses/database/week1/psets/library_system/</guid>
-      <description>&lt;h1 id=&#34;library-management-system&#34;&gt;Library Management System&lt;/h1&gt;&#xA;&lt;p&gt;Thiết kế và tạo database cho hệ thống quản lý thư viện.&lt;/p&gt;&#xA;&lt;h2 id=&#34;yêu-cầu&#34;&gt;Yêu cầu&lt;/h2&gt;&#xA;&lt;h3 id=&#34;tables-cần-thiết&#34;&gt;Tables cần thiết:&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;books&lt;/strong&gt;: Thông tin sách&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;id, title, author, isbn, published_year, category_id&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;authors&lt;/strong&gt;: Thông tin tác giả&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;id, name, bio&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;members&lt;/strong&gt;: Thông tin thành viên&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;id, name, email, phone, membership_date&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;borrowings&lt;/strong&gt;: Thông tin mượn sách&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;id, book_id, member_id, borrow_date, return_date, status&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;categories&lt;/strong&gt;: Thể loại sách&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;id, name&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;yêu-cầu-1&#34;&gt;Yêu cầu&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Tạo các tables với đầy đủ constraints&lt;/li&gt;&#xA;&lt;li&gt;Thêm sample data cho mỗi table&lt;/li&gt;&#xA;&lt;li&gt;Viết các queries:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Tìm sách chưa được trả&lt;/li&gt;&#xA;&lt;li&gt;Tìm thành viên mượn nhiều sách nhất&lt;/li&gt;&#xA;&lt;li&gt;Tìm sách phổ biến nhất&lt;/li&gt;&#xA;&lt;li&gt;Tìm sách quá hạn trả&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;gợi-ý&#34;&gt;Gợi ý&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sử dụng FOREIGN KEY constraints&lt;/li&gt;&#xA;&lt;li&gt;Sử dụng INDEX cho các cột thường được tìm kiếm&lt;/li&gt;&#xA;&lt;li&gt;Sử dụng CHECK constraints cho status&lt;/li&gt;&#xA;&lt;li&gt;Normalize database đến 3NF&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;how-to-check--cách-kiểm-tra&#34;&gt;How to check / Cách kiểm tra&lt;/h2&gt;&#xA;&lt;p&gt;Chạy:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Week 1 Problem Sets on UET Learning Course</title><link>/courses/database/weeks/1/psets/</link><description>Recent content in Week 1 Problem Sets on UET Learning Course</description><generator>Hugo</generator><language>en-us</language><atom:link href="/courses/database/weeks/1/psets/index.xml" rel="self" type="application/rss+xml"/><item><title>Library Management System</title><link>/courses/database/week1/psets/library_system/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/courses/database/week1/psets/library_system/</guid><description>&lt;h2 id="problem-to-solve"&gt;Problem to Solve&lt;/h2&gt;
+&lt;p&gt;Bạn được giao nhiệm vụ thiết kế và xây dựng cơ sở dữ liệu cho một hệ thống quản lý thư viện. Hệ thống cần lưu trữ thông tin về sách, tác giả, thể loại, thành viên và các giao dịch mượn/trả sách.&lt;/p&gt;
+&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+&lt;p&gt;Một hệ thống quản lý thư viện hiệu quả cần:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tính toàn vẹn dữ liệu&lt;/strong&gt;: Đảm bảo dữ liệu chính xác và nhất quán&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mối quan hệ rõ ràng&lt;/strong&gt;: Liên kết giữa sách, tác giả, và giao dịch mượn&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Truy vấn hiệu quả&lt;/strong&gt;: Tìm kiếm sách, theo dõi tình trạng mượn&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chuẩn hóa&lt;/strong&gt;: Tránh trùng lặp dữ liệu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="specification"&gt;Specification&lt;/h2&gt;
+&lt;h3 id="tables-cần-tạo"&gt;Tables cần tạo&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;1. categories&lt;/strong&gt; - Thể loại sách&lt;/p&gt;</description></item></channel></rss>

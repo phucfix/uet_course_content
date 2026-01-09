@@ -1,18 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Week 3 Problems on UET Learning Course</title>
-    <link>//localhost:1313/courses/cs50/weeks/3/problems/</link>
-    <description>Recent content in Week 3 Problems on UET Learning Course</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="//localhost:1313/courses/cs50/weeks/3/problems/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Caesar Cipher</title>
-      <link>//localhost:1313/courses/cs50/week3/problems/caesar/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/courses/cs50/week3/problems/caesar/</guid>
-      <description>&lt;p&gt;Write a program that accepts a non-negative integer key (e.g., 0..25) and plaintext, then outputs the ciphertext where each alphabetical character is shifted by the key. Preserve case and leave non-alphabetic characters unchanged.&lt;/p&gt;&#xA;&lt;p&gt;Tasks:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Parse and validate the key from command-line arguments or prompt the user.&lt;/li&gt;&#xA;&lt;li&gt;Iterate over the plaintext and apply the shift to letters only.&lt;/li&gt;&#xA;&lt;li&gt;Preserve uppercase and lowercase letters; leave punctuation and spaces unchanged.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Example:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Key 1, plaintext &amp;ldquo;Hello, World!&amp;rdquo; -&amp;gt; ciphertext &amp;ldquo;Ifmmp, Xpsme!&amp;rdquo;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Hints:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Week 3 Problems on UET Learning Course</title><link>/courses/cs50/weeks/3/problems/</link><description>Recent content in Week 3 Problems on UET Learning Course</description><generator>Hugo</generator><language>en-us</language><atom:link href="/courses/cs50/weeks/3/problems/index.xml" rel="self" type="application/rss+xml"/><item><title>Caesar Cipher</title><link>/courses/cs50/week3/problems/caesar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/courses/cs50/week3/problems/caesar/</guid><description>&lt;p&gt;Write a program that accepts a non-negative integer key (e.g., 0..25) and plaintext, then outputs the ciphertext where each alphabetical character is shifted by the key. Preserve case and leave non-alphabetic characters unchanged.&lt;/p&gt;
+&lt;p&gt;Tasks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Parse and validate the key from command-line arguments or prompt the user.&lt;/li&gt;
+&lt;li&gt;Iterate over the plaintext and apply the shift to letters only.&lt;/li&gt;
+&lt;li&gt;Preserve uppercase and lowercase letters; leave punctuation and spaces unchanged.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Key 1, plaintext &amp;ldquo;Hello, World!&amp;rdquo; -&amp;gt; ciphertext &amp;ldquo;Ifmmp, Xpsme!&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hints:&lt;/p&gt;</description></item></channel></rss>

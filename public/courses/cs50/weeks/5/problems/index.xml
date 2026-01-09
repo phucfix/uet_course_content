@@ -1,18 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Week 5 Problems on UET Learning Course</title>
-    <link>//localhost:1313/courses/cs50/weeks/5/problems/</link>
-    <description>Recent content in Week 5 Problems on UET Learning Course</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="//localhost:1313/courses/cs50/weeks/5/problems/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Substitution Cipher</title>
-      <link>//localhost:1313/courses/cs50/week5/problems/substitution/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/courses/cs50/week5/problems/substitution/</guid>
-      <description>&lt;p&gt;Write a program that accepts a 26-character key (containing each letter exactly once) and plaintext, then outputs the ciphertext produced by substituting each alphabetical character according to the key. Preserve case and leave non-alphabetic characters unchanged.&lt;/p&gt;&#xA;&lt;p&gt;Tasks:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Validate that the provided key contains 26 unique alphabetic characters.&lt;/li&gt;&#xA;&lt;li&gt;Normalize the key to a consistent case for mapping and preserve plaintext case in output.&lt;/li&gt;&#xA;&lt;li&gt;Implement the substitution mapping and apply it to the input text.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Example:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Week 5 Problems on UET Learning Course</title><link>/courses/cs50/weeks/5/problems/</link><description>Recent content in Week 5 Problems on UET Learning Course</description><generator>Hugo</generator><language>en-us</language><atom:link href="/courses/cs50/weeks/5/problems/index.xml" rel="self" type="application/rss+xml"/><item><title>Substitution Cipher</title><link>/courses/cs50/week5/problems/substitution/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/courses/cs50/week5/problems/substitution/</guid><description>&lt;p&gt;Write a program that accepts a 26-character key (containing each letter exactly once) and plaintext, then outputs the ciphertext produced by substituting each alphabetical character according to the key. Preserve case and leave non-alphabetic characters unchanged.&lt;/p&gt;
+&lt;p&gt;Tasks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Validate that the provided key contains 26 unique alphabetic characters.&lt;/li&gt;
+&lt;li&gt;Normalize the key to a consistent case for mapping and preserve plaintext case in output.&lt;/li&gt;
+&lt;li&gt;Implement the substitution mapping and apply it to the input text.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example:&lt;/p&gt;</description></item></channel></rss>

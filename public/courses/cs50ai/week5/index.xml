@@ -1,18 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Week 5 on UET Learning Course</title>
-    <link>//localhost:1313/courses/cs50ai/week5/</link>
-    <description>Recent content in Week 5 on UET Learning Course</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="//localhost:1313/courses/cs50ai/week5/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Week 5 - Neural Networks Overview</title>
-      <link>//localhost:1313/courses/cs50ai/weeks/5/notes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/courses/cs50ai/weeks/5/notes/</guid>
-      <description>&lt;h2 id=&#34;neural-networks&#34;&gt;Neural Networks&lt;/h2&gt;&#xA;&lt;p&gt;Basic feedforward network, activations, and training via gradient descent. Practice building a small network using numpy or a simple library.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Week 5 on UET Learning Course</title><link>/courses/cs50ai/week5/</link><description>Recent content in Week 5 on UET Learning Course</description><generator>Hugo</generator><language>en-us</language><atom:link href="/courses/cs50ai/week5/index.xml" rel="self" type="application/rss+xml"/><item><title>Week 5 - Neural Networks Overview</title><link>/courses/cs50ai/weeks/5/notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/courses/cs50ai/weeks/5/notes/</guid><description>&lt;h2 id="neural-networks"&gt;Neural Networks&lt;/h2&gt;
+&lt;p&gt;Basic feedforward network, activations, and training via gradient descent. Practice building a small network using numpy or a simple library.&lt;/p&gt;</description></item></channel></rss>

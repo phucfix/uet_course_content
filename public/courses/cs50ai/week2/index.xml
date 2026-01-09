@@ -1,18 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Week 2 on UET Learning Course</title>
-    <link>//localhost:1313/courses/cs50ai/week2/</link>
-    <description>Recent content in Week 2 on UET Learning Course</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="//localhost:1313/courses/cs50ai/week2/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Week 2 - Knowledge Representation</title>
-      <link>//localhost:1313/courses/cs50ai/weeks/2/notes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/courses/cs50ai/weeks/2/notes/</guid>
-      <description>&lt;h2 id=&#34;knowledge-representation&#34;&gt;Knowledge Representation&lt;/h2&gt;&#xA;&lt;p&gt;Intro to predicates, facts, and simple rule-based systems. Practice encoding knowledge as simple data structures.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Week 2 on UET Learning Course</title><link>/courses/cs50ai/week2/</link><description>Recent content in Week 2 on UET Learning Course</description><generator>Hugo</generator><language>en-us</language><atom:link href="/courses/cs50ai/week2/index.xml" rel="self" type="application/rss+xml"/><item><title>Week 2 - Knowledge Representation</title><link>/courses/cs50ai/weeks/2/notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/courses/cs50ai/weeks/2/notes/</guid><description>&lt;h2 id="knowledge-representation"&gt;Knowledge Representation&lt;/h2&gt;
+&lt;p&gt;Intro to predicates, facts, and simple rule-based systems. Practice encoding knowledge as simple data structures.&lt;/p&gt;</description></item></channel></rss>

@@ -91,7 +91,13 @@ html,body{
 
 /* icon badges for tools */
 .icon-badge{display:inline-flex;width:34px;height:34px;border-radius:6px;align-items:center;justify-content:center;background:rgba(255,255,255,0.02);font-weight:800;color:var(--cs50-blue);font-size:0.85rem}
-.icon-badge.code{font-family:monospace;background:rgba(255,255,255,0.01);color:#9fb0cc}
+.icon-badge.code{background:rgba(0,120,212,0.15);color:#0078d4}
+.icon-badge.code svg{width:16px;height:16px}
+.icon-badge.duck{background:rgba(255,213,0,0.15);font-size:1.2rem}
+.icon-badge.gradebook{background:rgba(46,204,113,0.15);color:#2ecc71}
+.icon-badge.gradebook svg{width:16px;height:16px}
+.icon-badge.syllabus{background:rgba(155,89,182,0.15);color:#9b59b6}
+.icon-badge.syllabus svg{width:16px;height:16px}
 
 /* Courses (bottom) styling smaller/muted */
 .course-sidebar .courses-list a{color:#9fb0cc;font-size:0.95rem;padding:8px 6px}
